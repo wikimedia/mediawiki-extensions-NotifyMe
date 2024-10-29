@@ -1,0 +1,17 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/server"
+	],
+	"globals": {
+		"$": "readonly",
+		"ext": "readonly",
+		"OO": "readonly",
+		"OOJSPlus": "readonly",
+		"moment": "readonly",
+		"mw": "readonly",
+		"document": "readonly",
+		"window": "readonly",
+		"location": "readonly"
+	}
+}

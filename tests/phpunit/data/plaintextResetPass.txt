@@ -1,0 +1,15 @@
+Someone (probably you, from IP address 127.0.0.1) requested a reset of your
+password for BS4.3 (<http://localhost/wiki/index.php/Main_Page>). The following user account is
+associated with this email address:
+
+Username:
+Dummy
+
+Temporary password:
+foobar
+
+This temporary password will expire in 7 days.
+You should log in and choose a new password now. If someone else made this
+request, or if you have remembered your original password, and you no longer
+wish to change it, you may ignore this message and continue using your old
+password.
