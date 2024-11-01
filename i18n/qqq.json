@@ -1,27 +1,11 @@
 {
 	"@metadata": {
-		"authors": [ "[http://www.hallowelt.com Hallo Welt! GmbH]" ]
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
 	},
 	"notifyme-desc": "Description of Notifications for [[Special:Version]]",
 	"prefs-notifications": "Used in [{{canonicalurl:Special:Preferences}} Special:Preferences], headline for notify me section in preferences.",
-	"notifyme-notification-center-filter-label-all": "Notification Center filter label",
-	"notifyme-notification-center-filter-label-namespaces": "Notification Center filter label",
-	"notifyme-notification-center-filter-label-buckets": "Notification Center filter label",
-	"notifyme-notification-center-filter-label-categories": "Notification Center filter label",
-	"notifyme-notification-center-filter-label-namespaces-none": "Notification Center filter label (in case of empty filter)",
-	"notifyme-notification-center-filter-label-categories-none": "Notification Center filter label (in case of empty filter)",
-	"notifyme-notifications-mega-menu-title": "Notifications mega menu title",
-	"notifyme-notifications-mega-menu-all-notifications-label": "Label for the link to the all notifications",
-	"notifyme-notifications-mega-menu-no-notifications": "Label which is displayed when there are no new notifications",
-	"notifyme-notification-center-filter-title": "Notifications filter title",
-	"notifyme-navbar-button-title": "Title for notifications mega menu button",
-	"notifyme-navbar-button-aria-label": "Aria label for notifications mega menu button",
-	"notifyme-navbar-button-aria-label-unread-notifications": "Aria label for notifications mega menu button which also includes amount of unread notifications for screen readers.\n$1 - number of unread notifications",
-	"notifyme-notification-center-pagination-aria-next": "Aria label for pagination button which switches to the next page",
-	"notifyme-notification-center-pagination-aria-previous": "Aria label for pagination button which switches to the previous page",
-	"notifyme-notification-center-navigation-hint": "Hint message that explains the arrow key navigation for the tabs on [[Special:Preferences]] to screenreader users.",
-	"notifyme-notification-center-filter-item-aria-label": "Aria label for filter item.\n$1 - Filter name",
-
 	"notifyme-subscriber-provider-preferences-desc": "Description for preferences related to subscribers in the notification system.",
 	"notifyme-link-label-view-page": "Label for a link that directs users to view a specific page.",
 	"notifyme-link-label-diff": "Label for a link that allows users to see the differences between versions.",
@@ -139,6 +123,12 @@
 	"notifyme-event-page-delete": "Action indicating a page has been deleted.\n$1 - gender\n$2 - page title",
 	"notifyme-mail-manage-notifications": "Label for managing notification settings in mail.",
 	"notifyme-mail-manage-notifications-link": "Link to manage notification settings in mail.",
+	"notifyme-notification-center-filter-label-all": "Notification Center filter label",
+	"notifyme-notification-center-filter-label-namespaces": "Notification Center filter label",
+	"notifyme-notification-center-filter-label-buckets": "Notification Center filter label",
+	"notifyme-notification-center-filter-label-categories": "Notification Center filter label",
+	"notifyme-notification-center-filter-label-namespaces-none": "Notification Center filter label (in case of empty filter)",
+	"notifyme-notification-center-filter-label-categories-none": "Notification Center filter label (in case of empty filter)",
 	"notifyme-event-discussion-edit-key-desc": "Description for editing discussions related to events.",
 	"notifyme-event-discussion-edit": "Action indicating an event discussion has been edited.\n$1 - gender\n$2 - page title",
 	"notifyme-event-discussion-edit-bot": "Action indicating a bot has edited an event discussion.\n$1 - page title",
@@ -154,6 +144,8 @@
 	"notifyme-event-user-group-removed-key-desc": "Description for an event where a user group has been removed.",
 	"notifyme-event-group-removed": "Action indicating a group has been removed from an event.\n$1 - gender\n$2 - plural of group\n$3 - group names",
 	"notifyme-event-group-removed-bot": "Action indicating a bot has removed a group from an event.\n$1 - plural of group\n$3 - group names",
+	"notifyme-notifications-mega-menu-title": "Notifications mega menu title",
+	"notifyme-notifications-mega-menu-all-notifications-label": "Label for the link to the all notifications",
 	"notifyme-mail-template-output-header-wrapper": "Wrapper for the output header in mail templates.",
 	"notificationtester": "Label for the notification testing interface.",
 	"notifyme-notification-tester-field-agent": "Field for specifying the agent in the notification tester.",
@@ -174,6 +166,10 @@
 	"notifyme-ui-delivery-web-email": "Label indicating delivery options for web and email notifications.",
 	"notifyme-ui-delivery-web": "Label indicating delivery options for web notifications.",
 	"notifyme-notification-tester-event-info": "Information about the event being tested in the notification tester.",
+	"notifyme-notifications-mega-menu-no-notifications": "Label which is displayed when there are no new notifications",
+	"notifyme-notification-center-filter-title": "Notifications filter title",
+	"notifyme-navbar-button-title": "Title for notifications mega menu button",
+	"notifyme-navbar-button-aria-label": "Aria label for notifications mega menu button",
 	"notifyme-mail-reception-reason": "Reason for receiving mail notifications.",
 	"notifyme-event-page-edit-revert-key-desc": "Description for reverting an edited page.",
 	"notifyme-event-page-edit-revert": "Action indicating a page edit has been reverted.\n$1 - gender\n$2 - page title",
@@ -195,5 +191,10 @@
 	"notifications-mail-greeting": "Greeting message for notifications-related emails.",
 	"notifications-mail-reception-reason": "Reason for receiving notifications-related emails.\n$1 - unread notifications count",
 	"notifications-mail-manage-notifications": "Label for managing notification settings in emails.",
-	"notifications-mail-manage-notifications-link": "Link to manage notification settings in emails."
+	"notifications-mail-manage-notifications-link": "Link to manage notification settings in emails.",
+	"notifyme-navbar-button-aria-label-unread-notifications": "Aria label for notifications mega menu button which also includes amount of unread notifications for screen readers.\n$1 - number of unread notifications",
+	"notifyme-notification-center-pagination-aria-next": "Aria label for pagination button which switches to the next page",
+	"notifyme-notification-center-pagination-aria-previous": "Aria label for pagination button which switches to the previous page",
+	"notifyme-notification-center-navigation-hint": "Hint message that explains the arrow key navigation for the tabs on [[Special:Preferences]] to screenreader users.",
+	"notifyme-notification-center-filter-item-aria-label": "Aria label for filter item.\n$1 - Filter name"
 }
