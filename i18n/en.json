@@ -79,7 +79,7 @@
 	"notifyme-schema-links-label": "Label of the link",
 	"notifyme-schema-links-url": "URL of the link",
 	"notifyme-schema-links-primary": "Whether the link is primary, boolean",
-	"notifyme-schema-agent": "User that triggered the notification (or performed the action that triggered the notification",
+	"notifyme-schema-agent": "User that triggered the notification (or performed the action that triggered the notification)",
 	"notifyme-schema-agent-is-bot": "Whether the agent is a bot",
 	"notifyme-schema-user-timestamp": "Timestamp of the notification formatted according to the target user's preferences",
 	"notifyme-schema-target-user": "User that the notification is targeted to",
