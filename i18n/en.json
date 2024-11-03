@@ -144,7 +144,7 @@
 	"notifyme-event-group-removed-bot": "Your user rights were changed. You have been removed from {{PLURAL:$1|the group \"$2\"|groups \"$2\"}}",
 	"notifyme-notifications-mega-menu-title": "Notifications",
 	"notifyme-notifications-mega-menu-all-notifications-label": "... see all notifications",
-	"notifyme-mail-template-output-header-wrapper": "Wrapper for the emails. This style of email will be used for all emails sent from the wiki. Edit this to adapt the general styling of the email, if you need to edit the styling of the actual content, see mail content pages below:",
+	"notifyme-mail-template-output-header-wrapper": "Wrapper for the emails. This style of email will be used for all emails sent from the wiki. Edit this to adapt the general styling of the email. If you need to edit the styling of the actual content, see mail content pages below:",
 	"notificationtester": "Notification tester",
 	"notifyme-notification-tester-field-agent": "Agent",
 	"notifyme-notification-tester-field-title": "Page",
