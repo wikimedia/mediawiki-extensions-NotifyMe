@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
@@ -115,11 +116,11 @@
 	"notifyme-link-label-history": "Label for a link that directs users to view the history of notifications.",
 	"notifyme-event-page-edit": "Action indicating a page has been edited.\n$1 - gender\n$2 - page title",
 	"notifyme-event-page-bot": "Action indicating a bot is involved in a page event.\n$1 - page title",
-	"notifyme-event-page-edit-group": "Action indicating editing of a page related to a group.\n$1 - page title\n$2 - amount of edits",
+	"notifyme-event-page-edit-group": "Action indicating editing of a page related to a group.\n* $1 - page title\n* $2 - amount of edits",
 	"notifyme-links-intro-edit": "Introduction text for editing links in notifications.",
-	"notifyme-event-page-move-bot": "Action indicating a bot has moved a page.\n$1 - page title\n$2 - amount of edits",
+	"notifyme-event-page-move-bot": "Action indicating a bot has moved a page.\n* $1 - page title\n* $2 - new title",
 	"notifyme-event-page-delete-bot": "Action indicating a bot has deleted a page.\n$1 - page title",
-	"notifyme-event-page-move": "Action indicating a page has been moved.\n$1 - gender\n$2 - page title from\n$3 - page title to",
+	"notifyme-event-page-move": "Action indicating a page has been moved.\n* $1 - gender\n* $2 - page title from\n* $3 - page title to",
 	"notifyme-event-page-delete": "Action indicating a page has been deleted.\n$1 - gender\n$2 - page title",
 	"notifyme-mail-manage-notifications": "Label for managing notification settings in mail.",
 	"notifyme-mail-manage-notifications-link": "Link to manage notification settings in mail.",
@@ -130,13 +131,13 @@
 	"notifyme-notification-center-filter-label-namespaces-none": "Notification Center filter label (in case of empty filter)",
 	"notifyme-notification-center-filter-label-categories-none": "Notification Center filter label (in case of empty filter)",
 	"notifyme-event-discussion-edit-key-desc": "Description for editing discussions related to events.",
-	"notifyme-event-discussion-edit": "Action indicating an event discussion has been edited.\n$1 - gender\n$2 - page title",
-	"notifyme-event-discussion-edit-bot": "Action indicating a bot has edited an event discussion.\n$1 - page title",
+	"notifyme-event-discussion-edit": "Action indicating an event discussion has been edited.\n* $1 - gender\n* $2 - page title",
+	"notifyme-event-discussion-edit-bot": "Action indicating a bot has edited an event discussion.\n* $1 - page title",
 	"notifyme-links-intro-discussion-edit": "Introduction text for editing discussion links.",
 	"notifyme-event-discussion-edit-group": "Action indicating editing of a group discussion related to events.\n$1 - page title\n$2 - message plural",
 	"notifyme-event-page-linked-key-desc": "Description indicating a page is linked to another event.",
 	"notifyme-event-page-linked": "Action indicating a page is linked to an event.\n$1 - gender\n$2 - page title from\n$3 - page title to",
-	"notifyme-event-page-linked-bot": "Action indicating a bot has linked a page to an event.\n$1 - page title from\n$2 - page title to",
+	"notifyme-event-page-linked-bot": "Action indicating a bot has linked a page to an event.\n* $1 - page title from\n* $2 - page title to",
 	"notifyme-event-page-linked-group": "Action indicating a group page is linked to an event.\n$1 - page title from\n$2 - page title to\n$3 - count",
 	"notifyme-event-user-group-added-key-desc": "Description for an event where a user group has been added.",
 	"notifyme-event-group-assigned": "Action indicating a group has been assigned to an event.\n$1 - gender\n$2 - plural of group\n$3 - group names",
