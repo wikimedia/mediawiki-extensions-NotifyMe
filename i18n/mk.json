@@ -1,15 +1,3 @@
-<<<<<<< HEAD   (ea023e Localisation updates from https://translatewiki.net.)
-||||||| BASE
-{
-	"@metadata": {
-		"authors": [
-			"Bjankuloski06"
-		]
-	},
-	"notifyme-desc": "Известувања",
-	"prefs-notifications": "Известувања"
-}
-=======
 {
 	"@metadata": {
 		"authors": [
@@ -206,4 +194,3 @@
 	"notifyme-notification-center-navigation-hint": "Совет: Можете да ги користите стрелките на тастатурата за да преоѓате од едно на друго јазиче во списокот на јазичиња.",
 	"notifyme-notification-center-filter-item-aria-label": "Филтер $1"
 }
->>>>>>> CHANGE (84667e Localisation updates from https://translatewiki.net.)

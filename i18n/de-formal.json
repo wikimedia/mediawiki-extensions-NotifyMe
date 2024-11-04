@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": [ "[http://www.hallowelt.com Hallo Welt! GmbH]" ]
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
 	},
 	"notifyme-bucket-personal-desc": "Seitenereignisse, die nur für Sie relevant sind (Zuweisungen, Erinnerungen...)",
 	"notifyme-ui-subscription-set-duplicate": "Sie haben diesen Benachrichtigungstyp bereits abonniert",
