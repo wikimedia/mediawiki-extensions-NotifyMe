@@ -92,9 +92,9 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 		$secondaryDataProvider = new SecondaryDataProvider(
 			$this->notificationStore, $this->serializer, $this->forUser, $this->grouping, $params->getLimit()
 		);
-		[ $dataSets, $processedCount ] = $secondaryDataProvider->extend( $dataSets );
+		[ $dataSets, $itemsCount, $processedCount ] = $secondaryDataProvider->extend( $dataSets );
 
-		return new NotificationResultSet( $dataSets, $total, $processedCount );
+		return new NotificationResultSet( $dataSets, $total, $itemsCount, $processedCount );
 	}
 
 	/**

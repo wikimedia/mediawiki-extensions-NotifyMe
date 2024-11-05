@@ -247,7 +247,7 @@ ext.notifyme.ui.panel.NotificationTab.prototype.loadNotifications = function () 
 		this.total = response.total;
 		this.shownPerPage[ this.page ] = this.page === 1 ?
 			response.processed : this.shownPerPage[ this.page - 1 ] + response.processed;
-		this.paginationWidget.updateWidget( response.total );
+		this.paginationWidget.updateWidget( response.items_total );
 
 		_removeLoading();
 
