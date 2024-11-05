@@ -96,14 +96,11 @@ $( () => {
 		$message.html( agent ? agent + ' ' + notification.message.main : notification.message.main );
 
 		// Timestamp
-		// We want to use extra-short timestamp strings; we change the locale
-		// to our echo-defined one and use that instead of the normal moment locale
 		const itemMoment = moment.utc( notification.timestamp );
-		itemMoment.locale( 'en' );
 		itemMoment.local();
 
 		const $timestamp = $( '<div>' ).addClass( 'notification-timestamp' );
-		$timestamp.text( itemMoment.fromNow( true ) + ' ago' );
+		$timestamp.text( itemMoment.fromNow( false ) );
 
 		$notificationItem.append( [
 			$unreadCircleWrapper,
