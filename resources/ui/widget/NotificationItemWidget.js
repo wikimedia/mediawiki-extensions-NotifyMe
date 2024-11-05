@@ -72,8 +72,7 @@ ext.notifyme.ui.widget.NotificationItemWidget.prototype.getTimestampWidget = fun
 
 	const timestampWidget = new OO.ui.LabelWidget( {
 		classes: [ 'notifications-ui-widget-NotificationItemWidget-timestamp' ],
-		// Get the time 'fromNow' without the suffix 'ago' and add that suffix with translated message
-		label: mw.message( 'notifyme-notification-center-timestamp-ago', itemMoment.fromNow( true ) ).text()
+		label: itemMoment.fromNow( false )
 	} );
 
 	return timestampWidget;
