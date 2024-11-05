@@ -24,20 +24,20 @@
 		"NotifyMe": {
 			"Buckets": {
 				"content-low-freq": {
-					"label": "ext-notifyme-bucket-content-low-freq",
-					"description": "ext-notifyme-bucket-content-low-freq-desc"
+					"label": "notifyme-bucket-content-low-freq",
+					"description": "notifyme-bucket-content-low-freq-desc"
 				},
 				"content-high-freq": {
-					"label": "ext-notifyme-bucket-content-high-freq",
-					"description": "ext-notifyme-bucket-content-high-freq-desc"
+					"label": "notifyme-bucket-content-high-freq",
+					"description": "notifyme-bucket-content-high-freq-desc"
 				},
 				"qm": {
-					"label": "ext-notifyme-bucket-qm",
-					"description": "ext-notifyme-bucket-qm-desc"
+					"label": "notifyme-bucket-qm",
+					"description": "notifyme-bucket-qm-desc"
 				},
 				"personal": {
-					"label": "ext-notifyme-bucket-personal",
-					"description": "ext-notifyme-bucket-personal-desc",
+					"label": "notifyme-bucket-personal",
+					"description": "notifyme-bucket-personal-desc",
 					"mandatory": true
 				}
 			},
