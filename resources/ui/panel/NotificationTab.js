@@ -292,6 +292,9 @@ ext.notifyme.ui.panel.NotificationTab.prototype.getFilters = function () {
 
 			if ( filterKey === 'category' && subItemKey !== '' ) {
 				filterObj.operator = 'like';
+
+				// Wire up with backend data provider
+				filterObj.property = 'categories';
 			}
 
 			if ( filterKey === 'namespace' ) {
