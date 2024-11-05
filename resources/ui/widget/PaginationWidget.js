@@ -111,7 +111,7 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.updateLabel = function () {
 		firstItem = ( ( this.page - 1 ) * this.itemPerPage ) + 1;
 
 	if ( lastItem > this.total ) {
-		lastItem = this.total;
+		lastItem = firstItem + this.total;
 	}
 
 	label = firstItem + ' - ' + lastItem;
