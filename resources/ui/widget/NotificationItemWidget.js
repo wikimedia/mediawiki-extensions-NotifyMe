@@ -117,9 +117,8 @@ ext.notifyme.ui.widget.NotificationItemWidget.prototype.composeMessage = functio
 
 	}
 
-	// TODO: Hide icons for now, currently there is only "edit" icon for all notifications
-	// var $iconWrapper = this.getIconWrapper( icon );
-	// $message.prepend( $iconWrapper );
+	var $iconWrapper = this.getIconWrapper( icon );
+	$message.prepend( $iconWrapper );
 
 	return $message;
 };
