@@ -79,6 +79,7 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 		$db = $this->lb->getConnection( DB_REPLICA );
 		$primaryDataProvider = new PrimaryDataProvider( $this->queryStore, $db, $this->getSchema(), $this->forUser );
 		$dataSets = $primaryDataProvider->makeData( $params );
+		$total = count( $dataSets );
 
 		$sorter = $this->makeSorter( $params );
 		$dataSets = $sorter->sort(
@@ -92,7 +93,6 @@ class Reader extends \MWStake\MediaWiki\Component\DataStore\Reader {
 			$this->notificationStore, $this->serializer, $this->forUser, $this->grouping, $params->getLimit()
 		);
 		[ $dataSets, $processedCount ] = $secondaryDataProvider->extend( $dataSets );
-		$total = count( $dataSets );
 
 		return new NotificationResultSet( $dataSets, $total, $processedCount );
 	}
