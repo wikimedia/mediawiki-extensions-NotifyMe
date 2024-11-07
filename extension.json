@@ -16,6 +16,9 @@
 	"MessagesDirs": {
 		"NotifyMe": "i18n"
 	},
+	"ExtensionMessagesFiles": {
+		"NotifyMeAliases": "languages/SpecialPages.alias.php"
+	},
 	"callback": "\\MediaWiki\\Extension\\NotifyMe\\Extension::onRegistration",
 	"attributes": {
 		"NotifyMe": {
