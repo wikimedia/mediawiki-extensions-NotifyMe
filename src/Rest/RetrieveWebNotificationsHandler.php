@@ -77,7 +77,8 @@ class RetrieveWebNotificationsHandler extends QueryStore {
 		return $this->getResponseFactory()->createJson( [
 			'results' => $result->getRecords(),
 			'total' => $result->getTotal(),
-			'processed' => $result->getProcessedCount()
+			'processed' => $result->getProcessedCount(),
+			'items_total' => $result->getItemsCount()
 		] );
 	}
 
