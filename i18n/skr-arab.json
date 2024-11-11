@@ -40,5 +40,20 @@
 	"notifyme-notification-center-help-menu-aria-label": "ترتیباں",
 	"notifyme-notification-center-help-menu-preferences-label": "ترجیحاں",
 	"notifyme-notification-center-pagination-aria-next": "اڳلا",
-	"notifyme-notification-center-pagination-aria-previous": "پچھلا"
+	"notifyme-notification-center-pagination-aria-previous": "پچھلا",
+	"notifyme-link-label-view-page": "ورقہ ݙیکھو",
+	"notifyme-ui-dialog-set-editor-bucket": "اطلاع نامے دی قسم",
+	"notifyme-ui-subscription-manager-type-manual": "انفرادی",
+	"notifyme-ui-email-frequency-weekly": "ہفتہ وار",
+	"notifyme-ui-subscriptionset-editor-namespace-label": "ناں جاہ",
+	"notifyme-ui-subscriptionset-namespace-label": "ناں جاہ",
+	"notifyme-mail-template-edit-help-header-variable": "متغیر",
+	"notifyme-notification-center-filter-label-namespaces": "ناں جاہیں",
+	"notifyme-notification-center-filter-label-buckets": "ٻالٹیاں",
+	"notifyme-notification-center-filter-label-categories-none": "کوئی ونکی کائنی",
+	"notifyme-notifications-mega-menu-title": "اطلاع نامے",
+	"notifyme-notification-tester-buckets": "ٻالٹیاں",
+	"notifyme-ui-delivery-web": "صرف ویب",
+	"notifyme-notification-center-help-menu-mark-all-read-label": "نشان لاؤ جو سارا پڑھ گھدے",
+	"notifyme-notification-center-timestamp-ago": "$1 پہلے"
 }
