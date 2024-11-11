@@ -7,7 +7,15 @@ ext.notifyme.ui.widget.PaginationWidget = function ( cfg ) {
 	this.itemPerPage = cfg.itemPerPage || 50;
 	this.page = cfg.page || 1;
 
-	this.total = -1;
+	// Items which were processed during request for notifications,
+	// with given offset
+	// If we have more items than "itemPerPage" - then there are next pages
+	// If "firstItem" in label is more then "itemPerPage" - there are previous pages
+	// No need to use total, because it only leads to confusion and bugs
+	// Because in filter we display amount of actual notifications,
+	// and in pagination we display amount of items on the page
+	// Item - either single notification and group of duplicate notifications
+	this.processedItems = 0;
 
 	// Pagination elements
 	this.labelWidget = new OO.ui.LabelWidget( {
@@ -84,15 +92,15 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.prevPage = function () {
 };
 
 ext.notifyme.ui.widget.PaginationWidget.prototype.hasPrevPage = function () {
-	return this.total > 0 && this.page > 1;
+	return this.processedItems > 0 && this.page > 1;
 };
 
 ext.notifyme.ui.widget.PaginationWidget.prototype.hasNextPage = function () {
-	return this.total > ( this.page * this.itemPerPage );
+	return this.processedItems > this.itemPerPage;
 };
 
-ext.notifyme.ui.widget.PaginationWidget.prototype.updateWidget = function ( total ) {
-	this.total = total;
+ext.notifyme.ui.widget.PaginationWidget.prototype.updateWidget = function ( processedItems ) {
+	this.processedItems = processedItems;
 
 	const hasPrevPage = this.hasPrevPage(),
 	 hasNextPage = this.hasNextPage();
@@ -107,11 +115,11 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.updateWidget = function ( tota
 
 ext.notifyme.ui.widget.PaginationWidget.prototype.updateLabel = function () {
 	let label,
-		lastItem = this.page * this.itemPerPage,
-		firstItem = ( ( this.page - 1 ) * this.itemPerPage ) + 1;
+		firstItem = ( ( this.page - 1 ) * this.itemPerPage ) + 1,
+		lastItem = ( firstItem + this.processedItems ) - 1;
 
-	if ( lastItem > this.total ) {
-		lastItem = firstItem + this.total;
+	if ( lastItem > this.page * this.itemPerPage ) {
+		lastItem = ( firstItem + this.itemPerPage ) - 1;
 	}
 
 	label = firstItem + ' - ' + lastItem;
