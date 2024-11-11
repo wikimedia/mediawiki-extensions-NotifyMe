@@ -83,6 +83,7 @@ class SerializerTest extends NotificationTestBase {
 				'user_page' => null
 			],
 			'agent_is_bot' => false,
+			'icon' => '',
 			'user_timestamp' => '20220901000000',
 			'timestamp' => '2022-09-01T00:00:00+00:00',
 			'status' => 'completed',
@@ -109,6 +110,8 @@ class SerializerTest extends NotificationTestBase {
 		$this->assertSame( [
 			'entity_type' => 'group',
 			'message' => 'dummy',
+			'icon' => '',
+			'timestamp' => '2022-09-01T00:00:00+00:00',
 			'count' => 1,
 			'target_user' => [
 				'display_name' => 'DemoUser',
@@ -128,6 +131,7 @@ class SerializerTest extends NotificationTestBase {
 						'user_page' => null
 					],
 					'agent_is_bot' => false,
+					'icon' => '',
 					'user_timestamp' => '20220901000000',
 					'timestamp' => '2022-09-01T00:00:00+00:00',
 					'status' => 'completed',
