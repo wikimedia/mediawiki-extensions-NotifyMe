@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests\SubscriberProvider;
 
+use MediaWiki\Block\Block;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\EventProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionSet\CategorySet;
@@ -18,6 +19,7 @@ use PHPUnit\Framework\TestCase;
 use TitleFactory;
 use WatchedItemStoreInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
+use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class ManualSubscriberProviderTest extends TestCase {
@@ -178,15 +180,16 @@ class ManualSubscriberProviderTest extends TestCase {
 		$mockUserFactory->method( 'newFromId' )->willReturnCallback( function ( $id ) {
 			$userMock = $this->createMock( \User::class );
 			$userMock->method( 'getId' )->willReturn( $id );
+			$blockMock = $this->createMock( Block::class );
 			if ( $id === 3 ) {
-				$userMock->method( 'getBlock' )->willReturn( new \Block() );
+				$userMock->method( 'getBlock' )->willReturn( $blockMock );
 			} else {
 				$userMock->method( 'getBlock' )->willReturn( null );
 			}
 			return $userMock;
 		} );
 
-		$mockDatabase = $this->createMock( \IDatabase::class );
+		$mockDatabase = $this->createMock( IDatabase::class );
 		$mockDatabase->method( 'select' )->willReturn(
 			array_map( static function ( $userId ) {
 				return (object)[
@@ -205,8 +208,10 @@ class ManualSubscriberProviderTest extends TestCase {
 			} );
 
 		$mockTitleFactory = $this->createMock( TitleFactory::class );
-		$mockTitleFactory->method( 'makeTitleSafe' )->willReturnCallback( static function ( $ns, $title ) {
-			return \Title::makeTitle( $ns, $title );
+		$mockTitleFactory->method( 'newFromText' )->willReturnCallback( function ( $text ) {
+			$categoryTitleMock = $this->createMock( \Title::class );
+			$categoryTitleMock->method( 'getPrefixedDBkey' )->willReturn( "Category:$text" );
+			return $categoryTitleMock;
 		} );
 
 		$mockWatchedItemStore = $this->createMock( WatchedItemStoreInterface::class );
