@@ -55,5 +55,6 @@
 	"notifyme-notification-tester-buckets": "ٻالٹیاں",
 	"notifyme-ui-delivery-web": "صرف ویب",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "نشان لاؤ جو سارا پڑھ گھدے",
-	"notifyme-notification-center-timestamp-ago": "$1 پہلے"
+	"notifyme-notification-center-timestamp-ago": "$1 پہلے",
+	"notifyme-notification-tester-invalid-page": "غلط ورقہ"
 }
