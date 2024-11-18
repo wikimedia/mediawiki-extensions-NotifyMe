@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Amire80",
+			"McDutchie",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
@@ -176,7 +177,7 @@
 	"notifyme-event-page-edit-revert": "Action indicating a page edit has been reverted.\n$1 - gender\n$2 - page title",
 	"notifyme-event-page-edit-revert-bot": "Action indicating a bot has reverted an edited page.\n$1 - page title",
 	"notifyme-notification-center-tab-label-unread": "Label for the unread notifications tab in the notification center.",
-	"notifyme-notification-center-tab-label-read": "Label for the read notifications tab in the notification center.",
+	"notifyme-notification-center-tab-label-read": "Label for the read notifications tab in the notification center.\n\nNote: this is the perfect participle, as in \"has been read\".",
 	"notifyme-notification-center-tab-label-all": "Label for the all notifications tab in the notification center.",
 	"notifyme-notifications-group-mark-group-as-unread-label": "Label for marking a notification group as unread.",
 	"notifyme-notifications-group-mark-group-as-read-label": "Label for marking a notification group as read.",

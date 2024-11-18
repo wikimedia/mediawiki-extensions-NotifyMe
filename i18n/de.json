@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Brettchenweber",
+			"McDutchie",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
@@ -166,7 +167,7 @@
 	"notifyme-ui-delete": "Löschen",
 	"notifyme-ui-delivery-web-email": "Web und E-Mail",
 	"notifyme-ui-delivery-web": "Nur Web",
-	"notifyme-notification-tester-event-info": "Füge einen der \"Ereignisschlüssel\"aus der folgenden Tabelle ein",
+	"notifyme-notification-tester-event-info": "Füge einen der \"Ereignisschlüssel\" aus der folgenden Tabelle ein",
 	"notifyme-notifications-mega-menu-no-notifications": "Keine neuen Benachrichtigungen!",
 	"notifyme-notification-center-filter-title": "Benachrichtigungen",
 	"notifyme-navbar-button-title": "Benachrichtigungen",
