@@ -1,8 +1,32 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"SleaY"
 		]
 	},
-	"prefs-notifications": "Notifications"
+	"prefs-notifications": "Notifications",
+	"notifyme-link-label-diff": "Voir la différence",
+	"notifyme-event-page-create-key-desc": "Page créée",
+	"notifyme-event-page-edit-key-desc": "Page modifiée",
+	"notifyme-event-page-move-key-desc": "Page renommée",
+	"notifyme-event-page-delete-key-desc": "Page supprimée",
+	"notifyme-channel-email": "Courriel",
+	"notifyme-ui-email-frequency-daily": "Quotidien",
+	"notifyme-ui-email-frequency-weekly": "Hebdomadaire",
+	"notifyme-ui-dialog-set-editor-cancel": "Annuler",
+	"notifyme-ui-dialog-set-editor-create": "Terminé",
+	"notifyme-sample-data-link-1": "Voir la différence",
+	"notifyme-sample-data-link-2": "Afficher l’historique de la page",
+	"notifyme-mail-template-edit-help-category-colors": "Couleurs",
+	"notifyme-mail-template-edit-help-header-variable": "Variable",
+	"notifyme-mail-template-edit-help-header-description": "Description",
+	"notifyme-mail-template-edit-help-header-example": "Exemple",
+	"notifyme-mail-greeting": "Bonjour",
+	"notifyme-notification-center-filter-label-categories": "Catégories",
+	"notifyme-notification-center-filter-label-categories-none": "Aucune catégorie",
+	"notifyme-event-page-linked-key-desc": "Page liée",
+	"notifyme-notification-center-help-menu-aria-label": "Paramètres",
+	"notifyme-notification-center-help-menu-mark-all-read-label": "Marquer tout comme lu",
+	"notifyme-notification-center-help-menu-preferences-label": "Préférences"
 }
