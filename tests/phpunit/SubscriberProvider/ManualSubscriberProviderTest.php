@@ -205,8 +205,10 @@ class ManualSubscriberProviderTest extends TestCase {
 			} );
 
 		$mockTitleFactory = $this->createMock( TitleFactory::class );
-		$mockTitleFactory->method( 'makeTitleSafe' )->willReturnCallback( static function ( $ns, $title ) {
-			return \Title::makeTitle( $ns, $title );
+		$mockTitleFactory->method( 'newFromText' )->willReturnCallback( function ( $text ) {
+			$categoryTitleMock = $this->createMock( \Title::class );
+			$categoryTitleMock->method( 'getPrefixedDBkey' )->willReturn( "Category:$text" );
+			return $categoryTitleMock;
 		} );
 
 		$mockWatchedItemStore = $this->createMock( WatchedItemStoreInterface::class );
