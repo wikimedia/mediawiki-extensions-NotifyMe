@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Hook;
 
 use Exception;
 use ManualLogEntry;
+use MediaWiki\Deferred\LinksUpdate\LinksTable;
 use MediaWiki\Deferred\LinksUpdate\LinksUpdate;
 use MediaWiki\Extension\NotifyMe\EventFactory;
 use MediaWiki\Hook\LinksUpdateCompleteHook;
@@ -14,6 +15,7 @@ use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\Hook\PageSaveCompleteHook;
+use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\Hook\UserGroupsChangedHook;
 use MediaWiki\User\UserFactory;
@@ -196,8 +198,10 @@ class TriggerEvents implements
 			return;
 		}
 		$agent = $this->getAgent( $revRecord->getUser() );
-		foreach ( $linksUpdate->getAddedLinks() as $title ) {
-			if ( !$title->isContentPage() || $title->isRedirect() ) {
+		$addedLinks = $linksUpdate->getPageReferenceArray( 'pagelinks', LinksTable::INSERTED );
+		foreach ( $addedLinks as $addedLink ) {
+			$title = Title::castFromPageReference( $addedLink );
+			if ( !$title || !$title->isContentPage() || $title->isRedirect() ) {
 				continue;
 			}
 			$firstRevision = $this->revisionLookup->getFirstRevision( $title );
