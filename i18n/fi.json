@@ -13,5 +13,6 @@
 	"notifyme-event-page-edit-key-desc": "Sivua muokattu",
 	"notifyme-event-page-move-key-desc": "Sivu siirretty",
 	"notifyme-event-page-delete-key-desc": "Sivu poistettu",
-	"notifyme-ui-dialog-set-editor-cancel": "Peruuta"
+	"notifyme-ui-dialog-set-editor-cancel": "Peruuta",
+	"notifications-subscriptions": "Hallitse ilmoitustilauksia"
 }
