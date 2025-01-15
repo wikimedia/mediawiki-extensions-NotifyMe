@@ -134,7 +134,7 @@ class EmailChannel implements IExternalChannel {
 	 * @return bool
 	 */
 	public function shouldSkip( INotificationEvent $event, UserIdentity $user ): bool {
-		return !$this->isEnabled( $user );
+		return false;
 	}
 
 	/**
@@ -149,7 +149,6 @@ class EmailChannel implements IExternalChannel {
 	 */
 	public function getDefaultConfiguration(): array {
 		return [
-			'enabled' => true,
 			'frequency' => 'daily',
 		];
 	}
@@ -201,17 +200,6 @@ class EmailChannel implements IExternalChannel {
 	public function getFrequencyPreference( UserIdentity $user ) {
 		$channelConf = $this->subscriptionConfigurator->getChannelConfiguration( $user, $this );
 		return $channelConf['frequency'] ?? 'instant';
-	}
-
-	/**
-	 * Is channel enabled for user
-	 * @param UserIdentity $user
-	 *
-	 * @return bool
-	 */
-	private function isEnabled( UserIdentity $user ): bool {
-		$channelConf = $this->subscriptionConfigurator->getChannelConfiguration( $user, $this );
-		return $channelConf['enabled'] ?? false;
 	}
 
 	/**

@@ -355,16 +355,12 @@
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "runDatabaseUpdates",
-		"MWStakeRunJobsTriggerRegisterHandlers": [
-			"\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\RegisterCheckEventProcesses::callback",
-			"\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\RegisterDigestSenders::callback"
-		],
 		"MWStakeCommonUIRegisterSkinSlotComponents": "commonUserInterface",
 		"GetPreferences": "addSubscriptionCenter",
 		"UserGetDefaultOptions": "addSubscriptionCenter",
 		"BeforePageDisplay": "addBootstrap",
 		"ContentHandlerDefaultModelFor": "setMailContentModel",
-		"MediaWikiServices": "setMailContentModel",
+		"MediaWikiServices": [ "setMailContentModel", "registerCrons" ],
 		"CodeEditorGetPageLanguage": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\SetMailContentModel::onCodeEditorGetPageLanguage",
 		"UserMailerTransformMessage": "handleNonNotificationMails",
 		"PageSaveComplete": "triggerEvents",
@@ -406,6 +402,9 @@
 		},
 		"commonUserInterface": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\CommonUserInterface"
+		},
+		"registerCrons": {
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\RegisterCrons"
 		}
 	},
 	"RestRoutes": [
