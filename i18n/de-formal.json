@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"[http://www.hallowelt.com Hallo Welt! GmbH]",
-			"McDutchie"
+			"McDutchie",
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
 	},
 	"notifyme-bucket-personal-desc": "Seitenereignisse, die nur für Sie relevant sind (Zuweisungen, Erinnerungen...)",
