@@ -1,14 +1,13 @@
 <?php
 
-namespace MediaWiki\Extension\NotifyMe\MediaWiki\RunJobsTriggerHandler;
+namespace MediaWiki\Extension\NotifyMe\Process;
 
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
+use MWStake\MediaWiki\Component\ProcessManager\IProcessStep;
 use MWStake\MediaWiki\Component\ProcessManager\ProcessManager;
-use MWStake\MediaWiki\Component\RunJobsTrigger\IHandler;
 use Psr\Log\LoggerInterface;
-use Status;
 
-class UpdateEventProcessStatus implements IHandler {
+class UpdateEventProcessStatus implements IProcessStep {
 	/** @var NotificationStore */
 	private $notificationStore;
 	/** @var ProcessManager */
@@ -30,23 +29,10 @@ class UpdateEventProcessStatus implements IHandler {
 	}
 
 	/**
-	 * @return TwicePerHour
+	 * @param array $data
+	 * @return array
 	 */
-	public function getInterval() {
-		return new TwicePerHour();
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getKey() {
-		return 'ext-notifyme-update-event-process-status';
-	}
-
-	/**
-	 * @return Status
-	 */
-	public function run() {
+	public function execute( $data = [] ): array {
 		$pending = $this->notificationStore->getPendingEventProcesses();
 
 		foreach ( $pending as $eventProcess ) {
@@ -65,6 +51,6 @@ class UpdateEventProcessStatus implements IHandler {
 			}
 		}
 
-		return Status::newGood();
+		return [];
 	}
 }

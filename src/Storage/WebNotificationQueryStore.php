@@ -273,7 +273,7 @@ class WebNotificationQueryStore {
 		if ( !$po ) {
 			return '';
 		}
-		$categories = array_keys( $po->getCategories() );
+		$categories = array_keys( $po->getCategoryNames() );
 
 		return implode( '|', $categories );
 	}
