@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": [ "[http://www.hallowelt.com Hallo Welt! GmbH]" ]
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
 	},
 	"notifyme-desc": "Notifications",
 	"prefs-notifications": "Notifications",
@@ -12,8 +14,8 @@
 	"notifyme-event-page-move-key-desc": "Page moved",
 	"notifyme-event-page-delete-key-desc": "Page deleted",
 	"notifications-subscriptions": "Manage notifications subscriptions",
-	"notifyme-digest-header-daily": "here is a summary of today's activities on $1",
-	"notifyme-digest-header-weekly": "here is a summary of this week's activities on $1",
+	"notifyme-digest-header-daily": "here is a summary of activities on $1 for the last 24 hours",
+	"notifyme-digest-header-weekly": "here is a summary of activities on $1 for the last week",
 	"notifyme-digest-subject-daily": "Daily summary of notifications",
 	"notifyme-digest-subject-weekly": "Weekly summary of notifications",
 	"notifyme-bucket-content-low-freq": "Content low-frequency",
