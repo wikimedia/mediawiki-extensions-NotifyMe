@@ -6,12 +6,12 @@ namespace MediaWiki\Extension\NotifyMe\Event;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\PageIdentity;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use Message;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
-use Title;
 use User;
 
 class PageLinkedEvent extends TitleEvent implements GroupableEvent {

@@ -10,6 +10,7 @@ use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionS
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionSet\WatchlistSet;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualSubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
@@ -209,7 +210,7 @@ class ManualSubscriberProviderTest extends TestCase {
 
 		$mockTitleFactory = $this->createMock( TitleFactory::class );
 		$mockTitleFactory->method( 'newFromText' )->willReturnCallback( function ( $text ) {
-			$categoryTitleMock = $this->createMock( \Title::class );
+			$categoryTitleMock = $this->createMock( Title::class );
 			$categoryTitleMock->method( 'getPrefixedDBkey' )->willReturn( "Category:$text" );
 			return $categoryTitleMock;
 		} );
@@ -249,7 +250,7 @@ class ManualSubscriberProviderTest extends TestCase {
 		$event = $this->createMock( $class );
 		$event->method( 'getKey' )->willReturn( $key );
 		if ( $class === ITitleEvent::class ) {
-			$titleMock = $this->createMock( \Title::class );
+			$titleMock = $this->createMock( Title::class );
 			$titleMock->method( 'getNamespace' )->willReturn( $ns );
 			$titleMock->method( 'getText' )->willReturn( $title );
 			$titleMock->method( 'getParentCategories' )->willReturn( [

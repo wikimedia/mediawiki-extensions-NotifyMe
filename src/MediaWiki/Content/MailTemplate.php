@@ -8,13 +8,13 @@ use Html;
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
+use MediaWiki\Title\Title;
 use Message;
 use MWException;
 use ParserOptions;
 use ParserOutput;
 use RequestContext;
 use TextContent;
-use Title;
 
 class MailTemplate extends TextContent {
 	/**
