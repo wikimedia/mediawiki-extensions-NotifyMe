@@ -3,13 +3,13 @@
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use DateTime;
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Title;
 
 class DummyNotificationStore extends TestCase {
 	/** @var int */

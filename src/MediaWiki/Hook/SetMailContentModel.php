@@ -6,7 +6,7 @@ use MediaWiki\Hook\MediaWikiServicesHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\Hook\ContentHandlerDefaultModelForHook;
 use MediaWiki\Revision\SlotRoleRegistry;
-use Title;
+use MediaWiki\Title\Title;
 
 class SetMailContentModel implements ContentHandlerDefaultModelForHook, MediaWikiServicesHook {
 	/**

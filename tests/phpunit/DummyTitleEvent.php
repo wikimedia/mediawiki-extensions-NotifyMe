@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
-use Title;
 
 class DummyTitleEvent extends DummyEvent implements ITitleEvent {
 	/** @var Title */

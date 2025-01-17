@@ -10,6 +10,7 @@ use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Languages\LanguageFactory;
+use MediaWiki\Title\Title;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserOptionsLookup;
 use MediaWiki\User\UserOptionsManager;
@@ -206,7 +207,7 @@ class SerializerTest extends NotificationTestBase {
 	protected function getSerializer(): NotificationSerializer {
 		$titleFactoryMock = $this->createMock( \TitleFactory::class );
 		$titleFactoryMock->method( 'newFromRow' )->willReturnCallback( function ( $row ) {
-			$title = $this->createMock( \Title::class );
+			$title = $this->createMock( Title::class );
 			$title->method( 'getPrefixedText' )->willReturn( $row->page_title );
 			$title->method( 'getPrefixedDBkey' )->willReturn( $row->page_title );
 			$title->method( 'getNamespace' )->willReturn( $row->page_namespace );
@@ -217,7 +218,7 @@ class SerializerTest extends NotificationTestBase {
 		$userFactoryMock->method( 'newFromId' )->willReturnCallback( function ( $id ) {
 			$user = $this->createMock( \User::class );
 			$user->method( 'getId' )->willReturn( $id );
-			$user->method( 'getUserPage' )->willReturn( $this->createMock( \Title::class ) );
+			$user->method( 'getUserPage' )->willReturn( $this->createMock( Title::class ) );
 			$user->method( 'getName' )->willReturn( 'DemoUser' );
 			$user->method( 'getRealName' )->willReturn( '' );
 			$user->mId = $id;
@@ -268,7 +269,7 @@ class SerializerTest extends NotificationTestBase {
 	protected function getTargetUserMock() {
 		$user = $this->createMock( User::class );
 		$user->method( 'getName' )->willReturn( 'DemoUser' );
-		$user->method( 'getUserPage' )->willReturn( $this->createMock( \Title::class ) );
+		$user->method( 'getUserPage' )->willReturn( $this->createMock( Title::class ) );
 		return $user;
 	}
 }
