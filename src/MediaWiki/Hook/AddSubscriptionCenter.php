@@ -8,7 +8,7 @@ use MediaWiki\Extension\NotifyMe\SubscriberManager;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
-use User;
+use MediaWiki\User\User;
 
 class AddSubscriptionCenter implements GetPreferencesHook, UserGetDefaultOptionsHook {
 	/** @var SubscriptionConfigurator */

@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\ForeignMail;
 
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Hook\UserMailerTransformMessageHook;
-use User;
+use MediaWiki\User\User;
 
 /**
  * TODO: This class lost a lot of its meaning since we dont use the "wrapper" anymore

@@ -9,10 +9,10 @@ use Exception;
 use MediaWiki\Extension\NotifyMe\Grouping\Grouper;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
+use MediaWiki\User\User;
 use Message;
 use MWStake\MediaWiki\Component\Events\Notification;
 use SpecialPage;
-use User;
 
 class DigestCreator {
 	public const DIGEST_TYPE_DAILY = 'daily';

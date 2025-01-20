@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use DateTime;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
@@ -74,11 +75,11 @@ class DummyNotificationStore extends TestCase {
 	}
 
 	/**
-	 * @param \User $user
+	 * @param User $user
 	 *
 	 * @return $this
 	 */
-	public function forUser( \User $user ) {
+	public function forUser( User $user ) {
 		$mainSet = !empty( $this->tempSubset ) ? $this->tempSubset : $this->notifications;
 		foreach ( $mainSet as $id => $notification ) {
 			if ( $notification->getTargetuser()->getId() === $user->getId() ) {
@@ -244,10 +245,10 @@ class DummyNotificationStore extends TestCase {
 	/**
 	 * @param string|int $userId
 	 *
-	 * @return MockObject|\User
+	 * @return MockObject|User
 	 */
 	private function getUserMock( $userId ) {
-		$mock = $this->createMock( \User::class );
+		$mock = $this->createMock( User::class );
 		$mock->method( 'getId' )->willReturn( $userId );
 		$mock->mId = $userId;
 		$mock->method( 'getName' )->willReturn( 'DemoUser' );

@@ -7,9 +7,9 @@ use MediaWiki\Rest\HttpException;
 use MediaWiki\Rest\Response;
 use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
 use RequestContext;
-use User;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ChangeWebNotificationStatus extends SimpleHandler {

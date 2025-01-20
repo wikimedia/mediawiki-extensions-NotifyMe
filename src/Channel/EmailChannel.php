@@ -11,6 +11,7 @@ use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\MainConfigNames;
+use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use Message;
 use MWException;
@@ -20,7 +21,6 @@ use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
 use MWStake\MediaWiki\Component\Events\PriorityEvent;
 use Psr\Log\LoggerInterface;
-use User;
 use UserMailer;
 
 class EmailChannel implements IExternalChannel {

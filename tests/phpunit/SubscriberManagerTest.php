@@ -4,11 +4,11 @@ namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
+use MediaWiki\User\User;
 use MediaWiki\User\UserOptionsManager;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use PHPUnit\Framework\TestCase;
-use User;
 
 /**
  * @covers \MediaWiki\Extension\NotifyMe\SubscriberManager

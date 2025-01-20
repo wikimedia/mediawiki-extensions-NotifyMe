@@ -6,6 +6,7 @@ namespace MediaWiki\Extension\NotifyMe\Event;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\PageIdentity;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use Message;
@@ -13,7 +14,6 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\PriorityEvent;
 use MWStake\MediaWiki\Component\Events\TitleEvent;
-use User;
 
 class DiscussionPageEditEvent extends TitleEvent implements GroupableEvent, PriorityEvent {
 

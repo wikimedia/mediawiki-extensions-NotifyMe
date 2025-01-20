@@ -8,8 +8,8 @@ use LoggedUpdateMaintenance;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\User\User;
 use MWException;
-use User;
 
 require_once __DIR__ . '/../../../../../maintenance/Maintenance.php';
 
