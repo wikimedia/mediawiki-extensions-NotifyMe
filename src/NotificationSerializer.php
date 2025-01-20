@@ -11,6 +11,7 @@ use Language;
 use MediaWiki\Extension\NotifyMe\Channel\WebChannel;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Languages\LanguageFactory;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserOptionsLookup;
@@ -22,7 +23,6 @@ use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
 use stdClass;
 use Throwable;
-use User;
 
 final class NotificationSerializer {
 	/** @var UserFactory */

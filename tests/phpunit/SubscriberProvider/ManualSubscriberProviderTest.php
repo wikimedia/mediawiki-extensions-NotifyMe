@@ -11,6 +11,7 @@ use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionS
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualSubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
@@ -179,7 +180,7 @@ class ManualSubscriberProviderTest extends TestCase {
 		$eventProviderMock->method( 'getRegisteredEvents' )->willReturn( $eventConfiguration );
 		$mockUserFactory = $this->createMock( UserFactory::class );
 		$mockUserFactory->method( 'newFromId' )->willReturnCallback( function ( $id ) {
-			$userMock = $this->createMock( \User::class );
+			$userMock = $this->createMock( User::class );
 			$userMock->method( 'getId' )->willReturn( $id );
 			$blockMock = $this->createMock( Block::class );
 			if ( $id === 3 ) {

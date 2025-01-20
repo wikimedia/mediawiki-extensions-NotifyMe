@@ -9,6 +9,7 @@ use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\ISubscriptionSet;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use Message;
@@ -16,7 +17,6 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
-use User;
 use Wikimedia\ObjectFactory\ObjectFactory;
 use Wikimedia\Rdbms\LoadBalancer;
 

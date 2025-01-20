@@ -8,11 +8,11 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
 use ParserFactory;
 use TemplateParser;
 use TitleFactory;
-use User;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 class MailContentProvider {

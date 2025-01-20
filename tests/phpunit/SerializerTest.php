@@ -11,12 +11,12 @@ use MediaWiki\Extension\NotifyMe\SubscriberManager;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Languages\LanguageFactory;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserOptionsLookup;
 use MediaWiki\User\UserOptionsManager;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\Notification;
-use User;
 
 /**
  * @covers \MediaWiki\Extension\NotifyMe\NotificationSerializer
@@ -216,7 +216,7 @@ class SerializerTest extends NotificationTestBase {
 		} );
 		$userFactoryMock = $this->createMock( UserFactory::class );
 		$userFactoryMock->method( 'newFromId' )->willReturnCallback( function ( $id ) {
-			$user = $this->createMock( \User::class );
+			$user = $this->createMock( User::class );
 			$user->method( 'getId' )->willReturn( $id );
 			$user->method( 'getUserPage' )->willReturn( $this->createMock( Title::class ) );
 			$user->method( 'getName' )->willReturn( 'DemoUser' );

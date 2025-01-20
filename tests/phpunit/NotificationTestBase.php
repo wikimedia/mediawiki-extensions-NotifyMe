@@ -3,11 +3,11 @@
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
+use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use User;
 
 class NotificationTestBase extends TestCase {
 	/**
