@@ -11,6 +11,7 @@ use MediaWiki\Extension\NotifyMe\SubscriberManager;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Languages\LanguageFactory;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserOptionsLookup;
@@ -205,7 +206,7 @@ class SerializerTest extends NotificationTestBase {
 	 * @return NotificationSerializer
 	 */
 	protected function getSerializer(): NotificationSerializer {
-		$titleFactoryMock = $this->createMock( \TitleFactory::class );
+		$titleFactoryMock = $this->createMock( TitleFactory::class );
 		$titleFactoryMock->method( 'newFromRow' )->willReturnCallback( function ( $row ) {
 			$title = $this->createMock( Title::class );
 			$title->method( 'getPrefixedText' )->willReturn( $row->page_title );

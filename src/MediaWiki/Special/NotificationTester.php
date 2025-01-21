@@ -6,11 +6,11 @@ use Exception;
 use Html;
 use MediaWiki\Extension\NotifyMe\NotificationTester as Tester;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserFactory;
 use MWStake\MediaWiki\Component\Events\BotAgent;
 use OOUI\HtmlSnippet;
 use OOUI\MessageWidget;
-use TitleFactory;
 
 class NotificationTester extends \FormSpecialPage {
 

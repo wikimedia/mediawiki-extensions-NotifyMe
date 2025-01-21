@@ -14,12 +14,12 @@ use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\Hook\PageSaveCompleteHook;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\Hook\UserGroupsChangedHook;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\BotAgent;
 use MWStake\MediaWiki\Component\Events\Notifier;
-use TitleFactory;
 
 class TriggerEvents implements
 	PageSaveCompleteHook,

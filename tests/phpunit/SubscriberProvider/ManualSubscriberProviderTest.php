@@ -11,6 +11,7 @@ use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionS
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualSubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
@@ -18,7 +19,6 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use PHPUnit\Framework\TestCase;
-use TitleFactory;
 use WatchedItemStoreInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
 use Wikimedia\Rdbms\IDatabase;
