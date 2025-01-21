@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\Rest;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
 use MediaWiki\Rest\HttpException;
 use MediaWiki\Rest\Response;
@@ -9,7 +10,6 @@ use MediaWiki\Rest\SimpleHandler;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
-use RequestContext;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ChangeWebNotificationStatus extends SimpleHandler {

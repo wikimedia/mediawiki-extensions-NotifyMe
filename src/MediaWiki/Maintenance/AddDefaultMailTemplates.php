@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Maintenance;
 use CommentStoreComment;
 use Exception;
 use LoggedUpdateMaintenance;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
@@ -122,7 +123,7 @@ class AddDefaultMailTemplates extends LoggedUpdateMaintenance {
 				'userpage' => '#'
 			],
 			'links_intro' => $this->msg( 'notifyme-sample-data-links-intro' ),
-			'timestamp' => \RequestContext::getMain()->getLanguage()->timeanddate( 20220101101010 ),
+			'timestamp' => RequestContext::getMain()->getLanguage()->timeanddate( 20220101101010 ),
 			'links' => [
 				[
 					'primary' => true, 'url' => '#', 'label' => $this->msg( 'notifyme-sample-data-link-1' ),
