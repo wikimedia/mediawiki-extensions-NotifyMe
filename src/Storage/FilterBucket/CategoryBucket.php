@@ -3,10 +3,10 @@
 namespace MediaWiki\Extension\NotifyMe\Storage\FilterBucket;
 
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
+use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserIdentity;
 use Message;
 use RawMessage;
-use TitleFactory;
 
 class CategoryBucket extends FilterBucket {
 
