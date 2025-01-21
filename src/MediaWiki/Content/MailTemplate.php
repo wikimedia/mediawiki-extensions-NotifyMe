@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Content;
 use Article;
 use Exception;
 use Html;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
@@ -13,7 +14,6 @@ use Message;
 use MWException;
 use ParserOptions;
 use ParserOutput;
-use RequestContext;
 use TextContent;
 
 class MailTemplate extends TextContent {
