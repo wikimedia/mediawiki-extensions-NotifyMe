@@ -3,9 +3,9 @@
 namespace MediaWiki\Extension\NotifyMe\Storage\FilterBucket;
 
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserIdentity;
-use Message;
 use RawMessage;
 
 class CategoryBucket extends FilterBucket {

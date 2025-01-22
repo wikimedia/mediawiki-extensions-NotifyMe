@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use DateTime;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\UserIdentity;
-use Message;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;

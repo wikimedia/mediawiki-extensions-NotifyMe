@@ -9,8 +9,8 @@ use Exception;
 use MediaWiki\Extension\NotifyMe\Grouping\Grouper;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
-use Message;
 use MWStake\MediaWiki\Component\Events\Notification;
 use SpecialPage;
 

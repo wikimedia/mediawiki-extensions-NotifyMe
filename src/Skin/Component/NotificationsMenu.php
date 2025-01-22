@@ -7,7 +7,7 @@ use IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
 use MediaWiki\MediaWikiServices;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\Literal;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCard;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\SimpleCardBody;
