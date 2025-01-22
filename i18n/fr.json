@@ -3,7 +3,8 @@
 		"authors": [
 			"Gomoko",
 			"Mahabarata",
-			"SleaY"
+			"SleaY",
+			"Wladek92"
 		]
 	},
 	"notifyme-desc": "Notifications",
@@ -16,8 +17,8 @@
 	"notifyme-event-page-move-key-desc": "Page renommée",
 	"notifyme-event-page-delete-key-desc": "Page supprimée",
 	"notifications-subscriptions": "Gérer les abonnements aux notifications",
-	"notifyme-digest-header-daily": "voici un résumé des activités d'aujourd'hui sur $1",
-	"notifyme-digest-header-weekly": "voici un résumé des activités de cette semaine sur $1",
+	"notifyme-digest-header-daily": "voici un résumé des activités sur $1 durant ces dernières 24 heures",
+	"notifyme-digest-header-weekly": "voici un résumé des activités sur $1 pour la semaine passée",
 	"notifyme-digest-subject-daily": "Un résumé quotidien des notifications",
 	"notifyme-digest-subject-weekly": "Un résumé hebdomadaire des notifications",
 	"notifyme-bucket-content-low-freq": "Contenu à basse fréquence",
