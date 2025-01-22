@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\NotifyMe\Event;
 
 use DateTime;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
-use Message;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 

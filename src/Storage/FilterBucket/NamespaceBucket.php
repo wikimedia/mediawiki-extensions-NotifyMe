@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\NotifyMe\Storage\FilterBucket;
 
 use Language;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
+use MediaWiki\Message\Message;
 use MediaWiki\User\UserIdentity;
-use Message;
 use RawMessage;
 
 class NamespaceBucket extends FilterBucket {

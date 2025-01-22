@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\NotifyMe;
 
 use Exception;
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 
 class BucketProvider {

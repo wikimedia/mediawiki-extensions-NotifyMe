@@ -11,6 +11,7 @@ use Language;
 use MediaWiki\Extension\NotifyMe\Channel\WebChannel;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Languages\LanguageFactory;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
@@ -407,7 +408,7 @@ final class NotificationSerializer {
 			if ( isset( $value['public'] ) && !$value['public'] ) {
 				return null;
 			}
-			$value['desc'] = \Message::newFromKey( $value['desc'] )->plain();
+			$value['desc'] = Message::newFromKey( $value['desc'] )->plain();
 			$value['example'] = htmlspecialchars( $value['example'] ?? '' );
 			if ( isset( $value['schemaKey'] ) ) {
 				$value['items'] = $this->getPublicSchemaFor( $value['schemaKey'] );
