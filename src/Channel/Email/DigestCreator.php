@@ -4,8 +4,8 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 
-use Config;
 use Exception;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\Grouping\Grouper;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;

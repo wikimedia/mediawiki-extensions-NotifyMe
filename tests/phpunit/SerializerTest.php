@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ChannelFactory;
 use MediaWiki\Extension\NotifyMe\EventFactory;
@@ -251,7 +252,7 @@ class SerializerTest extends NotificationTestBase {
 			$this->createMock( ChannelFactory::class ),
 			$this->createMock( UserOptionsManager::class ),
 			$this->createMock( BucketProvider::class ),
-			$this->createMock( \Config::class )
+			$this->createMock( Config::class )
 		);
 		return new NotificationSerializer(
 			$userFactoryMock,
