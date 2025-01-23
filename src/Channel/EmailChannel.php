@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\NotifyMe\Channel;
 
-use Config;
 use Exception;
 use MailAddress;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\Channel\Email\DigestCreator;
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;

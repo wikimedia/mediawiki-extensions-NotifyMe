@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 
-use Config;
 use Exception;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;

@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserOptionsManager;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
