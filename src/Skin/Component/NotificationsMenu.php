@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\NotifyMe\Skin\Component;
 
 use Html;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
 use MediaWiki\MediaWikiServices;
