@@ -14,7 +14,7 @@
 	"notifyme-event-page-move-key-desc": "Pagina verplaatst",
 	"notifyme-event-page-delete-key-desc": "Pagina verwijderd",
 	"notifications-subscriptions": "Meldingenabonnementen beheren",
-	"notifyme-digest-header-daily": "hier is een samenvatting van de activiteiten van vandaag op $1",
+	"notifyme-digest-header-daily": "hier is een samenvatting van de activiteiten van de laatste 24 uur op $1",
 	"notifyme-digest-header-weekly": "hier is een samenvatting van de activiteiten van deze week op $1",
 	"notifyme-digest-subject-daily": "Dagelijks overzicht van meldingen",
 	"notifyme-digest-subject-weekly": "Wekelijks overzicht van meldingen",
