@@ -10,6 +10,7 @@ use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\ISubscriptionSet;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Message\Message;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
@@ -204,7 +205,7 @@ class ManualSubscriberProvider implements ISubscriberProvider {
 	 * @inheritDoc
 	 */
 	public function getConfigurationLink(): ?string {
-		$sp = \SpecialPage::getTitleFor( 'Preferences', false, 'mw-prefsection-notifications' );
+		$sp = SpecialPage::getTitleFor( 'Preferences', false, 'mw-prefsection-notifications' );
 		return $sp->getFullURL();
 	}
 
