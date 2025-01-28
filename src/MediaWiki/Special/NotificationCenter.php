@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Special;
 
 use Html;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class NotificationCenter extends SpecialPage {
 	public function __construct() {
