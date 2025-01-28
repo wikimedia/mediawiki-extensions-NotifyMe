@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Special;
 
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\SpecialPage;
 
 class NotificationCenter extends SpecialPage {
