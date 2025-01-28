@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Html;
 
-use Html;
 use HTMLFormField;
+use MediaWiki\Html\Html;
 use MWException;
 use OOUI\ProgressBarWidget;
 

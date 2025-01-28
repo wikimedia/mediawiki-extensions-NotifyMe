@@ -4,9 +4,9 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Content;
 
 use Article;
 use Exception;
-use Html;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Revision\RevisionLookup;
