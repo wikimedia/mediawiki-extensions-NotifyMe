@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Maintenance;
 use CommentStoreComment;
 use Exception;
 use LoggedUpdateMaintenance;
+use MediaWiki\Content\JsonContent;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
 use MediaWiki\MediaWikiServices;
@@ -81,7 +82,7 @@ class AddDefaultMailTemplates extends LoggedUpdateMaintenance {
 			$updater = $wikiPage->newPageUpdater( $this->getMaintenanceUser() );
 			$content = new MailTemplate( $content );
 			$updater->setContent( 'main', $content );
-			$meta = new \JsonContent( json_encode( $data['meta'] ) );
+			$meta = new JsonContent( json_encode( $data['meta'] ) );
 			$updater->setContent( 'mail_template_meta', $meta );
 			$rev = $updater->saveRevision(
 				CommentStoreComment::newUnsavedComment( 'Default mail template content' )
