@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 use Exception;
 use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
@@ -225,7 +226,7 @@ class MailContentProvider {
 		$pageRef = $parser->getPage();
 		$parser->setPage( $pageRef );
 		$parser->setUser( $user );
-		$options = \ParserOptions::newFromUser( $user );
+		$options = ParserOptions::newFromUser( $user );
 		$parser->setOptions( $options );
 		$html = $parser->preprocess( $html, $pageRef, $options, $revision->getId() );
 	}
