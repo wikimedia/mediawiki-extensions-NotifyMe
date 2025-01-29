@@ -9,11 +9,11 @@ use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Parser\ParserOptions;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Title\Title;
 use MWException;
-use ParserOptions;
 use TextContent;
 
 class MailTemplate extends TextContent {
