@@ -127,6 +127,7 @@ class ChangeWebNotificationStatus extends SimpleHandler {
 		return [
 			'notifications' => [
 				static::PARAM_SOURCE => 'body',
+				ParamValidator::PARAM_TYPE => 'array',
 				ParamValidator::PARAM_REQUIRED => true,
 			]
 		];
