@@ -254,16 +254,10 @@ final class NotificationSerializer {
 			'icon' => $notification->getEvent()->getIcon(),
 			'user_timestamp' => $lang->userTimeAndDate(
 				$notification->getEvent()->getTime()->format( 'YmdHis' ),
-				$user
+				$user,
+				[ 'timecorrection' => true ]
 			),
 			'timestamp' => $notification->getEvent()->getTime()->format( 'c' ),
-			'timestamp_ago' => $lang->userTimeAndDate(
-				$notification->getEvent()->getTime()->format( 'YmdHis' ),
-				$user,
-				[
-					'timecorrection' => true
-				]
-			),
 			'status' => $notification->getStatus()->getStatus(),
 			'target_user' => $this->getUserOutputInfo( $user ),
 			'channel' => $channel->getKey(),
@@ -312,12 +306,10 @@ final class NotificationSerializer {
 			'message' => $message,
 			'icon' => $mostRecent->getEvent()->getIcon(),
 			'timestamp' => $mostRecent->getEvent()->getTime()->format( 'c' ),
-			'timestamp_ago' => $lang->userTimeAndDate(
+			'user_timestamp' => $lang->userTimeAndDate(
 				$mostRecent->getEvent()->getTime()->format( 'YmdHis' ),
 				$user,
-				[
-					'timecorrection' => true
-				]
+				[ 'timecorrection' => true ]
 			),
 			'count' => $count,
 			'target_user' => $this->getUserOutputInfo( $user ),
