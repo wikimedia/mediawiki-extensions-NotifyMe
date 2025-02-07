@@ -3,13 +3,13 @@
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
 use DateTime;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
-use RawMessage;
 
 class DummyEvent implements INotificationEvent, GroupableEvent {
 	/** @var UserIdentity */
