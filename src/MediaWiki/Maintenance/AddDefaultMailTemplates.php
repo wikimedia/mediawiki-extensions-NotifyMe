@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Maintenance;
 
-use CommentStoreComment;
 use Exception;
+use MediaWiki\CommentStore\CommentStoreComment;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
