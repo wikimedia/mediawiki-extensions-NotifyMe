@@ -10,6 +10,7 @@ use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
+use MediaWiki\Language\Language;
 use MediaWiki\Languages\LanguageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
@@ -235,7 +236,7 @@ class SerializerTest extends NotificationTestBase {
 
 		$languageFactoryMock = $this->createMock( LanguageFactory::class );
 		$languageFactoryMock->method( 'getLanguage' )->willReturnCallback( function ( $code ) {
-			$languageMock = $this->createMock( \Language::class );
+			$languageMock = $this->createMock( Language::class );
 			$languageMock->method( 'getCode' )->willReturn( $code );
 			$languageMock->method( 'userTimeAndDate' )->willReturnCallback( static function ( $time, $user ) {
 				return $time;
@@ -245,7 +246,7 @@ class SerializerTest extends NotificationTestBase {
 		$userOptionLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionLookupMock->method( 'getOption' )->willReturn( 'en' );
 
-		$contentLanguage = $this->createMock( \Language::class );
+		$contentLanguage = $this->createMock( Language::class );
 		$contentLanguage->method( 'getCode' )->willReturn( 'en' );
 
 		$subscriberConfigurator = new SubscriptionConfigurator(
