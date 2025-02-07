@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\Storage\FilterBucket;
 
-use Language;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
+use MediaWiki\Language\Language;
 use MediaWiki\Message\Message;
 use MediaWiki\User\UserIdentity;
 use RawMessage;

@@ -3,13 +3,13 @@
 namespace MediaWiki\Extension\NotifyMe\Storage;
 
 use Exception;
-use Language;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\CategoryBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\INotificationFilterBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\NamespaceBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\TitleBucket;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Language\Language;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
