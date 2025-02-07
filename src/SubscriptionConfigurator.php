@@ -3,8 +3,8 @@
 namespace MediaWiki\Extension\NotifyMe;
 
 use MediaWiki\Config\Config;
+use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\UserIdentity;
-use MediaWiki\User\UserOptionsManager;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 
 /**
