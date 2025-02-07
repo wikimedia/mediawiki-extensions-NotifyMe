@@ -4,10 +4,10 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Maintenance;
 
 use CommentStoreComment;
 use Exception;
-use LoggedUpdateMaintenance;
 use MediaWiki\Content\JsonContent;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
+use MediaWiki\Maintenance\LoggedUpdateMaintenance;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\User\User;
