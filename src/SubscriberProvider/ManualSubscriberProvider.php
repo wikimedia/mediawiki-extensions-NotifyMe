@@ -3,13 +3,13 @@
 namespace MediaWiki\Extension\NotifyMe\SubscriberProvider;
 
 use Exception;
-use ExtensionRegistry;
 use MediaWiki\Block\AbstractBlock;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\ISubscriptionSet;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Message\Message;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
