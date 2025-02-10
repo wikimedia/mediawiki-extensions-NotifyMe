@@ -116,7 +116,7 @@
 	"notifyme-event-page-create-bot": "Action indicating a bot has created a page.\n$1 - page title",
 	"notifyme-link-label-history": "Label for a link that directs users to view the history of notifications.",
 	"notifyme-event-page-edit": "Action indicating a page has been edited.\n$1 - gender\n$2 - page title",
-	"notifyme-event-page-bot": "Action indicating a bot is involved in a page event.\n$1 - page title",
+	"notifyme-event-page-edit-bot": "Action indicating a bot is involved in a page event.\n$1 - page title",
 	"notifyme-event-page-edit-group": "Action indicating editing of a page related to a group.\n* $1 - page title\n* $2 - amount of edits",
 	"notifyme-links-intro-edit": "Introduction text for editing links in notifications.",
 	"notifyme-event-page-move-bot": "Action indicating a bot has moved a page.\n* $1 - page title\n* $2 - new title",
