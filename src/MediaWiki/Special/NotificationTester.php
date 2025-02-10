@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Special;
 use Exception;
 use MediaWiki\Extension\NotifyMe\NotificationTester as Tester;
 use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserFactory;
@@ -12,7 +13,7 @@ use MWStake\MediaWiki\Component\Events\BotAgent;
 use OOUI\HtmlSnippet;
 use OOUI\MessageWidget;
 
-class NotificationTester extends \FormSpecialPage {
+class NotificationTester extends FormSpecialPage {
 
 	/** @var Tester */
 	private $tester;
