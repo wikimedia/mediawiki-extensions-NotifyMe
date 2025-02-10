@@ -200,5 +200,6 @@
 	"notifyme-notification-center-pagination-aria-next": "Next",
 	"notifyme-notification-center-pagination-aria-previous": "Previous",
 	"notifyme-notification-center-navigation-hint": "Tip: You can use the left and right arrow keys to navigate between the tabs in the tabs list.",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-event-page-edit-bot": "Page $1 was edited"
 }

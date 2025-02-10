@@ -202,5 +202,6 @@
 	"notifyme-notification-center-pagination-aria-next": "Aria label for pagination button which switches to the next page",
 	"notifyme-notification-center-pagination-aria-previous": "Aria label for pagination button which switches to the previous page",
 	"notifyme-notification-center-navigation-hint": "Hint message that explains the arrow key navigation for the tabs on [[Special:Preferences]] to screenreader users.",
-	"notifyme-notification-center-filter-item-aria-label": "Aria label for filter item.\n$1 - Filter name"
+	"notifyme-notification-center-filter-item-aria-label": "Aria label for filter item.\n$1 - Filter name",
+	"notifyme-event-page-edit-bot": "Action indicating a bot is involved in a page event.\n$1 - page title"
 }
