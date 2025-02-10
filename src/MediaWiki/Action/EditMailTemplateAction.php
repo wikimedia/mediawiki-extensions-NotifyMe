@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Action;
 
 use EditAction;
-use EditPage;
+use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\MediaWikiServices;
 use MWException;
