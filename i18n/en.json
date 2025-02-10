@@ -112,7 +112,7 @@
 	"notifyme-event-page-create-bot": "Page $1 was created",
 	"notifyme-link-label-history": "See page history",
 	"notifyme-event-page-edit": "{{GENDER:$1|edited}} page $2",
-	"notifyme-event-page-bot": "Page $1 was edited",
+	"notifyme-event-page-edit-bot": "Page $1 was edited",
 	"notifyme-event-page-edit-group": "Page $1 has been edited $2 times",
 	"notifyme-links-intro-edit": "You can view the changes to the page directly via the following link",
 	"notifyme-event-page-move-bot": "Page $1 was moved to $2",
