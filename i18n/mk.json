@@ -114,7 +114,7 @@
 	"notifyme-event-page-create-bot": "Страницата $1 е создадена",
 	"notifyme-link-label-history": "Погл. историја на страницата",
 	"notifyme-event-page-edit": "{{GENDER:$1|ја уреди}} страницата $2",
-	"notifyme-event-page-bot": "Страницата $1 е уредена",
+	"notifyme-event-page-edit-bot": "Страницата $1 е уредена",
 	"notifyme-event-page-edit-group": "Страницата $1 е уредена $2 пати",
 	"notifyme-links-intro-edit": "Можете да ги прегледате промените на страницата право преку следнава врска",
 	"notifyme-event-page-move-bot": "Страницата $1 е преместена на $2",

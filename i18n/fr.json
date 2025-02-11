@@ -117,7 +117,7 @@
 	"notifyme-event-page-create-bot": "La page $1 a été créée",
 	"notifyme-link-label-history": "Voir l'historique de la page",
 	"notifyme-event-page-edit": "{{GENDER:$1|}}a modifié la page $2",
-	"notifyme-event-page-bot": "La page $1 a été modifiée",
+	"notifyme-event-page-edit-bot": "La page $1 a été modifiée",
 	"notifyme-event-page-edit-group": "La page $1 a été modifiée $2 fois",
 	"notifyme-links-intro-edit": "Vous pouvez visualiser immédiatement les modifications apportées à la page via le lien suivant",
 	"notifyme-event-page-move-bot": "La page $1 a été déplacée vers $2",
