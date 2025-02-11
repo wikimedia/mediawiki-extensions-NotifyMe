@@ -101,5 +101,6 @@
 	"notifyme-notification-center-no-new-notifications-label": "新しい通知はありません",
 	"notifyme-navbar-button-aria-label-unread-notifications": "$1件の未読の{{PLURAL:$1|通知}}があります",
 	"notifyme-notification-center-pagination-aria-next": "次へ",
-	"notifyme-notification-center-pagination-aria-previous": "前へ"
+	"notifyme-notification-center-pagination-aria-previous": "前へ",
+	"notifyme-event-page-edit-bot": "ページ $1 は編集されました"
 }

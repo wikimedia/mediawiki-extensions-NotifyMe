@@ -192,5 +192,6 @@
 	"notifyme-notification-center-pagination-aria-next": "Volgende",
 	"notifyme-notification-center-pagination-aria-previous": "Vorige",
 	"notifyme-notification-center-navigation-hint": "Tip: u kunt de pijltjestoetsen naar links en naar rechts gebruiken om te navigeren tussen de tabbladen in de lijst.",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-event-page-edit-bot": "De pagina “$1” is bewerkt"
 }
