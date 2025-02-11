@@ -194,5 +194,6 @@
 	"notifyme-notification-center-pagination-aria-next": "Nächste",
 	"notifyme-notification-center-pagination-aria-previous": "Vorherige",
 	"notifyme-notification-center-navigation-hint": "Tipp: Du kannst die linke und rechte Pfeiltasten benutzen, um zwischen den Registerkarten in der Reiterliste zu navigieren.",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-event-page-edit-bot": "Seite $1 wurde bearbeitet"
 }

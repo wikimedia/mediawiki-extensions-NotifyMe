@@ -192,5 +192,6 @@
 	"notifyme-notification-center-pagination-aria-next": "הבא",
 	"notifyme-notification-center-pagination-aria-previous": "הקודם",
 	"notifyme-notification-center-navigation-hint": "עצה: ניתן להשתמש במקשי החיצים הימני והשמאלי כדי לנווט בין הלשוניות ברשימת הלשוניות.",
-	"notifyme-notification-center-filter-item-aria-label": "מסנן $1"
+	"notifyme-notification-center-filter-item-aria-label": "מסנן $1",
+	"notifyme-event-page-edit-bot": "הדף $1 נערך"
 }
