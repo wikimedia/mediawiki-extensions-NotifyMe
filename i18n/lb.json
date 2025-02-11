@@ -75,7 +75,6 @@
 	"notifyme-event-page-create-bot": "D'Säit $1 gouf ugeluecht",
 	"notifyme-link-label-history": "Historique vun der Säit weisen",
 	"notifyme-event-page-edit": "{{GENDER:$1|huet}} d'Säit $2 geännert",
-	"notifyme-event-page-bot": "D'Säit $1 gouf geännert",
 	"notifyme-event-page-edit-group": "D'Säit $1 gouf $2 Mol geännert",
 	"notifyme-links-intro-edit": "Dir kënnt d'Ännerunge vun der Säit direkt iwwer de follgende Link gesinn",
 	"notifyme-event-page-move-bot": "D'Säit $1 gouf op $2 geréckelt",

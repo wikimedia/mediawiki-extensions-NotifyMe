@@ -114,7 +114,6 @@
 	"notifyme-event-page-create-bot": "הדף $1 נוצר",
 	"notifyme-link-label-history": "צפייה בהיסטוריה של הדף",
 	"notifyme-event-page-edit": "{{GENDER:$1|ערך|ערכה}} את הדף $2",
-	"notifyme-event-page-bot": "הדף $1 נערך",
 	"notifyme-event-page-edit-group": "הדף $1 נערך {{PLURAL:$2|פעם אחת|פעמיים|$2 פעמים}}",
 	"notifyme-links-intro-edit": "ניתן לצפות בשינויים בדף ישירות דרך הקישור הבא",
 	"notifyme-event-page-move-bot": "הדף $1 הועבר לשם $2",

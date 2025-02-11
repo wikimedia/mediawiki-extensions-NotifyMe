@@ -116,7 +116,6 @@
 	"notifyme-event-page-create-bot": "Seite $1 wurde erstellt",
 	"notifyme-link-label-history": "siehe Versionsgeschichte",
 	"notifyme-event-page-edit": "{{GENDER:$1|hat}} Seite $2 bearbeitet",
-	"notifyme-event-page-bot": "Seite $1 wurde bearbeitet",
 	"notifyme-event-page-edit-group": "Seite $1 wurde $2-mal bearbeitet",
 	"notifyme-links-intro-edit": "Du kannst die Änderungen auf der Seite direkt über den folgenden Link einsehen",
 	"notifyme-event-page-move-bot": "Seite $1 wurde nach $2 verschoben",

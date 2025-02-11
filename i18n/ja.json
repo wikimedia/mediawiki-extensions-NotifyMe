@@ -66,7 +66,6 @@
 	"notifyme-schema-links-user-page": "利用者ページへのリンク",
 	"notifyme-schema-links-user-username": "利用者の利用者名",
 	"notifyme-schema-target-user-username": "対象利用者の利用者名",
-	"notifyme-event-page-bot": "ページ $1 は編集されました",
 	"notifyme-event-page-edit-group": "ページ $1 は $2 回編集されました",
 	"notifyme-event-page-move-bot": "ページ $1 は $2 へ移動されました",
 	"notifyme-event-page-delete-bot": "ページ $1 は削除されました",
