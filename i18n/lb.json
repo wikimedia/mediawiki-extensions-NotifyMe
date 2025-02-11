@@ -148,5 +148,6 @@
 	"notifyme-navbar-button-aria-label-unread-notifications": "Dir hutt $1 net gelies {{PLURAL:$1|Notifikatioun|Notifikatiounen}}",
 	"notifyme-notification-center-pagination-aria-next": "Nächst",
 	"notifyme-notification-center-pagination-aria-previous": "Vireg",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-event-page-edit-bot": "D'Säit $1 gouf geännert"
 }

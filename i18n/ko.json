@@ -95,5 +95,6 @@
 	"notifyme-notification-center-no-new-notifications-label": "새 알림이 없습니다",
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
-	"notifyme-notification-center-filter-item-aria-label": "필터 $1"
+	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
+	"notifyme-event-page-edit-bot": "$1 문서가 편집되었습니다"
 }

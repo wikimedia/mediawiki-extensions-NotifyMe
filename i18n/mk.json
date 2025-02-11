@@ -191,5 +191,6 @@
 	"notifyme-notification-center-pagination-aria-next": "Следно",
 	"notifyme-notification-center-pagination-aria-previous": "Претходно",
 	"notifyme-notification-center-navigation-hint": "Совет: Можете да ги користите стрелките на тастатурата за да преоѓате од едно на друго јазиче во списокот на јазичиња.",
-	"notifyme-notification-center-filter-item-aria-label": "Филтер $1"
+	"notifyme-notification-center-filter-item-aria-label": "Филтер $1",
+	"notifyme-event-page-edit-bot": "Страницата $1 е уредена"
 }
