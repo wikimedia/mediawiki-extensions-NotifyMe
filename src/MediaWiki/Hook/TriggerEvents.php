@@ -123,6 +123,10 @@ class TriggerEvents implements
 			if ( $flags & EDIT_NEW ) {
 				$this->emit( 'page-create', [ $agent, $title ] );
 			} else {
+				if ( $flags & EDIT_MINOR ) {
+					// Do not notify for minor
+					return;
+				}
 				$previousRevision = $this->revisionLookup->getPreviousRevision( $revisionRecord );
 				$this->emit( 'page-edit', [
 					$agent,

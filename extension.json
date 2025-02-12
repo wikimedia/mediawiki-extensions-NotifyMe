@@ -77,7 +77,7 @@
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\PageLinkedEvent"
 					},
-					"buckets": [ "content-low-freq" ]
+					"buckets": [ "personal" ]
 				},
 				"user-group-added": {
 					"spec": {

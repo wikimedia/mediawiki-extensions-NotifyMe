@@ -183,10 +183,7 @@ class ManualSubscriberProvider implements ISubscriberProvider {
 		);
 		$users = [];
 		foreach ( $res as $row ) {
-			$user = $this->userFactory->newFromId( $row->user_id );
-			if ( !$user->getBlock() ) {
-				$users[] = $user;
-			}
+			$users[] = $this->userFactory->newFromId( $row->user_id );
 		}
 		return $users;
 	}
