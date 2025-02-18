@@ -116,6 +116,7 @@
 	"notifyme-event-page-create-bot": "Seite $1 wurde erstellt",
 	"notifyme-link-label-history": "siehe Versionsgeschichte",
 	"notifyme-event-page-edit": "{{GENDER:$1|hat}} Seite $2 bearbeitet",
+	"notifyme-event-page-edit-bot": "Seite $1 wurde bearbeitet",
 	"notifyme-event-page-edit-group": "Seite $1 wurde $2-mal bearbeitet",
 	"notifyme-links-intro-edit": "Du kannst die Änderungen auf der Seite direkt über den folgenden Link einsehen",
 	"notifyme-event-page-move-bot": "Seite $1 wurde nach $2 verschoben",
@@ -193,6 +194,5 @@
 	"notifyme-notification-center-pagination-aria-next": "Nächste",
 	"notifyme-notification-center-pagination-aria-previous": "Vorherige",
 	"notifyme-notification-center-navigation-hint": "Tipp: Du kannst die linke und rechte Pfeiltasten benutzen, um zwischen den Registerkarten in der Reiterliste zu navigieren.",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
-	"notifyme-event-page-edit-bot": "Seite $1 wurde bearbeitet"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
 }

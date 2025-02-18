@@ -66,6 +66,7 @@
 	"notifyme-schema-links-user-page": "利用者ページへのリンク",
 	"notifyme-schema-links-user-username": "利用者の利用者名",
 	"notifyme-schema-target-user-username": "対象利用者の利用者名",
+	"notifyme-event-page-edit-bot": "ページ $1 は編集されました",
 	"notifyme-event-page-edit-group": "ページ $1 は $2 回編集されました",
 	"notifyme-event-page-move-bot": "ページ $1 は $2 へ移動されました",
 	"notifyme-event-page-delete-bot": "ページ $1 は削除されました",
@@ -100,6 +101,5 @@
 	"notifyme-notification-center-no-new-notifications-label": "新しい通知はありません",
 	"notifyme-navbar-button-aria-label-unread-notifications": "$1件の未読の{{PLURAL:$1|通知}}があります",
 	"notifyme-notification-center-pagination-aria-next": "次へ",
-	"notifyme-notification-center-pagination-aria-previous": "前へ",
-	"notifyme-event-page-edit-bot": "ページ $1 は編集されました"
+	"notifyme-notification-center-pagination-aria-previous": "前へ"
 }

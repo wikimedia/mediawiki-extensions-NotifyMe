@@ -114,6 +114,7 @@
 	"notifyme-event-page-create-bot": "הדף $1 נוצר",
 	"notifyme-link-label-history": "צפייה בהיסטוריה של הדף",
 	"notifyme-event-page-edit": "{{GENDER:$1|ערך|ערכה}} את הדף $2",
+	"notifyme-event-page-edit-bot": "הדף $1 נערך",
 	"notifyme-event-page-edit-group": "הדף $1 נערך {{PLURAL:$2|פעם אחת|פעמיים|$2 פעמים}}",
 	"notifyme-links-intro-edit": "ניתן לצפות בשינויים בדף ישירות דרך הקישור הבא",
 	"notifyme-event-page-move-bot": "הדף $1 הועבר לשם $2",
@@ -191,6 +192,5 @@
 	"notifyme-notification-center-pagination-aria-next": "הבא",
 	"notifyme-notification-center-pagination-aria-previous": "הקודם",
 	"notifyme-notification-center-navigation-hint": "עצה: ניתן להשתמש במקשי החיצים הימני והשמאלי כדי לנווט בין הלשוניות ברשימת הלשוניות.",
-	"notifyme-notification-center-filter-item-aria-label": "מסנן $1",
-	"notifyme-event-page-edit-bot": "הדף $1 נערך"
+	"notifyme-notification-center-filter-item-aria-label": "מסנן $1"
 }

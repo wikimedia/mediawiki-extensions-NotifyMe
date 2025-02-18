@@ -75,6 +75,7 @@
 	"notifyme-event-page-create-bot": "D'Säit $1 gouf ugeluecht",
 	"notifyme-link-label-history": "Historique vun der Säit weisen",
 	"notifyme-event-page-edit": "{{GENDER:$1|huet}} d'Säit $2 geännert",
+	"notifyme-event-page-edit-bot": "D'Säit $1 gouf geännert",
 	"notifyme-event-page-edit-group": "D'Säit $1 gouf $2 Mol geännert",
 	"notifyme-links-intro-edit": "Dir kënnt d'Ännerunge vun der Säit direkt iwwer de follgende Link gesinn",
 	"notifyme-event-page-move-bot": "D'Säit $1 gouf op $2 geréckelt",
@@ -148,6 +149,5 @@
 	"notifyme-navbar-button-aria-label-unread-notifications": "Dir hutt $1 net gelies {{PLURAL:$1|Notifikatioun|Notifikatiounen}}",
 	"notifyme-notification-center-pagination-aria-next": "Nächst",
 	"notifyme-notification-center-pagination-aria-previous": "Vireg",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
-	"notifyme-event-page-edit-bot": "D'Säit $1 gouf geännert"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
 }
