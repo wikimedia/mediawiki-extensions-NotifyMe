@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"notifyme-desc": "Notificationes",
+	"prefs-notifications": "Notificationes",
+	"notifyme-subscriber-provider-preferences-desc": "Abonate desde le Centro de notificationes",
+	"notifyme-link-label-view-page": "vider pagina",
+	"notifyme-link-label-diff": "vider differentia",
+	"notifyme-event-page-create-key-desc": "Pagina create",
+	"notifyme-event-page-edit-key-desc": "Pagina modificate",
+	"notifyme-event-page-move-key-desc": "Pagina renominate",
+	"notifyme-event-page-delete-key-desc": "Pagina delite",
+	"notifications-subscriptions": "Gerer abonamentos a notificationes",
+	"notifyme-digest-header-daily": "ecce un summario de activitates sur $1 durante le ultime 24 horas",
+	"notifyme-digest-header-weekly": "ecce un summario de activitates sur $1 durante le septimana passate",
+	"notifyme-digest-subject-daily": "Summario quotidian de notificationes",
+	"notifyme-digest-subject-weekly": "Summario septimanal de notificationes",
+	"notifyme-bucket-content-low-freq": "Contento a basse frequentia",
+	"notifyme-bucket-content-high-freq": "Contento a alte frequentia"
+}
