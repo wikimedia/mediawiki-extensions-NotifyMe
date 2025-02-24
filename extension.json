@@ -288,7 +288,8 @@
 			"dependencies": [
 				"oojs-ui",
 				"moment",
-				"ext.oOJSPlus.widgets"
+				"ext.oOJSPlus.widgets",
+				"oojs-ui.styles.icons-movement"
 			]
 		},
 		"ext.notifyme.specialPage": {
