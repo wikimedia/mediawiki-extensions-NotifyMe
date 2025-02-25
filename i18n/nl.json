@@ -116,7 +116,7 @@
 	"notifyme-event-page-edit": "{{GENDER:$1|heeft}} de pagina “$2” bewerkt",
 	"notifyme-event-page-edit-bot": "De pagina “$1” is bewerkt",
 	"notifyme-event-page-edit-group": "De pagina “$1” is $2 keer bewerkt",
-	"notifyme-links-intro-edit": "Via de volgende koppelingen kunt u de wijzigingen op de pagina direct bekijken",
+	"notifyme-links-intro-edit": "Via de volgende koppeling kunt u de wijzigingen op de pagina direct bekijken",
 	"notifyme-event-page-move-bot": "De pagina “$1” is hernoemd tot “$2”",
 	"notifyme-event-page-delete-bot": "De pagina “$1” is verwijderd",
 	"notifyme-event-page-move": "{{GENDER:$1|heeft}} de pagina “$2” hernoemd tot “$3”",
