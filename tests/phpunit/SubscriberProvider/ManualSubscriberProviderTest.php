@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests\SubscriberProvider;
 
-use MediaWiki\Block\Block;
+use MediaWiki\Block\AbstractBlock;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\EventProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberProvider\ManualProvider\SubscriptionSet\CategorySet;
@@ -182,7 +182,7 @@ class ManualSubscriberProviderTest extends TestCase {
 		$mockUserFactory->method( 'newFromId' )->willReturnCallback( function ( $id ) {
 			$userMock = $this->createMock( User::class );
 			$userMock->method( 'getId' )->willReturn( $id );
-			$blockMock = $this->createMock( Block::class );
+			$blockMock = $this->createMock( AbstractBlock::class );
 			if ( $id === 3 ) {
 				$userMock->method( 'getBlock' )->willReturn( $blockMock );
 			} else {
