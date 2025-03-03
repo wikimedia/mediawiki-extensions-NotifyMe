@@ -4,7 +4,8 @@
 			"Gomoko",
 			"Mahabarata",
 			"SleaY",
-			"Wladek92"
+			"Wladek92",
+			"McDutchie"
 		]
 	},
 	"notifyme-desc": "Notifications",
@@ -93,7 +94,7 @@
 	"notifyme-schema-source-providers-description": "Description du fournisseur source",
 	"notifyme-schema-source-providers-link": "Lien vers l'endroit où l'utilisateur peut modifier ses préférences (le cas échéant)",
 	"notifyme-mail-template-edit-help-colors": "Les variables de couleur suivantes sont disponibles. Elles seront automatiquement ajustées aux couleurs de l'habillage wiki.",
-	"notifyme-mail-template-edit-help-int": "Les messages d'internationalisation peuvent être utilisés dans le contenu via<pre><nowiki>{{int:message-key}}</nowiki></pre>",
+	"notifyme-mail-template-edit-help-int": "Les messages d'internationalisation peuvent être utilisés dans le contenu via <pre><nowiki>{{int:message-key}}</nowiki></pre>",
 	"notifyme-mail-template-edit-help-logo": "Pour ajouter le logo de votre wiki (défini dans l'habillage), utilisez <pre>&lt;img src=\"{{logo}}\" alt=\"Logo du wiki\" /&gt;</pre>",
 	"notifyme-mail-template-edit-help-category-params": "Variables de contenu",
 	"notifyme-mail-template-edit-help-category-logo": "Logo",

@@ -58,7 +58,7 @@
 	"notifyme-ui-subscriptionset-watchlist-label": "Label for the watchlist feature in subscription sets.",
 	"notifyme-ui-dialog-set-editor-cancel": "Label for the cancel action in the editor dialog.",
 	"notifyme-ui-dialog-set-editor-create": "Label for the create action in the editor dialog.",
-	"notifyme-sample-data-agent": "Sample data key for the notification agent.",
+	"notifyme-sample-data-agent": "Sample data key for the notification agent.\n\nIf there is a default placeholder name in your language, translate this as that. Otherwise you might translate something like \"Example person\".",
 	"notifyme-sample-data-target": "Sample data key for the target of notifications.",
 	"notifyme-sample-data-message": "Sample data key for the message content of notifications.",
 	"notifyme-sample-data-link-1": "Sample data key for the first notification link.",
