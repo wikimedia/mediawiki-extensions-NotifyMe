@@ -31,7 +31,7 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.initialize = function () 
 		if ( !set ) {
 			continue;
 		}
-		const setInstance = new set();
+		const setInstance = new set(); // eslint-disable-line new-cap
 		items.push( new OO.ui.ButtonOptionWidget( {
 			data: setInstance.getKey(),
 			label: setInstance.getLabel()
@@ -143,7 +143,7 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.onTypeSelect = function (
 	if ( !set ) {
 		return;
 	}
-	const setInstance = new set();
+	const setInstance = new set(); // eslint-disable-line new-cap
 	this.data.setType = item.getData();
 	this.setEditor = setInstance.getEditor( this );
 	if ( !this.setEditor ) {
@@ -178,7 +178,7 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.getActionProcess = functi
 				this.pushPending();
 				this.getValidity().done( () => {
 					this.popPending();
-					this.close( { action: action, value: $.extend( this.data, {
+					this.close( { action: action, value: Object.assign( this.data, {
 						set: this.setEditor ? this.setEditor.getValue() : {},
 						bucket: this.bucketSelector.findSelectedItem().getData(),
 						channels: [ 'web' ].concat( this.channelSelector.findSelectedItemsData() )
