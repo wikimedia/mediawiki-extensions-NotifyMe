@@ -56,7 +56,7 @@ OO.inheritClass( ext.notifyme.ui.widget.PaginationWidget, OO.ui.Widget );
 /**
  * Respond to "previous" button click event
  *
- * @fires change
+ * @event change
  */
 ext.notifyme.ui.widget.PaginationWidget.prototype.onPreviousChoose = function () {
 	this.emit( 'change', 'prev' );
@@ -65,7 +65,7 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.onPreviousChoose = function ()
 /**
  * Respond to "next" button click event
  *
- * @fires change
+ * @event change
  */
 ext.notifyme.ui.widget.PaginationWidget.prototype.onNextChoose = function () {
 	this.emit( 'change', 'next' );
@@ -102,8 +102,8 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.hasNextPage = function () {
 ext.notifyme.ui.widget.PaginationWidget.prototype.updateWidget = function ( processedItems ) {
 	this.processedItems = processedItems;
 
-	const hasPrevPage = this.hasPrevPage(),
-	 hasNextPage = this.hasNextPage();
+	const hasPrevPage = this.hasPrevPage();
+	const hasNextPage = this.hasNextPage();
 
 	this.previousWidget.setDisabled( this.isDisabled() || !hasPrevPage );
 	this.nextWidget.setDisabled( this.isDisabled() || !hasNextPage );
@@ -114,15 +114,14 @@ ext.notifyme.ui.widget.PaginationWidget.prototype.updateWidget = function ( proc
 };
 
 ext.notifyme.ui.widget.PaginationWidget.prototype.updateLabel = function () {
-	let label,
-		firstItem = ( ( this.page - 1 ) * this.itemPerPage ) + 1,
-		lastItem = ( firstItem + this.processedItems ) - 1;
+	const firstItem = ( ( this.page - 1 ) * this.itemPerPage ) + 1;
+	let lastItem = ( firstItem + this.processedItems ) - 1;
 
 	if ( lastItem > this.page * this.itemPerPage ) {
 		lastItem = ( firstItem + this.itemPerPage ) - 1;
 	}
 
-	label = firstItem + ' - ' + lastItem;
+	const label = firstItem + ' - ' + lastItem;
 
 	this.labelWidget.setLabel( label );
 };
