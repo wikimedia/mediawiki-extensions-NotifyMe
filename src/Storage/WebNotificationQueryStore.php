@@ -149,7 +149,7 @@ class WebNotificationQueryStore {
 			throw new Exception( 'This method can only be called from maintenance scripts' );
 		}
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
-		$db->query( 'TRUNCATE TABLE notifications_web_query_store' );
+		$db->query( 'TRUNCATE TABLE notifications_web_query_store', __METHOD__ );
 	}
 
 	/**
