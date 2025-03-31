@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -32,8 +33,12 @@
 	"notifyme-ui-subscriptionset-watchlist-label": "주시문서 목록",
 	"notifyme-ui-dialog-set-editor-cancel": "취소",
 	"notifyme-ui-dialog-set-editor-create": "완료",
+	"notifyme-sample-data-agent": "홍길동",
+	"notifyme-sample-data-target": "홍길순",
+	"notifyme-sample-data-message": "편집된 \"파티 계획\" 문서",
 	"notifyme-sample-data-link-1": "차이 보기",
 	"notifyme-sample-data-link-2": "문서 역사 보기",
+	"notifyme-sample-data-message-group": "\"파티 계획\" 문서가 편집되었습니다.",
 	"notificationcenter": "알림 센터",
 	"notifyme-schema-message": "알림 내용",
 	"notifyme-schema-links-label": "링크의 레이블",
