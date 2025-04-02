@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -96,5 +97,9 @@
 	"notifyme-notification-center-no-new-notifications-label": "새 알림이 없습니다",
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
-	"notifyme-notification-center-filter-item-aria-label": "필터 $1"
+	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
+	"notifyme-sample-data-agent": "홍길동",
+	"notifyme-sample-data-target": "홍길순",
+	"notifyme-sample-data-message": "편집된 \"파티 계획\" 문서",
+	"notifyme-sample-data-message-group": "\"파티 계획\" 문서가 편집되었습니다."
 }
