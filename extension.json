@@ -107,7 +107,8 @@
 					"class": "\\MediaWiki\\Extension\\NotifyMe\\Channel\\EmailChannel",
 					"services": [
 						"NotifyMe.Store", "NotifyMe.Serializer", "NotifyMe.MailContentProvider",
-						"NotifyMe.SubscriptionConfigurator", "NotifyMe.Logger", "MainConfig"
+						"NotifyMe.SubscriptionConfigurator", "NotifyMe.Logger", "MainConfig",
+						"UserOptionsLookup", "ContentLanguage"
 					]
 				}
 			},
