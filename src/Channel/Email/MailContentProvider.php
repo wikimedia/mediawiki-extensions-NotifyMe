@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 use Exception;
 use MediaWiki\Config\Config;
 use MediaWiki\Html\TemplateParser;
+use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\ParserFactory;
 use MediaWiki\Parser\ParserOptions;
@@ -12,6 +13,7 @@ use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
+use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
 use Wikimedia\Rdbms\ILoadBalancer;
@@ -33,8 +35,15 @@ class MailContentProvider {
 	 * @var ParserFactory
 	 */
 	private $parserFactory;
+
 	/** @var Config */
 	private $config;
+
+	/** @var UserOptionsLookup */
+	private $userOptionsLookup;
+
+	/** @var Language */
+	private $language;
 
 	/**
 	 * @param ILoadBalancer $lb
@@ -42,16 +51,20 @@ class MailContentProvider {
 	 * @param Config $config
 	 * @param RevisionLookup $revisionLookup
 	 * @param ParserFactory $parserFactory
+	 * @param UserOptionsLookup $userOptionsLookup
+	 * @param Language $language
 	 */
 	public function __construct(
-		ILoadBalancer $lb, TitleFactory $titleFactory, Config $config,
-		RevisionLookup $revisionLookup, ParserFactory $parserFactory
+		ILoadBalancer $lb, TitleFactory $titleFactory, Config $config, RevisionLookup $revisionLookup,
+		ParserFactory $parserFactory, UserOptionsLookup $userOptionsLookup, Language $language
 	) {
 		$this->lb = $lb;
 		$this->titleFactory = $titleFactory;
 		$this->config = $config;
 		$this->revisionLookup = $revisionLookup;
 		$this->parserFactory = $parserFactory;
+		$this->userOptionsLookup = $userOptionsLookup;
+		$this->language = $language;
 	}
 
 	/**
@@ -227,6 +240,13 @@ class MailContentProvider {
 		$parser->setPage( $pageRef );
 		$parser->setUser( $user );
 		$options = ParserOptions::newFromUser( $user );
+
+		$userLanguage = $this->userOptionsLookup->getOption( $user, 'language' );
+		if ( !$userLanguage ) {
+			$userLanguage = $this->language;
+		}
+		$options->setUserLang( $userLanguage );
+
 		$parser->setOptions( $options );
 		$html = $parser->preprocess( $html, $pageRef, $options, $revision->getId() );
 	}

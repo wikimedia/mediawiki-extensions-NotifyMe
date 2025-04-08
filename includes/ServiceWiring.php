@@ -85,7 +85,9 @@ return [
 			$services->getTitleFactory(),
 			$services->getMainConfig(),
 			$services->getRevisionLookup(),
-			$services->getParserFactory()
+			$services->getParserFactory(),
+			$services->getUserOptionsLookup(),
+			$services->getContentLanguage()
 		);
 	},
 	'NotifyMe.WebQueryStore' => static function ( MediaWikiServices $services ) {
