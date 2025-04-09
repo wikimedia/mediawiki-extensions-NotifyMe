@@ -136,10 +136,6 @@ class TriggerEvents implements
 				] );
 			}
 		}
-
-		if ( $title->getNamespace() === NS_USER_TALK ) {
-			$this->emit( 'discussion-edit', [ $agent, $title ] );
-		}
 	}
 
 	/**
