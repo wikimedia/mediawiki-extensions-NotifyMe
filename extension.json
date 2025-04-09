@@ -66,13 +66,6 @@
 					},
 					"buckets": [ "content-low-freq" ]
 				},
-				"discussion-edit": {
-					"spec": {
-						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\DiscussionPageEditEvent",
-						"services": [ "UserFactory" ]
-					},
-					"buckets": [ "personal" ]
-				},
 				"page-linked": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\PageLinkedEvent"
