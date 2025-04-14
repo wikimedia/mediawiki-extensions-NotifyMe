@@ -253,7 +253,8 @@ ext.notifyme.ui.panel.NotificationTab.prototype.loadNotifications = function () 
 
 		// If there are no notifications, show corresponding label and hide pagination
 		if ( !results.length ) {
-			const labelWidget = new OO.ui.LabelWidget( {
+			const labelWidget = new OOJSPlus.ui.widget.NoContentPlaceholderWidget( {
+				icon: 'no-notifications',
 				label: mw.message( 'notifyme-notification-center-no-new-notifications-label' ).text()
 			} );
 
