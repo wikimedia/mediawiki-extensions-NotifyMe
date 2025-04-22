@@ -138,7 +138,9 @@
 		"includes/ServiceWiring.php"
 	],
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\NotifyMe\\": "src/",
+		"MediaWiki\\Extension\\NotifyMe\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
 		"MediaWiki\\Extension\\NotifyMe\\Tests\\": "tests/phpunit"
 	},
 	"ResourceModules": {
