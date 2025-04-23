@@ -100,4 +100,20 @@ class BucketProvider {
 		}
 		return $events[$event->getKey()]['buckets'] ?? [];
 	}
+
+	/**
+	 * @return array
+	 */
+	public function getEventDescription(): array {
+		$events = $this->eventProvider->getRegisteredEvents();
+		$eventBuckets = [];
+		foreach ( $events as $event => $eventDef ) {
+			$desc = Message::newFromKey( 'notifyme-event-page-missing-desc' )->parse();
+			if ( isset( $eventDef['description'] ) ) {
+				$desc = Message::newFromKey( $eventDef['description'] )->text();
+			}
+			$eventBuckets[ $eventDef['buckets'][0] ][ $event ] = $desc;
+		}
+		return $eventBuckets;
+	}
 }
