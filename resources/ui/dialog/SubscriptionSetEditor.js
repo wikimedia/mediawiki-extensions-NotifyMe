@@ -6,6 +6,7 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor = function ( cfg ) {
 	this.data = cfg.data || {};
 	this.setRegistry = ext.notifyme.subscriptionSetRegistry;
 	this.buckets = cfg.buckets;
+	this.events = cfg.events;
 	this.channelLabels = cfg.channelLabels;
 };
 
@@ -65,12 +66,11 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.initialize = function () 
 					invisibleLabel: true,
 					$overlay: this.$overlay,
 					popup: {
-						head: true,
-						label: this.buckets[ bucketKey ].description,
+						head: false,
+						$content: this.makePopupContent( bucketKey ),
 						padded: true,
 						hideCloseButton: true,
 						autoFlip: true
-
 					}
 				} )
 			]
@@ -126,6 +126,35 @@ ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.initialize = function () 
 		this.setTypePicker.selectItem( this.setTypePicker.findFirstSelectableItem() );
 		this.bucketSelector.selectItem( this.bucketSelector.findFirstSelectableItem() );
 	}
+};
+
+ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.makePopupContent = function ( bucketKey ) {
+	const layout = new OO.ui.PanelLayout( {
+		classes: [ 'ext-notifyme-ui-dialog-event-desc-panel' ],
+		padded: true,
+		expanded: false
+	} );
+
+	const label = new OO.ui.LabelWidget( {
+		label: mw.message( 'notifyme-ui-dialog-popup-header-label' ).text()
+	} );
+	layout.$element.append( label.$element );
+
+	const $html = $( '<table>' ).addClass( 'wikitable' );
+	const $tableHeader = $( '<tr>' );
+	$tableHeader.append( $( '<th>' ).text( mw.message( 'notifyme-ui-dialog-popup-table-event-label' ).text() ) );
+	$tableHeader.append( $( '<th>' ).text( mw.message( 'notifyme-ui-dialog-popup-table-desc-label' ).text() ) );
+	$html.append( $tableHeader );
+
+	for ( const key in this.events[ bucketKey ] ) {
+		const $tr = $( '<tr>' );
+		$tr.append( $( '<td>' ).text( key ) );
+		$tr.append( $( '<td>' ).html( this.events[ bucketKey ][ key ] ) );
+		$html.append( $tr );
+	}
+
+	layout.$element.append( $html );
+	return layout.$element;
 };
 
 ext.notifyme.ui.dialog.SubscriptionSetEditor.prototype.setValue = function ( data ) {

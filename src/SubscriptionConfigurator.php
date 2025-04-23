@@ -74,6 +74,13 @@ class SubscriptionConfigurator {
 	}
 
 	/**
+	 * @return array
+	 */
+	public function getEventData(): array {
+		return $this->bucketProvider->getEventDescription();
+	}
+
+	/**
 	 * @param UserIdentity $user
 	 * @param IChannel $channel
 	 *

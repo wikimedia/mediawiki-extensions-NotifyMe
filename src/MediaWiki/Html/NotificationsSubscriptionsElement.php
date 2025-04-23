@@ -82,6 +82,7 @@ class NotificationsSubscriptionsElement extends HTMLFormField {
 		return Html::rawElement( 'div', [
 			'class' => 'notifications-subscriptions',
 			'data-buckets' => json_encode( $this->value['bucketData'] ),
+			'data-events' => json_encode( $this->value['eventData' ] ),
 			'data-channel-labels' => json_encode( $this->value['channelLabels'] ),
 		], $content . $underlyingField );
 	}

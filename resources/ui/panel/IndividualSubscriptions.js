@@ -7,6 +7,7 @@ ext.notifyme.ui.panel.IndividualSubscriptions = function ( cfg ) {
 	ext.notifyme.ui.panel.IndividualSubscriptions.parent.call( this, cfg );
 	this.setRegistry = ext.notifyme.subscriptionSetRegistry;
 	this.buckets = cfg.buckets || [];
+	this.events = cfg.events || [];
 	this.channelLabels = cfg.channelLabels || {};
 
 	this.emptyMessage = null;
@@ -60,6 +61,7 @@ ext.notifyme.ui.panel.IndividualSubscriptions.prototype.openDialog = function ( 
 		id: id,
 		data: data,
 		buckets: this.buckets,
+		events: this.events,
 		channelLabels: this.channelLabels
 	} );
 	windowManager.addWindows( [ window ] );
