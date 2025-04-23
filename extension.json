@@ -24,15 +24,15 @@
 		"NotifyMe": {
 			"Buckets": {
 				"content-low-freq": {
-					"label": "notifyme-bucket-content-low-freq",
+					"label": "notifyme-bucket-content-low-freq-label",
 					"description": "notifyme-bucket-content-low-freq-desc"
 				},
 				"content-high-freq": {
-					"label": "notifyme-bucket-content-high-freq",
+					"label": "notifyme-bucket-content-high-freq-label",
 					"description": "notifyme-bucket-content-high-freq-desc"
 				},
 				"qm": {
-					"label": "notifyme-bucket-qm",
+					"label": "notifyme-bucket-qm-label",
 					"description": "notifyme-bucket-qm-desc"
 				},
 				"personal": {
@@ -46,25 +46,29 @@
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\CreatePageEvent"
 					},
-					"buckets": [ "content-low-freq" ]
+					"buckets": [ "content-low-freq" ],
+					"description": "notifyme-event-page-create-desc"
 				},
 				"page-edit": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\EditPageEvent"
 					},
-					"buckets": [ "content-high-freq" ]
+					"buckets": [ "content-high-freq" ],
+					"description": "notifyme-event-page-edit-desc"
 				},
 				"page-move": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\MovePageEvent"
 					},
-					"buckets": [ "content-low-freq" ]
+					"buckets": [ "content-low-freq" ],
+					"description": "notifyme-event-page-move-desc"
 				},
 				"page-delete": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\DeletePageEvent"
 					},
-					"buckets": [ "content-low-freq" ]
+					"buckets": [ "content-low-freq" ],
+					"description": "notifyme-event-page-delete-desc"
 				},
 				"discussion-edit": {
 					"spec": {
@@ -195,7 +199,10 @@
 				"notifyme-ui-subscription-manager-type-manual-desc",
 				"notifyme-ui-dialog-set-editor-cancel",
 				"notifyme-ui-dialog-set-editor-create",
-				"notifyme-ui-subscription-set-empty"
+				"notifyme-ui-subscription-set-empty",
+				"notifyme-ui-dialog-popup-table-event-label",
+				"notifyme-ui-dialog-popup-table-desc-label",
+				"notifyme-ui-dialog-popup-header-label"
 			],
 			"styles": [
 				"styles.less"

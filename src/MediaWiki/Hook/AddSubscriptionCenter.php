@@ -53,6 +53,7 @@ class AddSubscriptionCenter implements GetPreferencesHook, UserGetDefaultOptions
 			'value' => [
 				'configuration' => $config,
 				'bucketData' => $this->configurator->getBucketData(),
+				'eventData' => $this->configurator->getEventData(),
 				'channelLabels' => $this->configurator->getChannelLabels(),
 			]
 		];

@@ -7,6 +7,7 @@ $( function () {
 		data: JSON.parse( $input.val() ),
 		channelConfigurationRegistry: ext.notifyme.channelConfigurationRegistry,
 		buckets: $container.data( 'buckets' ),
+		events: $container.data( 'events' ),
 		channelLabels: $container.data( 'channel-labels' )
 	} );
 	manager.connect( this, {
