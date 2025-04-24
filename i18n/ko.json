@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -97,5 +98,9 @@
 	"notifyme-event-page-edit-revert-bot": "$1 문서에 한 편집이 되돌려졌습니다",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "모두 읽은 것으로 표시",
 	"notifyme-notification-center-no-new-notifications-label": "새 알림이 없습니다",
-	"notifyme-event-page-edit-bot": "$1 문서가 편집되었습니다"
+	"notifyme-event-page-edit-bot": "$1 문서가 편집되었습니다",
+	"notifyme-sample-data-agent": "홍길동",
+	"notifyme-sample-data-target": "홍길순",
+	"notifyme-sample-data-message": "편집된 \"파티 계획\" 문서",
+	"notifyme-sample-data-message-group": "\"파티 계획\" 문서가 편집되었습니다."
 }
