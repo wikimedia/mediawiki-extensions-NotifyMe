@@ -19,10 +19,13 @@
 	"notifyme-digest-subject-daily": "Дневен преглед на известувања",
 	"notifyme-digest-subject-weekly": "Неделен преглед на известувања",
 	"notifyme-bucket-content-low-freq": "Содржина, поретки",
+	"notifyme-bucket-content-low-freq-label": "Настани што се случуваат поретко",
 	"notifyme-bucket-content-high-freq": "Содржина, почести",
+	"notifyme-bucket-content-high-freq-label": "Настани што се случуваат почесто",
 	"notifyme-bucket-content-low-freq-desc": "Настани на страница што се случуваат поретко (создавање, бришење, преместување...)",
 	"notifyme-bucket-content-high-freq-desc": "Настани на страница што се случуваат почесто (уредувања, коментари...)",
 	"notifyme-bucket-qm": "Надзор врз квалитетот",
+	"notifyme-bucket-qm-label": "Настани поврзани со квалитет на страници",
 	"notifyme-bucket-qm-desc": "Настани за квалитет на страница (одобрување, истек...)",
 	"notifyme-bucket-personal": "Лични настани на страница",
 	"notifyme-bucket-personal-desc": "Настани на страница релевантни само вам (задачи, потсетници...)",
@@ -192,5 +195,13 @@
 	"notifyme-notification-center-pagination-aria-next": "Следно",
 	"notifyme-notification-center-pagination-aria-previous": "Претходно",
 	"notifyme-notification-center-navigation-hint": "Совет: Можете да ги користите стрелките на тастатурата за да преоѓате од едно на друго јазиче во списокот на јазичиња.",
-	"notifyme-notification-center-filter-item-aria-label": "Филтер $1"
+	"notifyme-notification-center-filter-item-aria-label": "Филтер $1",
+	"notifyme-event-page-missing-desc": "''Сè уште нема опис на овој настан''",
+	"notifyme-event-page-create-desc": "Направена е страница од друг корисник",
+	"notifyme-event-page-delete-desc": "Избришана е страница од друг корисник",
+	"notifyme-event-page-move-desc": "Преместена е страница од друг корисник",
+	"notifyme-ui-dialog-popup-table-event-label": "Настан",
+	"notifyme-ui-dialog-popup-table-desc-label": "Опис",
+	"notifyme-ui-dialog-popup-header-label": "Овие настани покренуваат известувања:",
+	"notifyme-event-page-edit-desc": "Уредена е страница од друг корисник"
 }

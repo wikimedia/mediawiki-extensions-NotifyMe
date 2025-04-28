@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"22258",
 			"Hwangjy9",
 			"Tensama0415",
 			"Ykhwong"
@@ -101,5 +102,6 @@
 	"notifyme-notification-center-no-new-notifications-label": "새 알림이 없습니다",
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
-	"notifyme-notification-center-filter-item-aria-label": "필터 $1"
+	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
+	"notifyme-ui-dialog-popup-table-event-label": "사건"
 }
