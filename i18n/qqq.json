@@ -24,7 +24,7 @@
 	"notifyme-bucket-content-high-freq": "Label for high-frequency content notifications.",
 	"notifyme-bucket-content-low-freq-desc": "Description for low-frequency content bucket.",
 	"notifyme-bucket-content-high-freq-desc": "Description for high-frequency content bucket.",
-	"notifyme-bucket-qm": "Label for the 'Question and Mentions' notification bucket.",
+	"notifyme-bucket-qm": "Label for the 'Quality management' notification bucket.",
 	"notifyme-bucket-qm-desc": "Description for the 'Question and Mentions' notification bucket.",
 	"notifyme-bucket-personal": "Label for personal notifications.",
 	"notifyme-bucket-personal-desc": "Description for personal notifications bucket.",
