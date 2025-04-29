@@ -56,5 +56,7 @@
 	"notifyme-notification-center-help-menu-preferences-label": "ترجیحاں",
 	"notifyme-notification-center-timestamp-ago": "$1 پہلے",
 	"notifyme-notification-center-pagination-aria-next": "اڳلا",
-	"notifyme-notification-center-pagination-aria-previous": "پچھلا"
+	"notifyme-notification-center-pagination-aria-previous": "پچھلا",
+	"notifyme-ui-dialog-popup-table-event-label": "ایونٹ",
+	"notifyme-ui-dialog-popup-table-desc-label": "تفصیل"
 }

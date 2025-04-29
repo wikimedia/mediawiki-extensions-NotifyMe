@@ -20,6 +20,7 @@
 	"notifyme-bucket-content-low-freq-desc": "Manner heefeg Säitenevenementer (uleeën, läschen, réckelen…)",
 	"notifyme-bucket-content-high-freq-desc": "Méi heefeg Säitenevenementer (Ännerungen, Kommentaren…)",
 	"notifyme-bucket-qm": "Qualitéitsmonitoring",
+	"notifyme-bucket-qm-label": "Evenementer am Zesummenhang mat der Säitequalitéit",
 	"notifyme-bucket-personal": "Perséinlech Säitenevenementer",
 	"notifyme-bucket-personal-desc": "Säitenevenementer, déi nëmme fir Iech relevant sinn (Zoudeelungen, Erënnerungen…)",
 	"notifyme-channel-email": "E-Mail",
@@ -149,5 +150,8 @@
 	"notifyme-navbar-button-aria-label-unread-notifications": "Dir hutt $1 net gelies {{PLURAL:$1|Notifikatioun|Notifikatiounen}}",
 	"notifyme-notification-center-pagination-aria-next": "Nächst",
 	"notifyme-notification-center-pagination-aria-previous": "Vireg",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-event-page-missing-desc": "''Et gëtt nach keng Beschreiwung fir dëst Evenement''",
+	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
+	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung"
 }
