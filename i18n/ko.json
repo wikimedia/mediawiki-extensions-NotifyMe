@@ -4,7 +4,8 @@
 			"Hwangjy9",
 			"Tensama0415",
 			"Ykhwong",
-			"22258"
+			"22258",
+			"Suleiman the Magnificent Television"
 		]
 	},
 	"notifyme-desc": "알림",
@@ -103,5 +104,5 @@
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
 	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
-	"notifyme-ui-dialog-popup-table-event-label": "사건"
+	"notifyme-ui-dialog-popup-table-event-label": "이벤트"
 }
