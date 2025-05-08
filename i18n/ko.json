@@ -104,5 +104,6 @@
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
 	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
-	"notifyme-ui-dialog-popup-table-event-label": "이벤트"
+	"notifyme-ui-dialog-popup-table-event-label": "이벤트",
+	"notifyme-ui-dialog-popup-table-desc-label": "설명"
 }
