@@ -5,11 +5,13 @@
 			"Hwangjy9",
 			"Suleiman the Magnificent Television",
 			"Tensama0415",
-			"Ykhwong"
+			"Ykhwong",
+			"YeBoy371"
 		]
 	},
 	"notifyme-desc": "알림",
 	"prefs-notifications": "알림",
+	"notifyme-link-label-view-page": "문서 보기",
 	"notifyme-link-label-diff": "차이 보기",
 	"notifyme-event-page-create-key-desc": "문서를 만들었습니다",
 	"notifyme-event-page-edit-key-desc": "문서가 편집되었습니다",
@@ -61,6 +63,7 @@
 	"notifyme-link-label-history": "문서 역사 보기",
 	"notifyme-event-page-edit": "$2 문서를 {{GENDER:$1|편집했습니다}}",
 	"notifyme-event-page-edit-bot": "$1 문서가 편집되었습니다",
+	"notifyme-event-page-move-bot": "$1 문서가 $2(으)로 이동되었습니다",
 	"notifyme-event-page-delete-bot": "$1 문서가 삭제되었습니다",
 	"notifyme-event-page-delete": "$2 문서를 {{GENDER:$1|삭제했습니다}}",
 	"notifyme-mail-manage-notifications-link": "알림 환경 설정",
@@ -104,5 +107,6 @@
 	"notifyme-notification-center-pagination-aria-next": "다음",
 	"notifyme-notification-center-pagination-aria-previous": "이전",
 	"notifyme-notification-center-filter-item-aria-label": "필터 $1",
-	"notifyme-ui-dialog-popup-table-event-label": "이벤트"
+	"notifyme-ui-dialog-popup-table-event-label": "이벤트",
+	"notifyme-ui-dialog-popup-table-desc-label": "설명"
 }
