@@ -192,5 +192,16 @@
 	"notifyme-notification-center-pagination-aria-next": "Volgende",
 	"notifyme-notification-center-pagination-aria-previous": "Vorige",
 	"notifyme-notification-center-navigation-hint": "Tip: u kunt de pijltjestoetsen naar links en naar rechts gebruiken om te navigeren tussen de tabbladen in de lijst.",
-	"notifyme-notification-center-filter-item-aria-label": "Filter $1"
+	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
+	"notifyme-bucket-content-low-freq-label": "Gebeurtenissen die minder vaak voorkomen",
+	"notifyme-bucket-content-high-freq-label": "Gebeurtenissen die vaker voorkomen",
+	"notifyme-bucket-qm-label": "Gebeurtenissen met betrekking tot de paginakwaliteit",
+	"notifyme-event-page-missing-desc": "''Er is nog geen beschrijving van deze gebeurtenis''",
+	"notifyme-event-page-create-desc": "Er is een pagina door een andere gebruiker aangemaakt",
+	"notifyme-event-page-delete-desc": "Er is een pagina door een andere gebruiker verwijderd",
+	"notifyme-event-page-move-desc": "Er is een pagina door een andere gebruiker hernoemd",
+	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
+	"notifyme-ui-dialog-popup-table-desc-label": "Beschrijving",
+	"notifyme-ui-dialog-popup-header-label": "Deze gebeurtenissen activeren meldingen:",
+	"notifyme-event-page-edit-desc": "Er is een pagina door een andere gebruiker bewerkt"
 }

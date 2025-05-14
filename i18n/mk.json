@@ -192,5 +192,16 @@
 	"notifyme-notification-center-pagination-aria-next": "Следно",
 	"notifyme-notification-center-pagination-aria-previous": "Претходно",
 	"notifyme-notification-center-navigation-hint": "Совет: Можете да ги користите стрелките на тастатурата за да преоѓате од едно на друго јазиче во списокот на јазичиња.",
-	"notifyme-notification-center-filter-item-aria-label": "Филтер $1"
+	"notifyme-notification-center-filter-item-aria-label": "Филтер $1",
+	"notifyme-bucket-content-low-freq-label": "Настани што се случуваат поретко",
+	"notifyme-bucket-content-high-freq-label": "Настани што се случуваат почесто",
+	"notifyme-bucket-qm-label": "Настани поврзани со квалитет на страници",
+	"notifyme-event-page-missing-desc": "''Сè уште нема опис на овој настан''",
+	"notifyme-event-page-create-desc": "Направена е страница од друг корисник",
+	"notifyme-event-page-delete-desc": "Избришана е страница од друг корисник",
+	"notifyme-event-page-move-desc": "Преместена е страница од друг корисник",
+	"notifyme-ui-dialog-popup-table-event-label": "Настан",
+	"notifyme-ui-dialog-popup-table-desc-label": "Опис",
+	"notifyme-ui-dialog-popup-header-label": "Овие настани покренуваат известувања:",
+	"notifyme-event-page-edit-desc": "Уредена е страница од друг корисник"
 }

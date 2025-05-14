@@ -192,5 +192,16 @@
 	"notifyme-notification-center-pagination-aria-next": "הבא",
 	"notifyme-notification-center-pagination-aria-previous": "הקודם",
 	"notifyme-notification-center-navigation-hint": "עצה: ניתן להשתמש במקשי החיצים הימני והשמאלי כדי לנווט בין הלשוניות ברשימת הלשוניות.",
-	"notifyme-notification-center-filter-item-aria-label": "מסנן $1"
+	"notifyme-notification-center-filter-item-aria-label": "מסנן $1",
+	"notifyme-bucket-content-low-freq-label": "אירועים שקורים בתדירות נמוכה יותר",
+	"notifyme-bucket-content-high-freq-label": "אירועים שקורים בתדירות גבוהה יותר",
+	"notifyme-bucket-qm-label": "אירועים שקשורים לאיכות הדף",
+	"notifyme-event-page-missing-desc": "''עדיין אין תיאור של האירוע הזה''",
+	"notifyme-event-page-create-desc": "דף נוצר על־ידי משתמש אחר",
+	"notifyme-event-page-delete-desc": "דף נמחק על־ידי משתמש אחר",
+	"notifyme-event-page-move-desc": "דף הועבר על־ידי משתמש אחר",
+	"notifyme-ui-dialog-popup-table-event-label": "אירוע",
+	"notifyme-ui-dialog-popup-table-desc-label": "תיאור",
+	"notifyme-ui-dialog-popup-header-label": "האירועים האלה מפעילים התראות:",
+	"notifyme-event-page-edit-desc": "דף נערך על־ידי משתמש אחר"
 }
