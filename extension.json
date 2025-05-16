@@ -70,13 +70,6 @@
 					"buckets": [ "content-low-freq" ],
 					"description": "notifyme-event-page-delete-desc"
 				},
-				"discussion-edit": {
-					"spec": {
-						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\DiscussionPageEditEvent",
-						"services": [ "UserFactory" ]
-					},
-					"buckets": [ "personal" ]
-				},
 				"page-linked": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\PageLinkedEvent"
