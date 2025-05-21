@@ -6,12 +6,14 @@ namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 
 use Exception;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Extension\NotifyMe\Grouping\Grouper;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
+use MWException;
 use MWStake\MediaWiki\Component\Events\Notification;
 
 class DigestCreator {
@@ -62,8 +64,10 @@ class DigestCreator {
 		$grouper = new Grouper( $notifications );
 		$grouped = $grouper->onSubject()->group();
 
+		$context = new RequestContext();
+		$context->setUser( $user );
 		$digestHeader = Message::newFromKey( "notifyme-digest-header-$type" )
-			->params( $this->config->get( 'Sitename' ) );
+			->params( $this->config->get( 'Sitename' ) )->setContext( $context );
 		$content = [
 			'digestHeader' => $digestHeader->plain(),
 			'target_user' => $user->getRealName() ?: $user->getName(),
@@ -72,7 +76,7 @@ class DigestCreator {
 				'Preferences', false, 'mw-prefsection-notifications'
 			)->getFullURL()
 		];
-		$digestSubject = Message::newFromKey( "notifyme-digest-subject-$type" );
+		$digestSubject = Message::newFromKey( "notifyme-digest-subject-$type" )->setContext( $context );
 
 		return [
 			'subject' => $digestSubject->text(),
@@ -88,7 +92,7 @@ class DigestCreator {
 	 * @param User $user
 	 *
 	 * @return array
-	 * @throws \MWException
+	 * @throws MWException
 	 */
 	protected function serialize( array $grouped, User $user ): array {
 		$output = [];
