@@ -3,10 +3,10 @@
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Action;
 
 use EditAction;
+use LogicException;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\MediaWikiServices;
-use MWException;
 use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
 
 class EditMailTemplateAction extends EditAction {
@@ -18,7 +18,7 @@ class EditMailTemplateAction extends EditAction {
 		$this->useTransactionalTimeLimit();
 		try {
 			if ( !$this->getTitle()->exists() ) {
-				throw new MWException();
+				throw new LogicException();
 			}
 			$meta = $this->getMeta();
 		} catch ( MWException $e ) {
@@ -53,12 +53,12 @@ class EditMailTemplateAction extends EditAction {
 
 	/**
 	 * @return mixed
-	 * @throws MWException
+	 * @throws LogicException
 	 */
 	private function getMeta() {
 		$rev = $this->getArticle()->getPage()->getRevisionRecord();
 		if ( !$rev->hasSlot( 'mail_template_meta' ) ) {
-			throw new MWException( 'Trying to edit an invalid mail template' );
+			throw new LogicException( 'Trying to edit an invalid mail template' );
 		}
 		$meta = $rev->getContent( 'mail_template_meta' );
 		return json_decode( $meta->getText(), true );
