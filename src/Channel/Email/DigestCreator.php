@@ -13,7 +13,6 @@ use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Message\Message;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\User;
-use MWException;
 use MWStake\MediaWiki\Component\Events\Notification;
 
 class DigestCreator {
@@ -92,7 +91,7 @@ class DigestCreator {
 	 * @param User $user
 	 *
 	 * @return array
-	 * @throws MWException
+	 * @throws Exception
 	 */
 	protected function serialize( array $grouped, User $user ): array {
 		$output = [];
