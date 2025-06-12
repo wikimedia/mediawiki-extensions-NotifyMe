@@ -8,13 +8,11 @@ use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\MediaWikiServices;
 use MWException;
 use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
-use OOUI\Exception;
 
 class EditMailTemplateAction extends EditAction {
 
 	/**
 	 * @return void
-	 * @throws Exception
 	 */
 	public function show() {
 		$this->useTransactionalTimeLimit();
@@ -23,7 +21,7 @@ class EditMailTemplateAction extends EditAction {
 				throw new MWException();
 			}
 			$meta = $this->getMeta();
-		} catch ( \Exception $e ) {
+		} catch ( MWException $e ) {
 			$action = 'create';
 			if ( $this->getTitle()->exists() ) {
 				$action = 'edit';
