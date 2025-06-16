@@ -11,6 +11,7 @@ use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Action\EditMailTemplateAction;
 use MediaWiki\Extension\NotifyMe\MediaWiki\Content\MailTemplate;
 use MediaWiki\Html\Html;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Revision\RevisionLookup;
@@ -36,60 +37,36 @@ class MailTemplateHandler extends TextContentHandler {
 		return MailTemplate::class;
 	}
 
-	/**
-	 * @return false
-	 */
-	public function supportsSections() {
-		return false;
-	}
-
-	/**
-	 * @return bool
-	 */
-	public function supportsCategories() {
-		return true;
-	}
-
-	/**
-	 * @return false
-	 */
-	public function supportsRedirects() {
-		return false;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
 	protected function fillParserOutput( Content $content, ContentParseParams $cpoParams, ParserOutput &$output ) {
-		if ( !$content instanceof MailTemplate ) {
-			parent::fillParserOutput( $content, $cpoParams, $output );
-			return;
-		}
-
+		$revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
+		$mailContentProvider = MediaWikiServices::getInstance()->getService(
+			'NotifyMe.MailContentProvider'
+		);
 		try {
-
-			$revision = $this->revisionLookup->getRevisionByTitle( $cpoParams->getPage(), $cpoParams->getRevId() );
+			$page = MediaWikiServices::getInstance()->getTitleFactory()->castFromPageReference(
+				$cpoParams->getPage()
+			);
+			$revision = $revisionLookup->getRevisionByTitle( $page, $cpoParams->getRevId() );
 			if ( !$revision ) {
 				throw new Exception( 'No revision found' );
 			}
-			$mailContent = $this->mailContentProvider->getContentForRevision( $revision );
+			$mailContent = $mailContentProvider->getContentForRevision( $revision );
 			if ( !$mailContent ) {
 				throw new Exception( 'No content found for single notification' );
 			}
 			$type = $mailContent['meta']['type'];
 			if ( isset( $mailContent['meta']['is_content'] ) && $mailContent['meta']['is_content'] ) {
-				$contentHtml = $this->mailContentProvider->getHtmlFromData(
+				$mailContentHtml = $mailContentProvider->getHtmlFromData(
 					$mailContent,
 					RequestContext::getMain()->getUser(),
 					$mailContent['meta']['sampleData'] ?? []
 				);
 			} else {
-				$contentHtml = $mailContent['meta']['sampleData']['content'] ?? '';
+				$mailContentHtml = $mailContent['meta']['sampleData']['content'] ?? '';
 			}
-			$html = $this->mailContentProvider->wrap(
-				$contentHtml, RequestContext::getMain()->getUser()
+			$html = $mailContentProvider->wrap(
+				$mailContentHtml, RequestContext::getMain()->getUser()
 			);
-
 		} catch ( Exception $e ) {
 			$type = 'single';
 			$html = $content->getText();
@@ -120,7 +97,10 @@ class MailTemplateHandler extends TextContentHandler {
 	 * @return string
 	 */
 	private function addContentPages( string &$text ) {
-		$pages = $this->mailContentProvider->getEmailContentPages();
+		$mailContentProvider = MediaWikiServices::getInstance()->getService(
+			'NotifyMe.MailContentProvider'
+		);
+		$pages = $mailContentProvider->getEmailContentPages();
 		$text .= Html::openElement( 'ul' );
 		foreach ( $pages as $page ) {
 			$text .= Html::rawElement( 'li', [], Html::element( 'a', [
@@ -130,6 +110,27 @@ class MailTemplateHandler extends TextContentHandler {
 		$text .= Html::closeElement( 'ul' );
 
 		return $text;
+	}
+
+	/**
+	 * @return false
+	 */
+	public function supportsSections() {
+		return false;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function supportsCategories() {
+		return true;
+	}
+
+	/**
+	 * @return false
+	 */
+	public function supportsRedirects() {
+		return false;
 	}
 
 	/**
