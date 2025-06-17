@@ -118,6 +118,9 @@ class TriggerEvents implements
 		}
 
 		if ( !$title->isTalkPage() ) {
+			if ( $revisionRecord->isMinor() ) {
+				return;
+			}
 			if ( $flags & EDIT_NEW ) {
 				$this->emit( 'page-create', [ $agent, $title ] );
 			} else {
