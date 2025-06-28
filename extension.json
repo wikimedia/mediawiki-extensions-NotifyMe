@@ -138,7 +138,7 @@
 		"MediaWiki\\Extension\\NotifyMe\\": "src/"
 	},
 	"TestAutoloadNamespaces": {
-		"MediaWiki\\Extension\\NotifyMe\\Tests\\": "tests/phpunit"
+		"MediaWiki\\Extension\\NotifyMe\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
 		"ext.notifyme.subscription-preferences": {
