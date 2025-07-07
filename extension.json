@@ -195,7 +195,8 @@
 				"notifyme-ui-subscription-set-empty",
 				"notifyme-ui-dialog-popup-table-event-label",
 				"notifyme-ui-dialog-popup-table-desc-label",
-				"notifyme-ui-dialog-popup-header-label"
+				"notifyme-ui-dialog-popup-header-label",
+				"notifyme-ui-delivery-label"
 			],
 			"styles": [
 				"styles.less"
@@ -245,9 +246,7 @@
 			],
 			"messages": [
 				"notifyme-ui-edit",
-				"notifyme-ui-delete",
-				"notifyme-ui-delivery-web-email",
-				"notifyme-ui-delivery-web"
+				"notifyme-ui-delete"
 			],
 			"dependencies": [
 				"oojs-ui",
