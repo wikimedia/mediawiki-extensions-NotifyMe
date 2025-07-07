@@ -159,8 +159,6 @@
 	"notifyme-notification-generic-links-intro": "You can visit the page directly by using the following link",
 	"notifyme-ui-edit": "Edit",
 	"notifyme-ui-delete": "Delete",
-	"notifyme-ui-delivery-web-email": "Web and email",
-	"notifyme-ui-delivery-web": "Web only",
 	"notifyme-notification-tester-event-info": "Paste one of \"event key\"s from the table below",
 	"notifyme-notifications-mega-menu-no-notifications": "No new notifications!",
 	"notifyme-notification-center-filter-title": "Notifications",
@@ -204,5 +202,6 @@
 	"notifyme-ui-dialog-popup-table-event-label": "Event",
 	"notifyme-ui-dialog-popup-table-desc-label": "Description",
 	"notifyme-ui-dialog-popup-header-label": "These events trigger notifications:",
-	"notifyme-event-page-edit-desc": "A page has been edited by another user"
+	"notifyme-event-page-edit-desc": "A page has been edited by another user",
+	"notifyme-ui-delivery-label": "Delivery"
 }
