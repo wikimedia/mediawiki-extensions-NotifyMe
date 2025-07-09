@@ -61,17 +61,13 @@ class SubscriptionConfigurator {
 	public function getChannelLabels(): array {
 		$labels = [];
 		foreach ( $this->channelFactory->getChannels() as $channel ) {
-			$labels[$channel->getKey()] = [
-				'label' => $channel->getLabel()->text(),
-				'icon' => $channel->getKey() . '-icon',
-			];
+			$labels[$channel->getKey()] = $channel->getLabel()->text();
 		}
 		return $labels;
 	}
 
 	/**
 	 * @return array
-	 * @throws \Exception
 	 */
 	public function getBucketData(): array {
 		return $this->bucketProvider->getBucketLabels();

@@ -90,7 +90,6 @@ ext.notifyme.ui.panel.IndividualSubscriptions.prototype.addSet = function ( data
 		return;
 	}
 	const setInstance = new set( hash ); // eslint-disable-line new-cap
-	setInstance.setChannelLabels( this.channelLabels );
 	setInstance.setBucketDisplayLabels( this.buckets );
 	setInstance.setValue( data );
 	setInstance.connect( this, { edit: 'onEditClick', delete: 'onDeleteClick' } );
