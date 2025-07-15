@@ -163,8 +163,6 @@
 	"notifyme-notification-generic-links-intro": "Introduction text for generic links in notifications.",
 	"notifyme-ui-edit": "Label for the edit action in the UI.",
 	"notifyme-ui-delete": "Label for the delete action in the UI.",
-	"notifyme-ui-delivery-web-email": "Label indicating delivery options for web and email notifications.",
-	"notifyme-ui-delivery-web": "Label indicating delivery options for web notifications.",
 	"notifyme-notification-tester-event-info": "Information about the event being tested in the notification tester.",
 	"notifyme-notifications-mega-menu-no-notifications": "Label which is displayed when there are no new notifications",
 	"notifyme-notification-center-filter-title": "Notifications filter title",
@@ -208,5 +206,6 @@
 	"notifyme-ui-dialog-popup-table-event-label": "Label for table header column which contains event names",
 	"notifyme-ui-dialog-popup-table-desc-label": "Label for table header column which contains event descriptions",
 	"notifyme-ui-dialog-popup-header-label": "Label for popup which lists all events with description",
-	"notifyme-event-page-edit-desc": "Description when page edit event is triggered"
+	"notifyme-event-page-edit-desc": "Description when page edit event is triggered",
+	"notifyme-ui-delivery-label": "Label for the delivery method selection in the notification settings.\n\nThis is used in the [[Special:Preferences]] page."
 }
