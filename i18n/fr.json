@@ -167,8 +167,6 @@
 	"notifyme-notification-generic-links-intro": "Vous pouvez consulter immédiatement la page en utilisant le lien suivant",
 	"notifyme-ui-edit": "Modifier",
 	"notifyme-ui-delete": "Supprimer",
-	"notifyme-ui-delivery-web-email": "Sur le site et par courriel",
-	"notifyme-ui-delivery-web": "Uniquement sur le site",
 	"notifyme-notification-tester-event-info": "Collez l'une des « clés d'événement » du tableau ci-dessous",
 	"notifyme-notifications-mega-menu-no-notifications": "Aucune nouvelle notification !",
 	"notifyme-notification-center-filter-title": "Notifications",
