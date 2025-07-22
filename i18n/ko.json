@@ -86,8 +86,6 @@
 	"notifyme-notification-tester-invalid-target-user": "유효하지 않은 대상 사용자",
 	"notifyme-ui-edit": "편집",
 	"notifyme-ui-delete": "삭제",
-	"notifyme-ui-delivery-web-email": "웹 및 이메일",
-	"notifyme-ui-delivery-web": "웹 전용",
 	"notifyme-notifications-mega-menu-no-notifications": "새로운 알림이 없습니다!",
 	"notifyme-notification-center-filter-title": "알림",
 	"notifyme-navbar-button-title": "알림",
