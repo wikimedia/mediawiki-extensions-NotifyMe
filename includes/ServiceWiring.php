@@ -29,7 +29,8 @@ return [
 		}
 		return new ChannelFactory(
 			ExtensionRegistry::getInstance()->getAttribute( 'NotifyMeChannels' ),
-			$services->getObjectFactory()
+			$services->getObjectFactory(),
+			$services->getHookContainer()
 		);
 	},
 	'NotifyMe.Serializer' => static function ( MediaWikiServices $services ) {
