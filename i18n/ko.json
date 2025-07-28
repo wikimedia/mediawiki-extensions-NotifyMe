@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"22258",
 			"Hwangjy9",
+			"Suleiman the Magnificent Television",
 			"Tensama0415",
+			"YeBoy371",
 			"Ykhwong"
 		]
 	},
@@ -102,5 +105,15 @@
 	"notifyme-sample-data-agent": "홍길동",
 	"notifyme-sample-data-target": "홍길순",
 	"notifyme-sample-data-message": "편집된 \"파티 계획\" 문서",
-	"notifyme-sample-data-message-group": "\"파티 계획\" 문서가 편집되었습니다."
+	"notifyme-sample-data-message-group": "\"파티 계획\" 문서가 편집되었습니다.",
+	"notifyme-link-label-view-page": "문서 보기",
+	"notifyme-event-page-move-bot": "$1 문서가 $2(으)로 이동되었습니다",
+	"notifyme-notification-tester-field-event": "이벤트",
+	"notifyme-notification-tester-event": "이벤트 키",
+	"notifyme-event-page-missing-desc": "''이 이벤트에 대한 설명이 아직 없습니다''",
+	"notifyme-event-page-create-desc": "다른 사용자가 문서를 만들었습니다.",
+	"notifyme-event-page-delete-desc": "다른 사용자가 문서를 삭제했습니다.",
+	"notifyme-event-page-move-desc": "다른 사용자가 문서를 이동했습니다.",
+	"notifyme-ui-dialog-popup-table-event-label": "이벤트",
+	"notifyme-ui-dialog-popup-table-desc-label": "설명"
 }

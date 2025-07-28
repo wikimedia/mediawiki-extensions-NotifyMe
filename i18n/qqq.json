@@ -24,7 +24,7 @@
 	"notifyme-bucket-content-high-freq": "Label for high-frequency content notifications.",
 	"notifyme-bucket-content-low-freq-desc": "Description for low-frequency content bucket.",
 	"notifyme-bucket-content-high-freq-desc": "Description for high-frequency content bucket.",
-	"notifyme-bucket-qm": "Label for the 'Question and Mentions' notification bucket.",
+	"notifyme-bucket-qm": "Label for the 'Quality management' notification bucket.",
 	"notifyme-bucket-qm-desc": "Description for the 'Question and Mentions' notification bucket.",
 	"notifyme-bucket-personal": "Label for personal notifications.",
 	"notifyme-bucket-personal-desc": "Description for personal notifications bucket.",
@@ -203,5 +203,17 @@
 	"notifyme-notification-center-pagination-aria-previous": "Aria label for pagination button which switches to the previous page",
 	"notifyme-notification-center-navigation-hint": "Hint message that explains the arrow key navigation for the tabs on [[Special:Preferences]] to screenreader users.",
 	"notifyme-notification-center-filter-item-aria-label": "Aria label for filter item.\n$1 - Filter name",
-	"notifyme-event-page-edit-bot": "Action indicating a bot is involved in a page event.\n$1 - page title"
+	"notifyme-event-page-edit-bot": "Action indicating a bot is involved in a page event.\n$1 - page title",
+	"notifyme-bucket-content-low-freq-label": "Label for less frequency content radio selection button",
+	"notifyme-bucket-content-high-freq-label": "Label for high frequency content radio selection button",
+	"notifyme-bucket-qm-label": "Label for page quality radio selection button",
+	"notifyme-event-page-missing-desc": "Default label for event description if no description is provided by the event itself",
+	"notifyme-event-page-create-desc": "Description when page creation event is triggered",
+	"notifyme-event-page-delete-desc": "Description when page deletion event is triggered",
+	"notifyme-event-page-move-desc": "Description when page move event is triggered",
+	"notifyme-ui-dialog-popup-table-event-label": "Label for table header column which contains event names",
+	"notifyme-ui-dialog-popup-table-desc-label": "Label for table header column which contains event descriptions",
+	"notifyme-ui-dialog-popup-header-label": "Label for popup which lists all events with description",
+	"notifyme-event-page-edit-desc": "Description when page edit event is triggered",
+	"notifyme-ui-delivery-label": "Label for the delivery method selection in the notification settings.\n\nThis is used in the [[Special:Preferences]] page."
 }

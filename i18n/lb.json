@@ -150,5 +150,9 @@
 	"notifyme-notification-center-pagination-aria-next": "Nächst",
 	"notifyme-notification-center-pagination-aria-previous": "Vireg",
 	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
-	"notifyme-event-page-edit-bot": "D'Säit $1 gouf geännert"
+	"notifyme-event-page-edit-bot": "D'Säit $1 gouf geännert",
+	"notifyme-bucket-qm-label": "Evenementer am Zesummenhang mat der Säitequalitéit",
+	"notifyme-event-page-missing-desc": "''Et gëtt nach keng Beschreiwung fir dëst Evenement''",
+	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
+	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung"
 }

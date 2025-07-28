@@ -56,5 +56,7 @@
 	"notifyme-notification-center-filter-title": "اطلاع نامے",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "نشان لاؤ جو سارا پڑھ گھدے",
 	"notifyme-notification-center-timestamp-ago": "$1 پہلے",
-	"notifyme-notification-tester-invalid-page": "غلط ورقہ"
+	"notifyme-notification-tester-invalid-page": "غلط ورقہ",
+	"notifyme-ui-dialog-popup-table-event-label": "ایونٹ",
+	"notifyme-ui-dialog-popup-table-desc-label": "تفصیل"
 }
