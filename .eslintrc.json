@@ -11,7 +11,8 @@
 		"moment": "readonly",
 		"document": "readonly",
 		"window": "readonly",
-		"location": "readonly"
+		"location": "readonly",
+		"mediaWiki": "readonly"
 	},
 	"rules": {
 		"es-x/no-array-prototype-includes": "off",
