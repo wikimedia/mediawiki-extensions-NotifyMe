@@ -197,5 +197,6 @@
 	"notifyme-ui-dialog-popup-table-desc-label": "Beschrijving",
 	"notifyme-ui-dialog-popup-header-label": "Deze gebeurtenissen activeren meldingen:",
 	"notifyme-event-page-edit-desc": "Er is een pagina door een andere gebruiker bewerkt",
-	"notifyme-ui-delivery-label": "Aflevering"
+	"notifyme-ui-delivery-label": "Aflevering",
+	"prefs-subs": "Meldingsabonnementen"
 }
