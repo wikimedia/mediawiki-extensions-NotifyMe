@@ -282,7 +282,9 @@
 				"notifyme-notification-center-pagination-aria-next",
 				"notifyme-notification-center-pagination-aria-previous",
 				"notifyme-notification-center-navigation-hint",
-				"notifyme-notification-center-filter-item-aria-label"
+				"notifyme-notification-center-filter-item-aria-label",
+				"notifyme-notification-filter-count-aria-label",
+				"notifyme-notification-filter-aria-label"
 			],
 			"dependencies": [
 				"oojs-ui",

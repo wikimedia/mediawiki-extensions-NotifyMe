@@ -201,5 +201,7 @@
 	"notifyme-ui-dialog-popup-header-label": "Diese Ereignisse lösen Benachrichtigungen aus:",
 	"notifyme-event-page-edit-desc": "Eine Seite wurde von einem anderen Benutzer bearbeitet",
 	"notifyme-ui-delivery-label": "Zustellung",
-	"prefs-subs": "Benachrichtigungsabonnements"
+	"prefs-subs": "Benachrichtigungsabonnements",
+	"notifyme-notification-filter-count-aria-label": "enthält {{PLURAL:$1|eine Benachrichtigung| $1 Benachrichtigungen}}",
+	"notifyme-notification-filter-aria-label": "Benachrichtigungsfilter"
 }
