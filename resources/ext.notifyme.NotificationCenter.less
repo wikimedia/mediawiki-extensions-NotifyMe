@@ -97,10 +97,6 @@
 }
 
 .notifications-ui-widget-DatedNotificationsWidget-mark-as-read-button {
-	& .oo-ui-labelElement-label {
-		color: #777575;
-		font-weight: 600;
-	}
 	position: absolute;
 	right: 0;
 	margin-left: 20px;
@@ -176,11 +172,15 @@
 	min-height: 100px;
 	padding: 10px;
 	margin-bottom: 20px;
-	background-color: #fff;
+	background-color: #f8f9fa;
 }
 
 .notifications-ui-widget-NotificationItemWidget-notification-content .oojsplus-user-widget {
 	width: auto;
+
+	.user-display {
+		font-weight: normal;
+	}
 }
 
 .notifications-ui-widget-NotificationItemWidget-markAsReadButton {
@@ -254,23 +254,11 @@
 	margin: 2px 30px 0 5px;
 }
 
-.notifications-ui-widget-NotificationItemWidget-content-message-timestamp {
-	position: absolute;
-	bottom: 16px;
-	right: 7px;
-}
-
 .notifications-ui-widget-NotificationItemWidget-user-widget {
 	min-width: initial;
 	margin-right: 0 !important;
 	margin-left: 10px;
 	white-space: nowrap;
-}
-
-.notifications-ui-widget-NotificationItemWidget-timestamp {
-	font-style: italic;
-	font-weight: bold;
-	color: #777575;
 }
 
 /** NotificationGroupWidget **/
@@ -327,8 +315,7 @@
 
 		// Mark as unread
 		&-unread {
-			background-color: #eaecf0;
-			border: 1px solid #ccc;
+			background-color: #72777d;
 		}
 	}
 
@@ -343,7 +330,7 @@
 
 		// Mark as unread
 		&-unread {
-			background-color: #c8ccd1;
+			background-color: #54595d;
 		}
 	}
 }
