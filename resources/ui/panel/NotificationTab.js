@@ -283,6 +283,8 @@ ext.notifyme.ui.panel.NotificationTab.prototype.loadNotifications = function () 
 
 			// Hide pagination
 			this.paginationWidget.toggle( false );
+			// Hide mark all
+			this.markAllReadBtn.toggle( false );
 		} else {
 			this.$notificationsWrapper.append( datedNotificationWidget.$element );
 		}

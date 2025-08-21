@@ -93,13 +93,15 @@ ext.notifyme.ui.panel.NotificationCenter.prototype.addTabs = function () {
 	);
 
 	this.tabPanelUnread.connect( this, {
-		filterDataRetrieved: 'updateFilter'
+		filterDataRetrieved: 'updateFilter',
+		markAllRead: 'markNotificationsAllRead'
 	} );
 	this.tabPanelRead.connect( this, {
 		filterDataRetrieved: 'updateFilter'
 	} );
 	this.tabPanelAll.connect( this, {
-		filterDataRetrieved: 'updateFilter'
+		filterDataRetrieved: 'updateFilter',
+		markAllRead: 'markNotificationsAllRead'
 	} );
 
 	this.addTabPanels( [ this.tabPanelUnread, this.tabPanelRead, this.tabPanelAll ] );
