@@ -15,7 +15,6 @@ ext.notifyme.ui.panel.NotificationCenter = function ( cfg ) {
 	this.itemPerPage = cfg.itemPerPage || 10;
 
 	this.addTabs();
-	this.addAriaNavigationHint();
 
 	this.connect( this, {
 		set: 'tabSelected'
@@ -115,19 +114,6 @@ ext.notifyme.ui.panel.NotificationCenter.prototype.addFilterWidget = function ()
 	} );
 
 	$( '#notifications-overview' ).prepend( this.filterWidget.$element );
-};
-
-ext.notifyme.ui.panel.NotificationCenter.prototype.addAriaNavigationHint = function () {
-	// Make sure the accessibility tip is focussable so that keyboard users take notice,
-	// but hide it by default to reduce visual clutter.
-	// Make sure it becomes visible when focused.
-	const $navigationHint = $( '<div>' ).addClass( 'notifications-ui-widget-TabSelectWidget-navigation-hint' )
-		.text( mw.msg( 'notifyme-notification-center-navigation-hint' ) )
-		.attr( {
-			tabIndex: 0
-		} );
-
-	this.tabSelectWidget.$element.parent().prepend( $navigationHint );
 };
 
 /**

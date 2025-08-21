@@ -202,5 +202,7 @@
 	"notifyme-ui-dialog-popup-header-label": "These events trigger notifications:",
 	"notifyme-event-page-edit-desc": "A page has been edited by another user",
 	"notifyme-ui-delivery-label": "Delivery",
-	"prefs-subs": "Notification subscriptions"
+	"prefs-subs": "Notification subscriptions",
+	"notifyme-notification-filter-count-aria-label": "contains {{PLURAL:$1|one notification| $1 notifications}}",
+	"notifyme-notification-filter-aria-label": "Notification filter"
 }
