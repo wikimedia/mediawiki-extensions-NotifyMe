@@ -26,10 +26,29 @@ ext.notifyme.ui.panel.NotificationTab = function ( name, cfg ) {
 		change: 'changePage'
 	} );
 
+	this.markAllReadBtn = new OO.ui.ButtonWidget( {
+		icon: 'checkAll',
+		label: mw.message( 'notifyme-notification-center-help-menu-mark-all-read-label' ).text(),
+		data: 'markAllRead',
+		framed: false,
+		flags: [ 'progressive' ],
+		classes: [ 'notifications-ui-panel-NotificationTab-markAllAllRead-btn' ]
+	} );
+
 	// Notifications wrapper
 	this.$notificationsWrapper = $( '<div>' ).addClass( 'notifications-ui-panel-NotificationTab-notifications' );
 
 	this.$element.append( this.paginationWidget.$element );
+
+	if ( this.name !== 'read' ) {
+		this.$element.append( this.markAllReadBtn.$element );
+		this.markAllReadBtn.connect( this, {
+			click: () => {
+				this.emit( 'markAllRead' );
+			}
+		} );
+	}
+
 	this.$element.append( this.$notificationsWrapper );
 };
 
