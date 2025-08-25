@@ -34,6 +34,11 @@
 	& .oo-ui-tabOptionWidget {
 		width: 150px;
 	}
+
+	&:focus {
+		box-shadow: inset 0 0 0 2px var( --box-shadow-color-progressive--focus, #36c );
+		border: initial;
+	}
 }
 
 /** Accessibility hint for TabSelectWidget **/
@@ -82,6 +87,13 @@
 	margin-top: 0 !important;
 	margin-bottom: 10px !important;
 	margin-left: 10px !important;
+}
+
+.notifications-ui-panel-NotificationTab-markAllAllRead-btn {
+	display: flex;
+	justify-content: end;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .notifications-ui-widget-DatedNotificationsWidget-mark-as-read-button {
@@ -283,14 +295,6 @@
 		margin-left: 10px;
 		font-weight: normal;
 	}
-}
-
-/** HelpMenuWidget **/
-
-.notifications-ui-widget-HelpMenuWidget {
-	position: absolute;
-	bottom: 2px;
-	right: 0;
 }
 
 /** PaginationWidget **/

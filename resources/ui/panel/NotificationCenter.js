@@ -15,7 +15,6 @@ ext.notifyme.ui.panel.NotificationCenter = function ( cfg ) {
 	this.itemPerPage = cfg.itemPerPage || 10;
 
 	this.addTabs();
-	this.addButtons();
 	this.addAriaNavigationHint();
 
 	this.connect( this, {
@@ -114,18 +113,6 @@ ext.notifyme.ui.panel.NotificationCenter.prototype.addFilterWidget = function ()
 	} );
 
 	$( '#notifications-overview' ).prepend( this.filterWidget.$element );
-};
-
-ext.notifyme.ui.panel.NotificationCenter.prototype.addButtons = function () {
-	// Settings menu
-	this.settingsMenu = new ext.notifyme.ui.widget.HelpMenuWidget( { framed: true } );
-
-	this.settingsMenu.connect( this, { markAllRead: 'markNotificationsAllRead' } );
-
-	// Settings menu should not be part of tabs layout itself,
-	// for tabs to work correctly with switching using keyboard arrows,
-	// but still should be visually on the same line with tabs (by design)
-	this.tabSelectWidget.$element.parent().append( this.settingsMenu.$element );
 };
 
 ext.notifyme.ui.panel.NotificationCenter.prototype.addAriaNavigationHint = function () {
