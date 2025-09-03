@@ -4,6 +4,7 @@ ext.notifyme.ui.panel.NotificationCenter = function ( cfg ) {
 	cfg.expanded = false;
 
 	this.filter = 'title-all';
+	this.mobileView = cfg.mobileView || false;
 
 	// Parent constructor
 	ext.notifyme.ui.panel.NotificationCenter.parent.call( this, cfg );
@@ -107,7 +108,9 @@ ext.notifyme.ui.panel.NotificationCenter.prototype.addTabs = function () {
 };
 
 ext.notifyme.ui.panel.NotificationCenter.prototype.addFilterWidget = function () {
-	this.filterWidget = new ext.notifyme.ui.widget.FilterWidget();
+	this.filterWidget = new ext.notifyme.ui.widget.FilterWidget( {
+		mobileView: this.mobileView
+	} );
 
 	this.filterWidget.connect( this, {
 		selectItem: 'filterItemSelected'

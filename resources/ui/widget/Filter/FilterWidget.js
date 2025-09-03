@@ -1,6 +1,7 @@
 ext.notifyme.ui.widget.FilterWidget = function ( cfg ) {
 	cfg = cfg || {};
 
+	this.mobileView = cfg.mobileView || false;
 	ext.notifyme.ui.widget.FilterWidget.super.call( this, cfg );
 
 	this.filterData = {};
@@ -15,7 +16,11 @@ ext.notifyme.ui.widget.FilterWidget.prototype.loadData = function ( filterData, 
 	this.filterData = filterData;
 	this.activeFilter = activeFilter;
 
-	this.updateContent();
+	if ( this.mobileView ) {
+		this.updateMobileContent();
+	} else {
+		this.updateContent();
+	}
 };
 
 ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
@@ -43,6 +48,37 @@ ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
 		this.selectWidget.getMenu().$element.attr( 'aria-label',
 			mw.message( 'notifyme-notification-filter-aria-label' ).text() );
 		this.selectWidget.connect( this, {
+			select: 'filterSelected'
+		} );
+		this.$element.append( this.selectWidget.$element );
+	}
+	this.selectWidget.getMenu().selectItemByData( this.activeFilter );
+};
+
+ext.notifyme.ui.widget.FilterWidget.prototype.updateMobileContent = function () {
+	const options = [];
+	for ( const filter in this.filterData ) {
+		const filterType = this.filterData[ filter ].type;
+		if ( filterType !== 'title' ) {
+			options.push( new OO.ui.MenuSectionOptionWidget( {
+				label: this.filterData[ filter ].label
+			} ) );
+		}
+		for ( const item in this.filterData[ filter ].items ) {
+			const filterKey = filterType + '-' + this.filterData[ filter ].items[ item ].key;
+			options.push( new OO.ui.MenuOptionWidget( {
+				data: filterKey,
+				label: this.filterData[ filter ].items[ item ].label
+			} ) );
+		}
+	}
+	if ( !this.selectWidget ) {
+		this.selectWidget = new OO.ui.DropdownWidget( {
+			menu: {
+				items: options
+			}
+		} );
+		this.selectWidget.getMenu().connect( this, {
 			select: 'filterSelected'
 		} );
 		this.$element.append( this.selectWidget.$element );

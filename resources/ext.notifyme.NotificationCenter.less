@@ -4,6 +4,20 @@
 	display: flex;
 }
 
+#notifications-overview.notifications-mobile {
+	display: block;
+
+	.notifications-ui-widget-FilterWidget {
+		width: 100%;
+		margin: 1rem 0;
+	}
+
+	.notifications-ui-panel-NotificationCenter {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
 .notifications-ui-panel-NotificationCenter {
 	width: 76%;
 	margin-left: 10px;
@@ -97,8 +111,8 @@
 .notifications-ui-widget-FilterWidget {
 	display: inline-block;
 	width: 23%;
-	margin-left: 10px !important;
-	margin-right: 5px !important;
+	margin-left: 10px;
+	margin-right: 5px;
 }
 
 .notifications-ui-widget-FilterWidget { // stylelint-disable-line no-duplicate-selectors
