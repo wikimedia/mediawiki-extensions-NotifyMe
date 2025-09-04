@@ -177,9 +177,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "Groep als gelezen markeren",
 	"notifyme-notifications-group-expander-label-expanded": "$1 verdere bewerking{{PLURAL:$1||en}} van deze pagina verbergen",
 	"notifyme-notifications-group-expander-label-collapsed": "$1 verdere bewerking{{PLURAL:$1||en}} van deze pagina weergeven",
-	"notifyme-notification-center-help-menu-aria-label": "Instellingen",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "Alles als gelezen markeren",
-	"notifyme-notification-center-help-menu-preferences-label": "Voorkeuren",
 	"notifyme-notification-center-mark-as-read-circle-title": "Als gelezen markeren",
 	"notifyme-notification-center-mark-as-unread-circle-title": "Als ongelezen markeren",
 	"notifyme-notification-center-timestamp-ago": "$1 geleden",
@@ -198,5 +196,7 @@
 	"notifyme-ui-dialog-popup-header-label": "Deze gebeurtenissen activeren meldingen:",
 	"notifyme-event-page-edit-desc": "Er is een pagina door een andere gebruiker bewerkt",
 	"notifyme-ui-delivery-label": "Aflevering",
-	"prefs-subs": "Meldingsabonnementen"
+	"prefs-subs": "Meldingsabonnementen",
+	"notifyme-notification-filter-count-aria-label": "bevat {{PLURAL:$1|één melding|$1 meldingen}}",
+	"notifyme-notification-filter-aria-label": "Meldingsfilter"
 }

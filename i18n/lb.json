@@ -133,9 +133,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "Grupp als net gelies markéieren",
 	"notifyme-notifications-group-expander-label-expanded": "$1 {{PLURAL:$1|Ännerung|Ännerungen}} op dëser Säit manner weisen",
 	"notifyme-notifications-group-expander-label-collapsed": "nach $1 {{PLURAL:$1|Ännerung|Ännerungen}} op dëser Säit méi weisen",
-	"notifyme-notification-center-help-menu-aria-label": "Astellungen",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "All als gelies markéieren",
-	"notifyme-notification-center-help-menu-preferences-label": "Astellungen",
 	"notifyme-notification-center-mark-as-read-circle-title": "Als gelies markéieren",
 	"notifyme-notification-center-mark-as-unread-circle-title": "Als net gelies markéieren",
 	"notifyme-notification-center-timestamp-ago": "viru(n) $1",
@@ -146,5 +144,6 @@
 	"notifyme-notification-center-filter-item-aria-label": "Filter $1",
 	"notifyme-event-page-missing-desc": "''Et gëtt nach keng Beschreiwung fir dëst Evenement''",
 	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
-	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung"
+	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung",
+	"notifyme-notification-filter-aria-label": "Notifikatiounsfilter"
 }
