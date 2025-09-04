@@ -154,5 +154,6 @@
 	"notifyme-bucket-qm-label": "Evenementer am Zesummenhang mat der Säitequalitéit",
 	"notifyme-event-page-missing-desc": "''Et gëtt nach keng Beschreiwung fir dëst Evenement''",
 	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
-	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung"
+	"notifyme-ui-dialog-popup-table-desc-label": "Beschreiwung",
+	"notifyme-notification-filter-aria-label": "Notifikatiounsfilter"
 }
