@@ -207,6 +207,6 @@
 	"notifyme-event-page-edit-desc": "Description when page edit event is triggered",
 	"notifyme-ui-delivery-label": "Label for the delivery method selection in the notification settings.\n\nThis is used in the [[Special:Preferences]] page.",
 	"prefs-subs": "Header label for subscription section on [[Special:Preferences]]",
-	"notifyme-notification-filter-count-aria-label": "Aria label for filter batch text to display number of notifications in filter option\n$1 - notifications count",
+	"notifyme-notification-filter-count-aria-label": "Aria label for filter batch text to display number of notifications in filter option\n\n$1 - notifications count",
 	"notifyme-notification-filter-aria-label": "Aria label for select widget to filter notifications"
 }
