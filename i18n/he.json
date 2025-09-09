@@ -177,9 +177,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "לסמן בתור קבוצה שנקראה",
 	"notifyme-notifications-group-expander-label-expanded": "להסתיר עוד {{PLURAL:$1|עריכה אחת|$1 עריכות}} של הדף הזה",
 	"notifyme-notifications-group-expander-label-collapsed": "להציג עוד {{PLURAL:$1|עריכה אחת|$1 עריכות}} של הדף הזה",
-	"notifyme-notification-center-help-menu-aria-label": "הגדרות",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "לסמן שהכול נקרא",
-	"notifyme-notification-center-help-menu-preferences-label": "העדפות",
 	"notifyme-notification-center-mark-as-read-circle-title": "לסמן בתור התראה שנקראה",
 	"notifyme-notification-center-mark-as-unread-circle-title": "לסמן בתור התראה שלא נקראה",
 	"notifyme-notification-center-timestamp-ago": "לפני $1",
@@ -196,5 +194,9 @@
 	"notifyme-ui-dialog-popup-table-event-label": "אירוע",
 	"notifyme-ui-dialog-popup-table-desc-label": "תיאור",
 	"notifyme-ui-dialog-popup-header-label": "האירועים האלה מפעילים התראות:",
-	"notifyme-event-page-edit-desc": "דף נערך על־ידי משתמש אחר"
+	"notifyme-event-page-edit-desc": "דף נערך על־ידי משתמש אחר",
+	"notifyme-ui-delivery-label": "שיטת מסירה",
+	"prefs-subs": "מינויים להתראות",
+	"notifyme-notification-filter-count-aria-label": "מכיל {{PLURAL:$1|התראה אחת|$1 התראות}}",
+	"notifyme-notification-filter-aria-label": "סינון התראות"
 }

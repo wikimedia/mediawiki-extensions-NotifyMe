@@ -177,9 +177,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "Marcar gruppo como legite",
 	"notifyme-notifications-group-expander-label-expanded": "celar $1 altere modification{{PLURAL:$1||es}} de iste pagina",
 	"notifyme-notifications-group-expander-label-collapsed": "monstrar $1 altere modification{{PLURAL:$1||es}} de iste pagina",
-	"notifyme-notification-center-help-menu-aria-label": "Parametros",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "Marcar toto como legite",
-	"notifyme-notification-center-help-menu-preferences-label": "Preferentias",
 	"notifyme-notification-center-mark-as-read-circle-title": "Marcar como legite",
 	"notifyme-notification-center-mark-as-unread-circle-title": "Marcar como non legite",
 	"notifyme-notification-center-timestamp-ago": "$1 retro",
@@ -198,5 +196,7 @@
 	"notifyme-ui-dialog-popup-header-label": "Iste eventos actiona notificationes:",
 	"notifyme-event-page-edit-desc": "Un pagina ha essite modificate per un altere usator",
 	"notifyme-ui-delivery-label": "Livration",
-	"prefs-subs": "Abonamentos a notificationes"
+	"prefs-subs": "Abonamentos a notificationes",
+	"notifyme-notification-filter-count-aria-label": "contine {{PLURAL:$1|un notification|$1 notificationes}}",
+	"notifyme-notification-filter-aria-label": "Filtro de notificationes"
 }

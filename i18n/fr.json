@@ -184,9 +184,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "Marquer le groupe comme lu",
 	"notifyme-notifications-group-expander-label-expanded": "masquer $1 {{PLURAL:$1|modification|modifications}} de plus sur cette page",
 	"notifyme-notifications-group-expander-label-collapsed": "afficher $1 {{PLURAL:$1|modification|modifications}} de plus sur cette page",
-	"notifyme-notification-center-help-menu-aria-label": "Paramètres",
 	"notifyme-notification-center-help-menu-mark-all-read-label": "Marquer tout comme lu",
-	"notifyme-notification-center-help-menu-preferences-label": "Préférences",
 	"notifyme-notification-center-mark-as-read-circle-title": "Marquer comme lu",
 	"notifyme-notification-center-mark-as-unread-circle-title": "Marquer comme non lu",
 	"notifyme-notification-center-timestamp-ago": "il y a $1",
@@ -205,5 +203,7 @@
 	"notifyme-ui-dialog-popup-header-label": "Ces événements déclenchent des notifications :",
 	"notifyme-event-page-edit-desc": "Une page a été modifiée par un autre utilisateur",
 	"notifyme-ui-delivery-label": "Livraison",
-	"prefs-subs": "Abonnements aux notifications"
+	"prefs-subs": "Abonnements aux notifications",
+	"notifyme-notification-filter-count-aria-label": "contient {{PLURAL:$1|une notification|$1 notifications}}",
+	"notifyme-notification-filter-aria-label": "Filtre de notifications"
 }
