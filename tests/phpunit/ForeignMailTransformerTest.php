@@ -2,14 +2,18 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
+use MailAddress;
 use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Extension\NotifyMe\MediaWiki\ForeignMail\Transformer;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
 
 /**
  * @covers \MediaWiki\Extension\NotifyMe\MediaWiki\ForeignMail\Transformer::onUserMailerTransformMessage
  */
 class ForeignMailTransformerTest extends TestCase {
+
+	private const USERNAME = 'Test.User';
 
 	/**
 	 * @covers \MediaWiki\Extension\NotifyMe\MediaWiki\ForeignMail\Transformer::onUserMailerTransformMessage
@@ -23,16 +27,17 @@ class ForeignMailTransformerTest extends TestCase {
 		$mcpMock->method( 'wrap' )->willReturnCallback( static function ( $body, $user ) {
 			return $body;
 		} );
+		$loggerpMock = $this->createMock( LoggerInterface::class );
 
-		$transformer = new Transformer( $mcpMock );
+		$transformer = new Transformer( $mcpMock, $loggerpMock );
 		$subject = 'Dummy';
 		$headers = [
 			'Content-type' => 'text/plain; charset=UTF-8'
 		];
 		$error = '';
 		$transformer->onUserMailerTransformMessage(
-			[ new \MailAddress( 'foo' ) ],
-			new \MailAddress( 'bar' ),
+			[ new MailAddress( 'foo', self::USERNAME ) ],
+			new MailAddress( 'bar' ),
 			$subject, $headers, $input, $error
 		);
 

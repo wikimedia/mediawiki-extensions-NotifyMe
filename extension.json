@@ -395,7 +395,7 @@
 		},
 		"handleNonNotificationMails": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\ForeignMail\\Transformer",
-			"services": [ "NotifyMe.MailContentProvider" ]
+			"services": [ "NotifyMe.MailContentProvider", "NotifyMe.Logger" ]
 		},
 		"triggerEvents": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\TriggerEvents",
