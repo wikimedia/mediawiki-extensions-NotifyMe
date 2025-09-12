@@ -3,7 +3,7 @@ password for BS4.3 (<http://localhost/wiki/index.php/Main_Page>). The following 
 associated with this email address:
 
 Username:
-Dummy
+Test.User
 
 Temporary password:
 foobar
