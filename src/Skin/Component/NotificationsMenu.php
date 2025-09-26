@@ -17,9 +17,6 @@ use MWStake\MediaWiki\Component\CommonUserInterface\IRestrictedComponent;
 
 class NotificationsMenu extends SimpleDropdownIcon implements IRestrictedComponent {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}

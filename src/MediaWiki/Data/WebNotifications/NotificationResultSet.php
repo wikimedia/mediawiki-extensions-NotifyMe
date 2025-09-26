@@ -7,7 +7,6 @@ use MWStake\MediaWiki\Component\DataStore\ResultSet;
 
 class NotificationResultSet extends ResultSet {
 	/**
-	 *
 	 * @var int
 	 */
 	protected $processedCount = 0;
@@ -18,7 +17,6 @@ class NotificationResultSet extends ResultSet {
 	protected $itemsCount = 0;
 
 	/**
-	 *
 	 * @param Record[] $records
 	 * @param int $total
 	 * @param int $itemsCount

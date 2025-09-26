@@ -90,7 +90,6 @@ abstract class SendDigest implements IProcessStep {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getDateRangeCondition() {
