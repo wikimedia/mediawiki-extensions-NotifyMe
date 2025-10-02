@@ -166,5 +166,19 @@
 	"notifyme-notifications-group-expander-label-expanded": "隱藏此頁面的 $1 次以上{{PLURAL:$1|編輯}}",
 	"notifyme-notifications-group-expander-label-collapsed": "顯示此頁面的 $1 次以上{{PLURAL:$1|編輯}}",
 	"notifyme-navbar-button-aria-label-unread-notifications": "您有 $1 則未讀{{PLURAL:$1|通知}}",
-	"notifyme-event-page-missing-desc": "''尚無關於此事件的描述''"
+	"notifyme-event-page-missing-desc": "''尚無關於此事件的描述''",
+	"notifyme-ui-subscription-manager-type-manual": "個人",
+	"notifyme-ui-subscription-manager-type-manual-desc": "選擇您想要接收通知的事件",
+	"notifyme-sample-data-source-provider-2": "您已訂閱「Planning」分類，此頁面是該分類的一部分",
+	"notifyme-schema-source-providers-link": "連結到使用者可以更改偏好設定的地方（如果適用）",
+	"notifyme-mail-template-edit-help-int": "國際化訊息可以透過 <pre><nowiki>{{int:message-key}}</nowiki></pre> 在內容中使用",
+	"notifyme-mail-template-edit-help-logo": "要新增設定在外觀的您的 wiki 標誌，請使用 <pre>&lt;img src=\"{{logo}}\" alt=\"Wiki logo\" /&gt;</pre>",
+	"notifyme-schema-link-intro": "在連結清單前顯示的訊息。此欄位的可用性取決於通知類型",
+	"notifyme-links-intro-edit": "您可以透過以下連結直接查看頁面的更改內容",
+	"notifyme-mail-manage-notifications": "造訪以下連結來管理您收到的通知",
+	"notifyme-event-group-assigned-bot": "您的使用者權限已變更。您已被加入到群組{{PLURAL:$1|「$2」}}",
+	"notifyme-event-group-removed-bot": "您的使用者權限已變更。您已被從群組{{PLURAL:$1|「$2」}}裡移除",
+	"notifyme-notification-tester-field-bot": "以機器人使用者身分發送（某些事件會根據是被真人使用者或是機器人觸發，而採用不同的訊息）",
+	"notifyme-notification-center-filter-item-aria-label": "過濾器$1",
+	"notifyme-notification-filter-aria-label": "通知過濾器"
 }
