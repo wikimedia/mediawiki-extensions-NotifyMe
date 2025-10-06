@@ -180,5 +180,16 @@
 	"notifyme-event-group-removed-bot": "您的使用者權限已變更。您已被從群組{{PLURAL:$1|「$2」}}裡移除",
 	"notifyme-notification-tester-field-bot": "以機器人使用者身分發送（某些事件會根據是被真人使用者或是機器人觸發，而採用不同的訊息）",
 	"notifyme-notification-center-filter-item-aria-label": "過濾器$1",
-	"notifyme-notification-filter-aria-label": "通知過濾器"
+	"notifyme-notification-filter-aria-label": "通知過濾器",
+	"notifyme-mail-template-output-header-single": "這是個人通知的電子郵件通知樣貌（含範例資料）。要編輯電子郵件內容的樣式，請編輯此頁面。若您要編輯電子郵件的包裝器，請參閱[[MediaWiki:Wrapper.mail|電子郵件包裝器]]",
+	"notifyme-mail-template-output-header-digest": "這是電子郵件摘要通知樣貌（含範例資料）。要編輯電子郵件內容的樣式，請編輯此頁面。若您要編輯電子郵件的包裝器，請參閱[[MediaWiki:Wrapper.mail|電子郵件包裝器]]",
+	"notifyme-mail-template-edit-title-wrapper": "編輯電子郵件包裝器",
+	"notifyme-mail-template-edit-title-single": "編輯單一電子郵件通知範本",
+	"notifyme-mail-template-edit-title-digest": "編輯電子郵件摘要通知範本",
+	"notifyme-edit-mail-template-error-create": "無法建立新的電子郵件範本",
+	"notifyme-edit-mail-template-error-edit": "無法編輯電子郵件範本：缺少詮釋資料",
+	"notifyme-schema-user-timestamp": "根據目標使用者偏好設定的通知時間戳記格式",
+	"notifyme-mail-template-edit-help-button-label": "郵件內容說明",
+	"notifyme-notification-center-filter-label-namespaces-none": "主要",
+	"notifyme-mail-template-output-header-wrapper": "電子郵件包裝器。此電子郵件樣式將用於所有從 wiki 發送的電子郵件。編輯此可調整電子郵件的整體樣式。如果您需要編輯實際內容的樣式，請參閱以下郵件內容頁面："
 }
