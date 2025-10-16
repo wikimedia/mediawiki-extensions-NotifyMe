@@ -201,5 +201,6 @@
 	"notifyme-ui-delivery-label": "Zustellung",
 	"prefs-subs": "Benachrichtigungsabonnements",
 	"notifyme-notification-filter-count-aria-label": "enthält {{PLURAL:$1|eine Benachrichtigung| $1 Benachrichtigungen}}",
-	"notifyme-notification-filter-aria-label": "Benachrichtigungsfilter"
+	"notifyme-notification-filter-aria-label": "Benachrichtigungsfilter",
+	"notifyme-notification-center-pagination-number-aria-label": "Benachrichtigungen $1 bis $2 angezeigt"
 }
