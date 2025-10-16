@@ -26,6 +26,9 @@ ext.notifyme.ui.widget.FilterWidget.prototype.loadData = function ( filterData, 
 ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
 	const options = [];
 	for ( const filter in this.filterData ) {
+		if ( this.filterData[ filter ].items.length === 0 ) {
+			continue;
+		}
 		const filterType = this.filterData[ filter ].type;
 		if ( filterType !== 'title' ) {
 			options.push( { optgroup: this.filterData[ filter ].label } );
@@ -58,6 +61,9 @@ ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
 ext.notifyme.ui.widget.FilterWidget.prototype.updateMobileContent = function () {
 	const options = [];
 	for ( const filter in this.filterData ) {
+		if ( this.filterData[ filter ].items.length === 0 ) {
+			continue;
+		}
 		const filterType = this.filterData[ filter ].type;
 		if ( filterType !== 'title' ) {
 			options.push( new OO.ui.MenuSectionOptionWidget( {

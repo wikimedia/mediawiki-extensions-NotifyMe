@@ -284,7 +284,8 @@
 				"notifyme-notification-center-navigation-hint",
 				"notifyme-notification-center-filter-item-aria-label",
 				"notifyme-notification-filter-count-aria-label",
-				"notifyme-notification-filter-aria-label"
+				"notifyme-notification-filter-aria-label",
+				"notifyme-notification-center-pagination-number-aria-label"
 			],
 			"dependencies": [
 				"oojs-ui",
