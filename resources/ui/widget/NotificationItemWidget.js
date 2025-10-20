@@ -119,7 +119,7 @@ ext.notifyme.ui.widget.NotificationItemWidget.prototype.getSecondaryLinks = func
 		const $linkWrapper = $( '<div>' ).addClass( 'notifications-ui-widget-NotificationItemWidget-secondary-link-wrapper' );
 
 		const icon = new OO.ui.IconWidget( {
-			icon: 'next'
+			icon: 'arrowNext'
 		} );
 
 		const $link = $( '<a>' )
