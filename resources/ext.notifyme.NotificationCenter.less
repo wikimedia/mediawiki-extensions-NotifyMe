@@ -4,20 +4,6 @@
 	display: flex;
 }
 
-#notifications-overview.notifications-mobile {
-	display: block;
-
-	.notifications-ui-widget-FilterWidget {
-		width: 100%;
-		margin: 1rem 0;
-	}
-
-	.notifications-ui-panel-NotificationCenter {
-		width: 100%;
-		margin-left: 0;
-	}
-}
-
 .notifications-ui-panel-NotificationCenter {
 	width: 76%;
 	margin-left: 10px;
@@ -100,9 +86,8 @@
 }
 
 .notifications-ui-widget-DatedNotificationsWidget-mark-as-read-button {
-	position: absolute;
-	right: 0;
-	margin-left: 20px;
+	display: flex;
+	justify-content: right;
 	margin-bottom: 4px;
 }
 
@@ -194,7 +179,7 @@
 
 .notifications-ui-widget-NotificationItemWidget-secondary-links-wrapper {
 	margin-top: 10px;
-	margin-left: 68px;
+	margin-left: 2.5rem;
 
 	& .oo-ui-iconWidget {
 		min-height: initial;
@@ -206,10 +191,6 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 5px;
-}
-
-.notifications-ui-widget-NotificationItemWidget-secondary-link {
-	margin-left: 10px;
 }
 
 .notifications-ui-widget-NotificationItemWidget-notification-content-in-group {
@@ -283,7 +264,6 @@
 	}
 
 	& .oo-ui-labelElement-label {
-		margin-left: 10px;
 		font-weight: normal;
 	}
 }

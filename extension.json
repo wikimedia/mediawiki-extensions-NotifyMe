@@ -264,9 +264,10 @@
 				"ui/widget/ToggleReadCircleButtonWidget.js",
 				"ui/widget/Filter/FilterWidget.js"
 			],
-			"styles": [
-				"ext.notifyme.NotificationCenter.less"
-			],
+			"styles": {
+				"ext.notifyme.NotificationCenter.less": {},
+				"ext.notifyme.NotificationCenter.sm.less": { "media": "all and ( max-width: 767px )" }
+			},
 			"messages": [
 				"notifyme-notification-center-tab-label-unread",
 				"notifyme-notification-center-tab-label-read",
