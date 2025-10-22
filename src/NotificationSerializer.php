@@ -401,7 +401,7 @@ final class NotificationSerializer {
 			if ( isset( $value['public'] ) && !$value['public'] ) {
 				return null;
 			}
-			$value['desc'] = Message::newFromKey( $value['desc'] )->plain();
+			$value['desc'] = Message::newFromKey( $value['desc'] )->text();
 			$value['example'] = htmlspecialchars( $value['example'] ?? '' );
 			if ( isset( $value['schemaKey'] ) ) {
 				$value['items'] = $this->getPublicSchemaFor( $value['schemaKey'] );
