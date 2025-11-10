@@ -264,7 +264,7 @@ class MailContentProvider {
 	 */
 	private function processWikitext( string &$html, User $user, RevisionRecord $revision ) {
 		$parser = $this->parserFactory->create();
-		$pageRef = $parser->getPage();
+		$pageRef = $revision->getPage();
 		$parser->setPage( $pageRef );
 		$parser->setUser( $user );
 		$options = ParserOptions::newFromUser( $user );
