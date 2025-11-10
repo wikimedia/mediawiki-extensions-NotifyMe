@@ -429,7 +429,8 @@
 	],
 	"ContentHandlers": {
 		"mail_template": {
-			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\ContentHandler\\MailTemplateHandler"
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\ContentHandler\\MailTemplateHandler",
+			"services": [ "RevisionLookup", "NotifyMe.MailContentProvider" ]
 		}
 	},
 	"manifest_version": 2
