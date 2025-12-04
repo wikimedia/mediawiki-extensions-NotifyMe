@@ -191,5 +191,6 @@
 	"notifyme-schema-user-timestamp": "根據目標使用者偏好設定的通知時間戳記格式",
 	"notifyme-mail-template-edit-help-button-label": "郵件內容說明",
 	"notifyme-notification-center-filter-label-namespaces-none": "主要",
-	"notifyme-mail-template-output-header-wrapper": "電子郵件包裝器。此電子郵件樣式將用於所有從 wiki 發送的電子郵件。編輯此可調整電子郵件的整體樣式。如果您需要編輯實際內容的樣式，請參閱以下郵件內容頁面："
+	"notifyme-mail-template-output-header-wrapper": "電子郵件包裝器。此電子郵件樣式將用於所有從 wiki 發送的電子郵件。編輯此可調整電子郵件的整體樣式。如果您需要編輯實際內容的樣式，請參閱以下郵件內容頁面：",
+	"notifyme-notification-center-pagination-number-aria-label": "已顯示 $1 至 $2 的通知"
 }
