@@ -4,6 +4,8 @@
 			"Yupik"
 		]
 	},
+	"notifyme-ui-subscriptionset-editor-category-label": "Kategoriija",
+	"notifyme-ui-subscriptionset-category-label": "Kategoriija",
 	"notifyme-ui-dialog-set-editor-cancel": "Gaskkalduhte",
 	"notifyme-notification-center-filter-label-categories": "Kategoriijat"
 }
