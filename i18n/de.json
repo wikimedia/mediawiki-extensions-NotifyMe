@@ -3,6 +3,7 @@
 		"authors": [
 			"Brettchenweber",
 			"McDutchie",
+			"Mschlindwein",
 			"Vhoesl",
 			"[http://www.hallowelt.com Hallo Welt! GmbH]"
 		]
@@ -97,7 +98,7 @@
 	"notifyme-schema-source-providers-link": "Link zu der Stelle, an der der Nutzer seine Einstellungen ändern kann (falls zutreffend)",
 	"notifyme-mail-template-edit-help-colors": "Die folgenden Farbvariablen sind verfügbar. Sie werden automatisch an die Farben der Oberfläche des Wikis angepasst.",
 	"notifyme-mail-template-edit-help-int": "Nachrichten zur Internationalisierung können im Inhalt über <pre><nowiki>{{int:message-key}}</nowiki></pre> verwendet werden",
-	"notifyme-mail-template-edit-help-logo": "Um das Logo des Wikis hinzuzufügen, das im Skin festgelegt ist, {{#FORMAL:verwende|verwenden Sie}} <pre>&lt;img src=\"{{logo}}\" alt=\"Wiki logo\" /&gt;</pre>",
+	"notifyme-mail-template-edit-help-logo": "Um das Logo des Wikis hinzuzufügen, das im Skin festgelegt ist, kann <pre>&lt;img src=\"{{logo}}\" alt=\"Wiki logo\" /&gt;</pre> verwendet werden",
 	"notifyme-mail-template-edit-help-category-params": "Inhaltliche Variablen",
 	"notifyme-mail-template-edit-help-category-logo": "Logo",
 	"notifyme-mail-template-edit-help-category-int": "Internationalisierung",
