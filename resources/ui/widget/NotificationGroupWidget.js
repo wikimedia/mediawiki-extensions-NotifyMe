@@ -28,6 +28,12 @@ ext.notifyme.ui.widget.NotificationGroupWidget = function ( data, cfg ) {
 	};
 
 	ext.notifyme.ui.widget.NotificationGroupWidget.parent.call( this, notificationData, cfg );
+	mws.galaxyIntegration.ForeignWikiBadge.call( this, this.notifications[ 0 ]._source_wiki || null ); // eslint-disable-line no-underscore-dangle
+	const $wikiBadge = this.getWikiBadge();
+	if ( $wikiBadge ) {
+		this.$content.prepend( $wikiBadge );
+	}
+
 	this.connect( this, {
 		itemMarked: 'groupItemMarked'
 	} );
@@ -35,9 +41,14 @@ ext.notifyme.ui.widget.NotificationGroupWidget = function ( data, cfg ) {
 	this.addNotifications( this.notifications );
 
 	this.$element.addClass( 'notifications-ui-widget-NotificationGroupWidget' );
+	const wikiColor = this.getWikiColor();
+	if ( wikiColor ) {
+		this.$element.css( 'border-left', `4px solid ${ wikiColor }` );
+	}
 };
 
 OO.inheritClass( ext.notifyme.ui.widget.NotificationGroupWidget, ext.notifyme.ui.widget.NotificationItemWidget );
+OO.mixinClass( ext.notifyme.ui.widget.NotificationGroupWidget, mws.galaxyIntegration.ForeignWikiBadge );
 
 ext.notifyme.ui.widget.NotificationGroupWidget.prototype.isGroupUnread = function () {
 	return this.notifications[ 0 ].status === 'pending';

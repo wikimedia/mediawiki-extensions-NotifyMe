@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\Grouping;
 
+use MediaWiki\Extension\NotifyMe\ForeignNotification;
 use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
@@ -97,6 +98,9 @@ final class Grouper {
 			$hash[] = $notification->getEvent()->getTitle()->getPrefixedDBkey();
 		}
 		$hash = array_merge( $hash, $additionalParts );
+		if ( $notification instanceof ForeignNotification ) {
+			$hash[] = $notification->getSourceWikiId();
+		}
 
 		return md5( implode( '-', $hash ) );
 	}

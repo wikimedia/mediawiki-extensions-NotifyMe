@@ -83,32 +83,7 @@ $( () => {
 	}
 
 	function renderNotificationItem( notification ) {
-		const $notificationItem = $( '<div>' ).addClass( 'notification-item' );
-
-		const $unreadCircleWrapper = $( '<div>' ).addClass( 'notification-unread-circle-wrapper' );
-		const $unreadCircle = $( '<div>' ).addClass( 'notification-unread-circle' );
-
-		$unreadCircleWrapper.append( $unreadCircle );
-
-		const hasAgent = !notification.agent_is_bot && notification.entity_type === 'single_notification';
-		const agent = hasAgent ? notification.agent.display_name : '';
-		const $message = $( '<div>' ).addClass( 'notification-message' );
-		$message.html( agent ? agent + ' ' + notification.message.main : notification.message.main );
-
-		// Timestamp
-		const itemMoment = moment.utc( notification.timestamp );
-		itemMoment.local();
-
-		const $timestamp = $( '<div>' ).addClass( 'notification-timestamp' );
-		$timestamp.text( itemMoment.fromNow( false ) );
-
-		$notificationItem.append( [
-			$unreadCircleWrapper,
-			$message,
-			$timestamp
-		] );
-
-		return $notificationItem;
+		return new ext.notifyme.ui.widget.NotificationPreviewItemWidget( notification ).$element;
 	}
 
 	var $megaMenuButton = $( '.notifications-megamenu-btn' ); // eslint-disable-line no-var

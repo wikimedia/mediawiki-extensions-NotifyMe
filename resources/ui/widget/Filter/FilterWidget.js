@@ -45,9 +45,7 @@ ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
 		}
 	}
 	if ( !this.selectWidget ) {
-		this.selectWidget = new OOJSPlus.ui.widget.GroupedSelectWidget( {
-			options: options
-		} );
+		this.selectWidget = new OOJSPlus.ui.widget.GroupedSelectWidget();
 		this.selectWidget.getMenu().$element.attr( 'aria-label',
 			mw.message( 'notifyme-notification-filter-aria-label' ).text() );
 		this.selectWidget.connect( this, {
@@ -55,6 +53,8 @@ ext.notifyme.ui.widget.FilterWidget.prototype.updateContent = function () {
 		} );
 		this.$element.append( this.selectWidget.$element );
 	}
+	this.selectWidget.getMenu().clearItems();
+	this.selectWidget.setOptionsData( options );
 	this.selectWidget.getMenu().selectItemByData( this.activeFilter );
 };
 

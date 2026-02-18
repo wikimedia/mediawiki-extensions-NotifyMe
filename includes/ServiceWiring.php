@@ -5,6 +5,7 @@ use MediaWiki\Extension\NotifyMe\Channel\Email\MailContentProvider;
 use MediaWiki\Extension\NotifyMe\ChannelFactory;
 use MediaWiki\Extension\NotifyMe\EventFactory;
 use MediaWiki\Extension\NotifyMe\EventProvider;
+use MediaWiki\Extension\NotifyMe\ForeignNotificationFactory;
 use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\NotificationTester;
@@ -41,7 +42,8 @@ return [
 			$services->getLanguageFactory(),
 			$services->getUserOptionsLookup(),
 			$services->getContentLanguage(),
-			$services->getService( 'NotifyMe.EventFactory' )
+			$services->getService( 'NotifyMe.EventFactory' ),
+			$services->getService( 'NotifyMe._ForeignNotificationFactory' )
 		);
 	},
 	'NotifyMe.Store' => static function ( MediaWikiServices $services ) {
@@ -135,6 +137,12 @@ return [
 		return new EventProvider(
 			ExtensionRegistry::getInstance()->getAttribute( 'NotifyMeEvents' ),
 			$services->getHookContainer()
+		);
+	},
+	'NotifyMe._ForeignNotificationFactory' => static function ( MediaWikiServices $services ) {
+		return new ForeignNotificationFactory(
+			$services->getHookContainer(),
+			$services->getTitleFactory()
 		);
 	},
 ];

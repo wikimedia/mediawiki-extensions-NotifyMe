@@ -12,7 +12,8 @@
 		"document": "readonly",
 		"window": "readonly",
 		"location": "readonly",
-		"mediaWiki": "readonly"
+		"mediaWiki": "readonly",
+		"mws": "readonly"
 	},
 	"rules": {
 		"es-x/no-array-prototype-includes": "off",

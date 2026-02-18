@@ -215,5 +215,7 @@
 	"notifyme-automation-arbitrary-title-notification-action": "Wiki automation integration action name",
 	"notifyme-arbitrary-event-action-message-label": "Field label",
 	"notifyme-arbitrary-event-action-event-target-user-label": "Field label",
-	"notifyme-arbitrary-event-action-send-as-bot-label": "Field label"
+	"notifyme-arbitrary-event-action-send-as-bot-label": "Field label",
+	"notifyme-notification-center-filter-label-source": "Filter bucket label for selection of which wiki to show notifications from",
+	"notifyme-notification-center-filter-label-source-local": "Filter bucket option label that shows notifications from the local wiki only"
 }

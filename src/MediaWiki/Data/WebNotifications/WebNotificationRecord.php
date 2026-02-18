@@ -23,4 +23,5 @@ class WebNotificationRecord extends Record {
 	public const NAMESPACE_TEXT = 'namespace_text';
 	public const BUCKETS = 'buckets';
 	public const CATEGORIES = 'categories';
+	public const SOURCE = 'source';
 }
