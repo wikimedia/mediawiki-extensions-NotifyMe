@@ -30,10 +30,23 @@
 				align-items: center;
 				position: relative;
 				min-height: 70px;
-				background-color: #f1f3f9;
+				background-color: #f8f9fa;
 				border-radius: 5px;
 				margin-top: 18px;
 				padding-right: 10px;
+
+				&.notification-preview-item-has-wiki-badge {
+					.notification-message,
+					.notification-unread-circle-wrapper {
+						margin-top: 8px;
+					}
+
+					.foreign-wiki-badge {
+						position: absolute;
+						top: 0;
+						left: 8px;
+					}
+				}
 
 				.notification-unread-circle-wrapper {
 					display: flex;

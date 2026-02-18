@@ -6,6 +6,7 @@ use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ChannelFactory;
 use MediaWiki\Extension\NotifyMe\EventFactory;
+use MediaWiki\Extension\NotifyMe\ForeignNotificationFactory;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
@@ -262,7 +263,8 @@ class SerializerTest extends NotificationTestBase {
 			$languageFactoryMock,
 			$userOptionLookupMock,
 			$contentLanguage,
-			$this->createMock( EventFactory::class )
+			$this->createMock( EventFactory::class ),
+			$this->createMock( ForeignNotificationFactory::class )
 		);
 	}
 

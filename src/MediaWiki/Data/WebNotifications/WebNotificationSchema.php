@@ -88,6 +88,11 @@ class WebNotificationSchema extends Schema {
 				self::SORTABLE => false,
 				self::TYPE => FieldType::LISTVALUE
 			],
+			WebNotificationRecord::SOURCE => [
+				self::FILTERABLE => true,
+				self::SORTABLE => false,
+				self::TYPE => FieldType::STRING
+			],
 		] );
 	}
 }

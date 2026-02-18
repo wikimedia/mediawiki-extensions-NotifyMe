@@ -7,6 +7,7 @@ use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\CategoryBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\INotificationFilterBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\NamespaceBucket;
+use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\SourceWikiBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\TitleBucket;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Language\Language;
@@ -14,6 +15,7 @@ use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\UserIdentity;
+use MediaWiki\WikiMap\WikiMap;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
 use Wikimedia\Rdbms\FakeResultWrapper;
@@ -39,6 +41,9 @@ class WebNotificationQueryStore {
 	/** @var HookContainer */
 	private $hookContainer;
 
+	/** @var string */
+	private $wikiId;
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param WikiPageFactory $wikiPageFactory
@@ -57,6 +62,7 @@ class WebNotificationQueryStore {
 		$this->language = $language;
 		$this->bucketProvider = $bucketProvider;
 		$this->hookContainer = $hookContainer;
+		$this->wikiId = WikiMap::getCurrentWikiId();
 	}
 
 	/**
@@ -73,6 +79,7 @@ class WebNotificationQueryStore {
 			'nwqs_notification_timestamp' => $db->timestamp( $notification->getEvent()->getTime() ),
 			'nwqs_status' => $notification->getStatus()->getStatus(),
 			'nwqs_buckets' => $this->getBuckets( $notification ),
+			'nwqs_wiki_id' => $this->wikiId,
 		];
 		if ( $notification->getEvent() instanceof ITitleEvent ) {
 			$title = $notification->getEvent()->getTitle();
@@ -105,6 +112,7 @@ class WebNotificationQueryStore {
 			new TitleBucket( $this->getTotalCount( $status, $user ) ),
 			new CategoryBucket( $this->titleFactory, $this, $user, $status ),
 			new NamespaceBucket( $this->language, $this, $user, $status ),
+			new SourceWikiBucket( $this->hookContainer, $this, $user, $status )
 		];
 
 		$this->hookContainer->run( 'NotifyMeGetFilterMeta', [ &$buckets, $this, $user, $status ] );
@@ -149,7 +157,11 @@ class WebNotificationQueryStore {
 			throw new Exception( 'This method can only be called from maintenance scripts' );
 		}
 		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
-		$db->query( 'TRUNCATE TABLE notifications_web_query_store', __METHOD__ );
+		$db->newDeleteQueryBuilder()
+			->deleteFrom( 'notifications_web_query_store' )
+			->where( [ 'nwqs_wiki_id' => $this->wikiId ] )
+			->caller( __METHOD__ )
+			->execute();
 	}
 
 	/**
@@ -166,9 +178,10 @@ class WebNotificationQueryStore {
 		$db = $this->loadBalancer->getConnection( DB_REPLICA );
 		$conds[] = 'ni_event_type IN (' . $db->makeList( $eventTypes ) . ')';
 
-		return $db->select(
-			[ 'notifications_web_query_store', 'notifications_instance' ],
-			[
+		return $db->newSelectQueryBuilder()
+			->table( 'notifications_web_query_store', 'nwqs' )
+			->table( 'notifications_instance', 'ni' )
+			->select( [
 				'ni_event_type',
 				'nwqs_notification_id',
 				'nwqs_target_user',
@@ -178,13 +191,16 @@ class WebNotificationQueryStore {
 				'nwqs_namespace_text',
 				'nwqs_title',
 				'nwqs_categories',
-				'nwqs_buckets'
-			],
-			$conds,
-			__METHOD__,
-			$options,
-			[ 'notifications_instance' => [ 'INNER JOIN', 'ni_id = nwqs_notification_id' ] ]
-		);
+				'nwqs_buckets',
+				'nwqs_wiki_id'
+			] )
+			->where( $conds )
+			->options( $options )
+			->caller( __METHOD__ )
+			->join( 'notifications_instance', 'ni', [
+				'ni_id = nwqs_notification_id'
+			] )
+			->fetchResultSet();
 	}
 
 	/**
@@ -210,14 +226,17 @@ class WebNotificationQueryStore {
 			$conds['nwqs_status'] = $forStatus;
 		}
 
-		return $db->select(
-			[ 'notifications_web_query_store', 'notifications_instance' ],
-			$fields,
-			$conds,
-			__METHOD__,
-			$options,
-			[ 'notifications_instance' => [ 'INNER JOIN', 'ni_id = nwqs_notification_id' ] ]
-		);
+		return $db->newSelectQueryBuilder()
+			->table( 'notifications_web_query_store', 'nwqs' )
+			->table( 'notifications_instance', 'ni' )
+			->select( $fields )
+			->where( $conds )
+			->options( $options )
+			->caller( __METHOD__ )
+			->join( 'notifications_instance', 'ni', [
+				'ni_id = nwqs_notification_id'
+			] )
+			->fetchResultSet();
 	}
 
 	/**

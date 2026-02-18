@@ -191,7 +191,8 @@ ext.notifyme.ui.panel.NotificationTab.prototype.loadNotifications = function () 
 					unread: isUnread,
 					timestamp: entity.timestamp,
 					links: entity.links,
-					isInGroup: false
+					isInGroup: false,
+					sourceWiki: entity._source_wiki || null // eslint-disable-line no-underscore-dangle
 				} );
 				entityWidget.connect( this, {
 					itemMarked: 'itemsMarked'

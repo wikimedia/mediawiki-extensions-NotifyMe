@@ -29,6 +29,7 @@ class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 		WebNotificationRecord::BUCKETS => 'nwqs_buckets',
 		WebNotificationRecord::CATEGORIES => 'nwqs_categories',
 		WebNotificationRecord::TIMESTAMP => 'nwqs_notification_timestamp',
+		WebNotificationRecord::SOURCE => 'nwqs_wiki_id',
 		// Non-schema fields
 		'title' => 'nwqs_title',
 		'namespaces' => 'nwqs_namespace_id',
@@ -162,7 +163,8 @@ class PrimaryDataProvider extends PrimaryDatabaseDataProvider {
 			WebNotificationRecord::CATEGORIES => explode( '|', $row->nwqs_categories ),
 			WebNotificationRecord::NAMESPACE_ID => $row->nwqs_namespace_id,
 			WebNotificationRecord::NAMESPACE_TEXT => $row->nwqs_namespace_text,
-			WebNotificationRecord::TIMESTAMP => $row->nwqs_notification_timestamp
+			WebNotificationRecord::TIMESTAMP => $row->nwqs_notification_timestamp,
+			WebNotificationRecord::SOURCE => $row->nwqs_wiki_id,
 		] );
 	}
 }

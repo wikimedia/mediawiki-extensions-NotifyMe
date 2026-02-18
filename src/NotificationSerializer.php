@@ -17,6 +17,7 @@ use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
+use MediaWiki\WikiMap\WikiMap;
 use MWStake\MediaWiki\Component\Events\BotAgent;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
 use MWStake\MediaWiki\Component\Events\EventLink;
@@ -41,6 +42,11 @@ final class NotificationSerializer {
 	private $contentLang;
 	/** @var EventFactory */
 	private $eventFactory;
+	/** @var ForeignNotificationFactory */
+	private $foreignNotificationFactory;
+
+	/** @var string */
+	private $wikiId;
 
 	/**
 	 * @var array[]
@@ -168,6 +174,10 @@ final class NotificationSerializer {
 						'desc' => 'notifyme-schema-source-providers-link',
 					],
 				],
+			],
+			'_source_wiki' => [
+				'type' => 'string',
+				'public' => false
 			]
 		],
 		'group' => [
@@ -215,11 +225,12 @@ final class NotificationSerializer {
 	 * @param UserOptionsLookup $userOptionsLookup
 	 * @param Language $contentLang
 	 * @param EventFactory $eventFactory
+	 * @param ForeignNotificationFactory $foreignNotificationFactory
 	 */
 	public function __construct(
 		UserFactory $userFactory, ChannelFactory $channelFactory, SubscriberManager $subscriberManager,
 		LanguageFactory $languageFactory, UserOptionsLookup $userOptionsLookup, Language $contentLang,
-		EventFactory $eventFactory
+		EventFactory $eventFactory, ForeignNotificationFactory $foreignNotificationFactory
 	) {
 		$this->userFactory = $userFactory;
 		$this->channelFactory = $channelFactory;
@@ -228,6 +239,8 @@ final class NotificationSerializer {
 		$this->userOptionsLookup = $userOptionsLookup;
 		$this->contentLang = $contentLang;
 		$this->eventFactory = $eventFactory;
+		$this->foreignNotificationFactory = $foreignNotificationFactory;
+		$this->wikiId = WikiMap::getCurrentWikiId();
 	}
 
 	/**
@@ -274,6 +287,9 @@ final class NotificationSerializer {
 				}, $notification->getSourceProviders()
 			),
 		];
+		if ( $notification instanceof ForeignNotification ) {
+			$data['_source_wiki'] = $notification->getSourceWikiInfo();
+		}
 
 		$data = array_filter( $data, function ( $value ) {
 			return isset( $this->schema['notification'][$value] );
@@ -364,6 +380,9 @@ final class NotificationSerializer {
 			}
 		}
 		$notification = new Notification( $event, $targetUser, $channel, $status, $providers );
+		if ( property_exists( $data, 'ni_wiki_id' ) && $data->ni_wiki_id && $data->ni_wiki_id !== $this->wikiId ) {
+			$notification = $this->foreignNotificationFactory->createFromNative( $notification, $data->ni_wiki_id );
+		}
 		$notification->setId( (int)$data->ni_id );
 
 		return $notification;

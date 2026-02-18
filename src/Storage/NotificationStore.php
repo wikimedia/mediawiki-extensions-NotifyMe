@@ -6,6 +6,7 @@ use Exception;
 use MediaWiki\Extension\NotifyMe\EventProvider;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\User\User;
+use MediaWiki\WikiMap\WikiMap;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\Delivery\NotificationStatus;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
@@ -24,6 +25,9 @@ class NotificationStore {
 	/** @var array */
 	private $conditions = [];
 
+	/** @var string */
+	private string $wikiId;
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param NotificationSerializer $serializer
@@ -35,6 +39,7 @@ class NotificationStore {
 		$this->loadBalancer = $loadBalancer;
 		$this->serializer = $serializer;
 		$this->eventProvider = $eventProvider;
+		$this->wikiId = WikiMap::getCurrentWikiId();
 	}
 
 	/**
@@ -150,10 +155,14 @@ class NotificationStore {
 	 * @return Notification[]
 	 */
 	public function query( $conds = [] ): array {
+		$this->conditions = array_merge( $this->conditions, $conds );
 		$dbr = $this->loadBalancer->getConnection( ILoadBalancer::DB_REPLICA );
 		$res = $dbr->select(
 			[ 'notifications_instance', 'notifications_event' ],
-			[ 'ni_id', 'ni_event_type', 'ne_key', 'ne_id', 'ne_timestamp', 'ni_channel', 'ni_payload', 'ne_payload' ],
+			[
+				'ni_id', 'ni_event_type', 'ne_key', 'ne_id', 'ne_timestamp',
+				'ni_channel', 'ni_payload', 'ne_payload', 'ni_wiki_id'
+			],
 			array_merge( $this->conditions, $conds ),
 			__METHOD__,
 			[], [
@@ -277,6 +286,7 @@ class NotificationStore {
 				'ni_channel' => $notification->getChannel()->getKey(),
 				'ni_status' => $notification->getStatus()->getStatus(),
 				'ni_payload' => $payload,
+				'ni_wiki_id' => $this->wikiId
 			],
 			__METHOD__
 		);
