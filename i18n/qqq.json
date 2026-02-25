@@ -210,5 +210,10 @@
 	"prefs-subs": "Header label for subscription section on [[Special:Preferences]]",
 	"notifyme-notification-filter-count-aria-label": "Aria label for filter batch text to display number of notifications in filter option\n\n$1 - notifications count",
 	"notifyme-notification-filter-aria-label": "Aria label for select widget to filter notifications",
-	"notifyme-notification-center-pagination-number-aria-label": "Aria label to indicate which notifications are shown\nParameters:\n* $1 - number of first shown notification\n* $2 - number of last shown notification"
+	"notifyme-notification-center-pagination-number-aria-label": "Aria label to indicate which notifications are shown\nParameters:\n* $1 - number of first shown notification\n* $2 - number of last shown notification",
+	"notifyme-automation-arbitrary-notification-action": "Wiki automation integration action name",
+	"notifyme-automation-arbitrary-title-notification-action": "Wiki automation integration action name",
+	"notifyme-arbitrary-event-action-message-label": "Field label",
+	"notifyme-arbitrary-event-action-event-target-user-label": "Field label",
+	"notifyme-arbitrary-event-action-send-as-bot-label": "Field label"
 }

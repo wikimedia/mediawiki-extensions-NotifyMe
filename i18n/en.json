@@ -205,5 +205,10 @@
 	"prefs-subs": "Notification subscriptions",
 	"notifyme-notification-filter-count-aria-label": "contains {{PLURAL:$1|one notification|$1 notifications}}",
 	"notifyme-notification-filter-aria-label": "Notification filter",
-	"notifyme-notification-center-pagination-number-aria-label": "Notifications $1 to $2 shown"
+	"notifyme-notification-center-pagination-number-aria-label": "Notifications $1 to $2 shown",
+	"notifyme-automation-arbitrary-notification-action": "Send a notification",
+	"notifyme-automation-arbitrary-title-notification-action": "Send a title-related notification",
+	"notifyme-arbitrary-event-action-message-label": "Message",
+	"notifyme-arbitrary-event-action-event-target-user-label": "Target user(s)",
+	"notifyme-arbitrary-event-action-send-as-bot-label": "Send as bot user"
 }
