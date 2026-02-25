@@ -93,6 +93,18 @@
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\EditRevertedEvent"
 					},
 					"buckets": [ "personal" ]
+				},
+				"arbitrary-message-event": {
+					"spec": {
+						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\ArbitraryMessageEvent"
+					},
+					"buckets": [ "personal" ]
+				},
+				"arbitrary-title-message-event": {
+					"spec": {
+						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\ArbitraryTitleMessageEvent"
+					},
+					"buckets": [ "personal" ]
 				}
 			},
 			"Channels": {
@@ -127,6 +139,26 @@
 				"watchlist": {
 					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\ManualProvider\\SubscriptionSet\\WatchlistSet",
 					"services": [ "WatchedItemStore" ]
+				}
+			}
+		},
+		"WikiAutomations": {
+			"Actions": {
+				"notifyme-arbitrary-notification": {
+					"type": "generic",
+					"message": "notifyme-automation-arbitrary-notification-action",
+					"spec": {
+						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\Action\\ArbitraryNotificationAction",
+						"services": [ "UserFactory", "MWStake.Notifier" ]
+					}
+				},
+				"notifyme-arbitrary-title-notification": {
+					"type": "generic",
+					"message": "notifyme-automation-arbitrary-title-notification-action",
+					"spec": {
+						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\Action\\ArbitraryTitleNotificationAction",
+						"services": [ "UserFactory", "MWStake.Notifier" ]
+					}
 				}
 			}
 		}
