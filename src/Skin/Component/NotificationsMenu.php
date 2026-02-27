@@ -53,7 +53,7 @@ class NotificationsMenu extends SimpleDropdownIcon implements IRestrictedCompone
 	 * @inheritDoc
 	 */
 	public function getIconClasses(): array {
-		return [ 'bi-bell-fill' ];
+		return [ 'bi-bs-notification' ];
 	}
 
 	/**
