@@ -12,5 +12,7 @@
 	"notifyme-ui-dialog-popup-table-event-label": "Evento",
 	"notifyme-ui-dialog-popup-table-desc-label": "Descrizione",
 	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
-	"notifyme-notification-filter-aria-label": "Filtro notifiche"
+	"notifyme-notification-filter-aria-label": "Filtro notifiche",
+	"notifyme-automation-arbitrary-notification-action": "Invia una notifica",
+	"notifyme-arbitrary-event-action-message-label": "Messaggio"
 }
