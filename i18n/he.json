@@ -199,5 +199,6 @@
 	"notifyme-ui-delivery-label": "שיטת מסירה",
 	"prefs-subs": "מינויים להתראות",
 	"notifyme-notification-filter-count-aria-label": "מכיל {{PLURAL:$1|התראה אחת|$1 התראות}}",
-	"notifyme-notification-filter-aria-label": "סינון התראות"
+	"notifyme-notification-filter-aria-label": "סינון התראות",
+	"notifyme-notification-center-pagination-number-aria-label": "הודעות $1 עד $2 מוצגות"
 }
