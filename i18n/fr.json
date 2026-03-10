@@ -208,7 +208,5 @@
 	"prefs-subs": "Abonnements aux notifications",
 	"notifyme-notification-filter-count-aria-label": "contient {{PLURAL:$1|une notification|$1 notifications}}",
 	"notifyme-notification-filter-aria-label": "Filtre de notifications",
-	"notifyme-notification-center-pagination-number-aria-label": "Notifications $1 à $2 affichées",
-	"notifyme-automation-arbitrary-notification-action": "Tuma mwatsi",
-	"notifyme-arbitrary-event-action-message-label": "Mwatsi"
+	"notifyme-notification-center-pagination-number-aria-label": "Notifications $1 à $2 affichées"
 }
