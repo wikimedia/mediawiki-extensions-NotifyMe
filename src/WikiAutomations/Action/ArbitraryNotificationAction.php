@@ -31,6 +31,11 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 			],
 			[
 				'type' => 'text',
+				'name' => 'subject',
+				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-subject-label' )->text(),
+			],
+			[
+				'type' => 'text',
 				'name' => 'message',
 				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-message-label' )->text(),
 			],
@@ -47,13 +52,16 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 		$data = $this->getData();
 		$users = $this->getTargetUsers( $data );
 
-		$event = new ArbitraryEvent( $this->getAgent( $data ), $data['message'] ?? '', $users );
+		$event = new ArbitraryEvent(
+			$this->getAgent( $data ), $data['message'] ?? '', $data['subject'] ?? '', $users
+		);
 		$this->notifier->emit( $event );
 
 		return Status::newGood( [
 			'users' => array_map( static function ( $user ) {
 				return $user->getName();
 			}, $users ),
+			'subject' => $data['subject'] ?? '',
 			'message' => $data['message'] ?? ''
 		] );
 	}
@@ -69,6 +77,39 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 		return array_filter( $users, static function ( $user ) {
 			return $user && $user->isRegistered();
 		} );
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getDisplayData(): array {
+		$data = $this->getData();
+
+		$displayData = [];
+		if ( $data['subject'] ?? '' ) {
+			$displayData[] = [
+				'value' => $data['subject']
+			];
+		}
+		$message = $data['message'] ?? '';
+		if ( strlen( $message ) > 50 ) {
+			$message = substr( $message, 0, 47 ) . '...';
+		}
+		if ( $message ) {
+			$displayData[] = [
+				'value' => $message
+			];
+		}
+		$targetUsers = array_map( static function ( $user ) {
+			return $user->getName();
+		}, $this->getTargetUsers( $data ) );
+		if ( !empty( $targetUsers ) ) {
+			$displayData[] = [
+				'value' => implode( ', ', $targetUsers )
+			];
+		}
+
+		return $displayData;
 	}
 
 	/**

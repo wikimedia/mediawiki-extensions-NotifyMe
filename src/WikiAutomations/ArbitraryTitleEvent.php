@@ -17,10 +17,15 @@ class ArbitraryTitleEvent extends TitleEvent implements PriorityEvent {
 	 * @param UserIdentity $agent
 	 * @param PageIdentity $title
 	 * @param string $message
+	 * @param string $subject
 	 * @param array $targetUsers
 	 */
 	public function __construct(
-		UserIdentity $agent, PageIdentity $title, private string $message, private readonly array $targetUsers
+		UserIdentity $agent,
+		PageIdentity $title,
+		private readonly string $message,
+		private string $subject,
+		private readonly array $targetUsers
 	) {
 		parent::__construct( $agent, $title );
 	}
@@ -30,6 +35,18 @@ class ArbitraryTitleEvent extends TitleEvent implements PriorityEvent {
 	 */
 	public function getKey(): string {
 		return 'arbitrary-title-message-event';
+	}
+
+	public function getKeyMessage(): Message {
+		if ( !$this->subject ) {
+			$this->subject = 'notifyme-arbitrary-event-default-subject';
+		}
+		$subject = Message::newFromKey( $this->subject );
+		if ( !$subject->exists() ) {
+			$subject = new RawMessage( $this->subject );
+		}
+
+		return $subject;
 	}
 
 	/**

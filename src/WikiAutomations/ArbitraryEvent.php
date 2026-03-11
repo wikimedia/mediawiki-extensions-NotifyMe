@@ -14,9 +14,15 @@ class ArbitraryEvent extends NotificationEvent implements PriorityEvent {
 	/**
 	 * @param UserIdentity $agent
 	 * @param string $message
+	 * @param string $subject
 	 * @param array $targetUsers
 	 */
-	public function __construct( UserIdentity $agent, private string $message, private readonly array $targetUsers ) {
+	public function __construct(
+		UserIdentity $agent,
+		private readonly string $message,
+		private string $subject,
+		private readonly array $targetUsers
+	) {
 		parent::__construct( $agent );
 	}
 
@@ -25,6 +31,18 @@ class ArbitraryEvent extends NotificationEvent implements PriorityEvent {
 	 */
 	public function getKey(): string {
 		return 'arbitrary-message-event';
+	}
+
+	public function getKeyMessage(): Message {
+		if ( !$this->subject ) {
+			$this->subject = 'notifyme-arbitrary-event-default-subject';
+		}
+		$subject = Message::newFromKey( $this->subject );
+		if ( !$subject->exists() ) {
+			$subject = new RawMessage( $this->subject );
+		}
+
+		return $subject;
 	}
 
 	/**
