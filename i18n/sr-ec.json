@@ -25,5 +25,6 @@
 	"notifyme-automation-arbitrary-notification-action": "Пошаљи обавештење",
 	"notifyme-arbitrary-event-action-message-label": "Порука",
 	"notifyme-notification-center-filter-label-source": "Вики",
-	"notifyme-notification-center-filter-label-source-local": "Овај вики"
+	"notifyme-notification-center-filter-label-source-local": "Овај вики",
+	"notifyme-arbitrary-event-default-subject": "Аутоматско обавештење"
 }
