@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"FL2226"
 		]
 	},
 	"prefs-notifications": "Notifiche",
@@ -14,5 +15,10 @@
 	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
 	"notifyme-notification-filter-aria-label": "Filtro notifiche",
 	"notifyme-automation-arbitrary-notification-action": "Invia una notifica",
-	"notifyme-arbitrary-event-action-message-label": "Messaggio"
+	"notifyme-automation-arbitrary-title-notification-action": "Invia una notifica relativa alla pagina",
+	"notifyme-arbitrary-event-action-message-label": "Messaggio",
+	"notifyme-notification-center-filter-label-source": "Wiki",
+	"notifyme-notification-center-filter-label-source-local": "Questa wiki",
+	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
+	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica"
 }
