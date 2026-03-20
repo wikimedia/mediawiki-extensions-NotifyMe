@@ -18,7 +18,7 @@
 	"notifyme-automation-arbitrary-title-notification-action": "Invia una notifica relativa alla pagina",
 	"notifyme-arbitrary-event-action-message-label": "Messaggio",
 	"notifyme-notification-center-filter-label-source": "Wiki",
-	"notifyme-notification-center-filter-label-source-local": "Questa wiki",
+	"notifyme-notification-center-filter-label-source-local": "Questo wiki",
 	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
 	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica"
 }
