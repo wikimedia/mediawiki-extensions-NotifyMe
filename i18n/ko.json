@@ -112,5 +112,8 @@
 	"notifyme-event-page-move-desc": "다른 사용자가 문서를 이동했습니다.",
 	"notifyme-ui-dialog-popup-table-event-label": "이벤트",
 	"notifyme-ui-dialog-popup-table-desc-label": "설명",
-	"notifyme-notification-filter-aria-label": "알림 필터"
+	"notifyme-notification-filter-aria-label": "알림 필터",
+	"notifyme-notification-center-filter-label-source": "위키",
+	"notifyme-notification-center-filter-label-source-local": "이 위키",
+	"notifyme-arbitrary-event-default-subject": "자동 알림"
 }
