@@ -201,7 +201,7 @@
 	"notifyme-notification-filter-aria-label": "Filtro de notificationes",
 	"notifyme-notification-center-pagination-number-aria-label": "Notificationes de $1 a $2 monstrate",
 	"notifyme-automation-arbitrary-notification-action": "Inviar un notification",
-	"notifyme-automation-arbitrary-title-notification-action": "Inviar un notification concernente le titulo",
+	"notifyme-automation-arbitrary-title-notification-action": "Inviar un notification concernente le pagina",
 	"notifyme-arbitrary-event-action-message-label": "Message",
 	"notifyme-arbitrary-event-action-event-target-user-label": "Usator(es) de destination",
 	"notifyme-arbitrary-event-action-send-as-bot-label": "Inviar como usator de robot"

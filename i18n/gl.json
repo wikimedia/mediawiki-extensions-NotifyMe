@@ -202,10 +202,12 @@
 	"notifyme-notification-filter-aria-label": "Filtro de notificacións",
 	"notifyme-notification-center-pagination-number-aria-label": "Móstranse as notificacións da $1 á $2",
 	"notifyme-automation-arbitrary-notification-action": "Enviar unha notificación",
-	"notifyme-automation-arbitrary-title-notification-action": "Enviar unha notificación relacionada co título",
+	"notifyme-automation-arbitrary-title-notification-action": "Enviar unha notificación relacionada coa páxina",
 	"notifyme-arbitrary-event-action-message-label": "Mensaxe",
 	"notifyme-arbitrary-event-action-event-target-user-label": "Usuario(s) de destino",
 	"notifyme-arbitrary-event-action-send-as-bot-label": "Enviar como usuario de bot",
 	"notifyme-notification-center-filter-label-source": "Wiki",
-	"notifyme-notification-center-filter-label-source-local": "Este wiki"
+	"notifyme-notification-center-filter-label-source-local": "Este wiki",
+	"notifyme-arbitrary-event-default-subject": "Notificación automática",
+	"notifyme-arbitrary-event-action-subject-label": "Tema da notificación"
 }
