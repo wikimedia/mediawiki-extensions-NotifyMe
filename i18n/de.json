@@ -213,5 +213,7 @@
 	"prefs-subs": "Benachrichtigungsabonnements",
 	"notifyme-notification-filter-count-aria-label": "enthält {{PLURAL:$1|eine Benachrichtigung| $1 Benachrichtigungen}}",
 	"notifyme-notification-filter-aria-label": "Benachrichtigungsfilter",
-	"notifyme-notification-center-pagination-number-aria-label": "Benachrichtigungen $1 bis $2 angezeigt"
+	"notifyme-notification-center-pagination-number-aria-label": "Benachrichtigungen $1 bis $2 angezeigt",
+	"notifyme-automation-arbitrary-notification-action": "Senden einer Benachrichtigung",
+	"notifyme-automation-arbitrary-title-notification-action": "Senden einer titelbezogenen Benachrichtigung"
 }

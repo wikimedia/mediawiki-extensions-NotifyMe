@@ -58,5 +58,7 @@
 	"notifyme-notification-center-timestamp-ago": "$1 پہلے",
 	"notifyme-notification-tester-invalid-page": "غلط ورقہ",
 	"notifyme-ui-dialog-popup-table-event-label": "ایونٹ",
-	"notifyme-ui-dialog-popup-table-desc-label": "تفصیل"
+	"notifyme-ui-dialog-popup-table-desc-label": "تفصیل",
+	"notifyme-arbitrary-event-action-message-label": "سنیہا",
+	"notifyme-notification-center-filter-label-source": "وکی"
 }

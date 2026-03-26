@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Cwlin0416",
-			"Kly"
+			"Kly",
+			"LowensteinYang"
 		]
 	},
 	"prefs-notifications": "通知",
@@ -172,7 +173,7 @@
 	"notifyme-sample-data-source-provider-2": "您已訂閱「Planning」分類，此頁面是該分類的一部分",
 	"notifyme-schema-source-providers-link": "連結到使用者可以更改偏好設定的地方（如果適用）",
 	"notifyme-mail-template-edit-help-int": "國際化訊息可以透過 <pre><nowiki>{{int:message-key}}</nowiki></pre> 在內容中使用",
-	"notifyme-mail-template-edit-help-logo": "要新增設定在外觀的您的 wiki 標誌，請使用 <pre>&lt;img src=\"{{logo}}\" alt=\"Wiki logo\" /&gt;</pre>",
+	"notifyme-mail-template-edit-help-logo": "要新增您的那個在外觀中設定的wiki標誌，可使用<pre>&lt;img src=\"{{logo}}\" alt=\"Wiki logo\" /&gt;</pre>",
 	"notifyme-schema-link-intro": "在連結清單前顯示的訊息。此欄位的可用性取決於通知類型",
 	"notifyme-links-intro-edit": "您可以透過以下連結直接查看頁面的更改內容",
 	"notifyme-mail-manage-notifications": "造訪以下連結來管理您收到的通知",
