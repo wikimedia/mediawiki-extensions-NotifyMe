@@ -201,10 +201,12 @@
 	"notifyme-notification-filter-aria-label": "Филтер на известувања",
 	"notifyme-notification-center-pagination-number-aria-label": "Прикажани известувањата $1 до $2",
 	"notifyme-automation-arbitrary-notification-action": "Испрати известување",
-	"notifyme-automation-arbitrary-title-notification-action": "Испрати известување поврзано со насловот",
+	"notifyme-automation-arbitrary-title-notification-action": "Испрати известување поврзано со страницата",
 	"notifyme-arbitrary-event-action-message-label": "Порака",
 	"notifyme-arbitrary-event-action-event-target-user-label": "Целни корисници",
 	"notifyme-arbitrary-event-action-send-as-bot-label": "Испрати како ботовски корисник",
 	"notifyme-notification-center-filter-label-source": "Вики",
-	"notifyme-notification-center-filter-label-source-local": "Ова вики"
+	"notifyme-notification-center-filter-label-source-local": "Ова вики",
+	"notifyme-arbitrary-event-default-subject": "Автоматско известување",
+	"notifyme-arbitrary-event-action-subject-label": "Тема на известувањето"
 }
