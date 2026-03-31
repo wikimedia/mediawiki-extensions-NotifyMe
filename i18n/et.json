@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rivoz"
+			"Rivoz",
+			"Pikne"
 		]
 	},
 	"notifyme-automation-arbitrary-notification-action": "Saada teavitus",
 	"notifyme-arbitrary-event-action-message-label": "Sõnum",
-	"notifyme-notification-center-filter-label-source": "Wiki",
-	"notifyme-notification-center-filter-label-source-local": "See wiki",
+	"notifyme-notification-center-filter-label-source": "Viki",
+	"notifyme-notification-center-filter-label-source-local": "See viki",
 	"notifyme-arbitrary-event-action-subject-label": "Teavituse teema"
 }
