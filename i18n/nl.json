@@ -201,5 +201,14 @@
 	"prefs-subs": "Meldingsabonnementen",
 	"notifyme-notification-filter-count-aria-label": "bevat {{PLURAL:$1|één melding|$1 meldingen}}",
 	"notifyme-notification-filter-aria-label": "Meldingsfilter",
-	"notifyme-notification-center-pagination-number-aria-label": "Meldingen $1 tot $2 worden weergegeven"
+	"notifyme-notification-center-pagination-number-aria-label": "Meldingen $1 tot $2 worden weergegeven",
+	"notifyme-automation-arbitrary-notification-action": "Een melding sturen",
+	"notifyme-automation-arbitrary-title-notification-action": "Een paginagerelateerde melding verzenden",
+	"notifyme-arbitrary-event-action-message-label": "Bericht",
+	"notifyme-arbitrary-event-action-event-target-user-label": "Ontvanger(s)",
+	"notifyme-arbitrary-event-action-send-as-bot-label": "Als botgebruiker verzenden",
+	"notifyme-notification-center-filter-label-source": "Wiki",
+	"notifyme-notification-center-filter-label-source-local": "Deze wiki",
+	"notifyme-arbitrary-event-default-subject": "Automatische melding",
+	"notifyme-arbitrary-event-action-subject-label": "Onderwerp van de melding"
 }
