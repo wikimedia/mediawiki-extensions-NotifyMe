@@ -22,7 +22,7 @@ class PopulateWikiId extends LoggedUpdateMaintenance {
 	 * @throws Exception
 	 */
 	protected function doDBUpdates() {
-		$this->output( "...Populate wiki_id for NotifyMe..." );
+		$this->output( "...Populate wiki_id for NotifyMe...\n" );
 
 		$wikiId = WikiMap::getCurrentWikiId();
 		$dbw = $this->getDB( DB_PRIMARY );
