@@ -30,10 +30,20 @@ class NotificationTester extends FormSpecialPage {
 	 * @param TitleFactory $titleFactory
 	 */
 	public function __construct( Tester $tester, UserFactory $userFactory, TitleFactory $titleFactory ) {
-		parent::__construct( 'NotificationTester', 'wikiadmin', false );
+		parent::__construct( 'NotificationTester' );
 		$this->tester = $tester;
 		$this->userFactory = $userFactory;
 		$this->titleFactory = $titleFactory;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'wikiadmin';
+	}
+
+	/** @inheritDoc */
+	public function isListed(): bool {
+		return false;
 	}
 
 	/**

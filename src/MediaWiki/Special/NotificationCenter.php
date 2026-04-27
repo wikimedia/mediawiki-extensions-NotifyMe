@@ -7,7 +7,12 @@ use MediaWiki\SpecialPage\SpecialPage;
 
 class NotificationCenter extends SpecialPage {
 	public function __construct() {
-		parent::__construct( 'NotificationCenter', 'notifications-view' );
+		parent::__construct( 'NotificationCenter' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'notifications-view';
 	}
 
 	/**
