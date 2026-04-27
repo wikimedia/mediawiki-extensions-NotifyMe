@@ -401,7 +401,7 @@
 		"ContentHandlerDefaultModelFor": "setMailContentModel",
 		"MediaWikiServices": [ "setMailContentModel", "registerCrons" ],
 		"CodeEditorGetPageLanguage": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\SetMailContentModel::onCodeEditorGetPageLanguage",
-		"UserMailerTransformMessage": "handleNonNotificationMails",
+		"UserMailerTransformMessage": [ "replaceCID", "handleNonNotificationMails" ],
 		"PageSaveComplete": "triggerEvents",
 		"PageMoveComplete": "triggerEvents",
 		"PageDeleteComplete": "triggerEvents",
@@ -444,6 +444,10 @@
 		},
 		"registerCrons": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\Hook\\RegisterCrons"
+		},
+		"replaceCID": {
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\Channel\\Email\\ReplaceCID",
+			"services": [ "NotifyMe.MailContentProvider" ]
 		}
 	},
 	"RestRoutes": [
