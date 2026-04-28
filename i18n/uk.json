@@ -103,8 +103,6 @@
 	"notifyme-mail-template-edit-help-header-description": "Опис",
 	"notifyme-mail-template-edit-help-header-example": "Приклад",
 	"notifyme-mail-template-edit-help-button-label": "Допомога з вмістом пошти",
-	"notifyme-notification-tester-field-event": "Подія",
-	"notifyme-ui-dialog-popup-table-event-label": "Подія",
 	"notifyme-schema-group-notifications": "Об'єкти сповіщень, що належать до групи",
 	"notifyme-mail-template-edit-help-header-notifications": "Окремі змінні сповіщень",
 	"notifyme-subscriber-provider-mandatory-desc": "Це сповіщення є обов'язковим і від нього не можна відмовитися",
@@ -151,7 +149,9 @@
 	"notifyme-notification-tester-field-agent": "Агент",
 	"notifyme-notification-tester-field-title": "Сторінка",
 	"notifyme-notification-tester-field-target-user": "Цільовий користувач",
+	"notifyme-notification-tester-field-event": "Подія",
 	"notifyme-notification-tester-event": "Ключ події",
 	"notifyme-notification-tester-buckets": "Групи",
-	"notifyme-notification-tester-testable": "Можна перевірити"
+	"notifyme-notification-tester-testable": "Можна перевірити",
+	"notifyme-ui-dialog-popup-table-event-label": "Подія"
 }

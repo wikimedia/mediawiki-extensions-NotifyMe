@@ -5,8 +5,8 @@
 		]
 	},
 	"prefs-notifications": "Абвесткі",
-	"notifyme-ui-dialog-set-editor-cancel": "Скасаваць",
-	"notifyme-ui-edit": "Рэдагаваць",
 	"notifyme-ui-subscriptionset-editor-category-label": "Катэґорыя",
-	"notifyme-ui-subscriptionset-category-label": "Катэґорыя"
+	"notifyme-ui-subscriptionset-category-label": "Катэґорыя",
+	"notifyme-ui-dialog-set-editor-cancel": "Скасаваць",
+	"notifyme-ui-edit": "Рэдагаваць"
 }
