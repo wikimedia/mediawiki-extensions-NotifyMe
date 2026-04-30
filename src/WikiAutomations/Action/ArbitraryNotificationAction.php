@@ -15,6 +15,10 @@ use MWStake\MediaWiki\Component\FormEngine\StandaloneFormSpecification;
 
 class ArbitraryNotificationAction extends GenericAutomationAction {
 
+	/**
+	 * @param UserFactory $userFactory
+	 * @param Notifier $notifier
+	 */
 	public function __construct(
 		protected readonly UserFactory $userFactory,
 		protected readonly Notifier $notifier
@@ -25,24 +29,33 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 		$spec = new StandaloneFormSpecification();
 		$spec->setItems( [
 			[
-				'type' => 'checkbox',
-				'name' => 'sendAsBot',
-				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-send-as-bot-label' )->text(),
-			],
-			[
 				'type' => 'text',
 				'name' => 'subject',
 				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-subject-label' )->text(),
+				'labelAlign' => 'top',
+				'help' => Message::newFromKey( 'notifyme-arbitrary-event-action-subject-help' )->text(),
+				'helpInline' => true,
 			],
 			[
-				'type' => 'text',
+				'type' => 'textarea',
+				'required' => true,
 				'name' => 'message',
 				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-message-label' )->text(),
+				'labelAlign' => 'top',
+				'help' => $this->getMessageHelpText(),
+				'helpInline' => true,
 			],
 			[
 				'type' => 'user_multiselect',
 				'name' => 'target_users',
 				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-event-target-user-label' )->text(),
+				'labelAlign' => 'top',
+			],
+			[
+				'type' => 'checkbox',
+				'name' => 'sendAsBot',
+				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-send-as-bot-label' )->text(),
+				'labelAlign' => 'inline'
 			],
 		] );
 		return $spec;
@@ -122,4 +135,12 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 		}
 		return new BotAgent();
 	}
+
+	/**
+	 * @return string
+	 */
+	protected function getMessageHelpText(): string {
+		return Message::newFromKey( 'notifyme-arbitrary-event-action-message-help' )->text();
+	}
+
 }
