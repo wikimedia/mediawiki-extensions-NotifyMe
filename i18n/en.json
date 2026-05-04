@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": [ "[http://www.hallowelt.com Hallo Welt! GmbH]" ]
+		"authors": [
+			"[http://www.hallowelt.com Hallo Welt! GmbH]"
+		]
 	},
 	"notifyme-desc": "Notifications",
 	"prefs-notifications": "Notifications",
