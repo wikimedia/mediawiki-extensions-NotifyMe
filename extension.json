@@ -203,7 +203,7 @@
 			"dependencies": [
 				"oojs-ui",
 				"ext.oOJSPlus.widgets",
-				"spark-md5"
+				"ext.visualEditor.base"
 			]
 		},
 		"ext.notifyme.subscription.set": {
