@@ -120,5 +120,11 @@
 	"notifyme-notification-filter-aria-label": "알림 필터",
 	"notifyme-notification-center-filter-label-source": "위키",
 	"notifyme-notification-center-filter-label-source-local": "이 위키",
-	"notifyme-arbitrary-event-default-subject": "자동 알림"
+	"notifyme-arbitrary-event-default-subject": "자동 알림",
+	"notifyme-automation-arbitrary-notification-action": "알림 보내기",
+	"notifyme-automation-arbitrary-title-notification-action": "문서 관련 알림 보내기",
+	"notifyme-arbitrary-event-action-message-label": "메시지",
+	"notifyme-arbitrary-event-action-event-target-user-label": "대상 사용자",
+	"notifyme-arbitrary-event-action-send-as-bot-label": "봇 사용자로써 보내기",
+	"notifyme-arbitrary-event-action-subject-label": "알림 유형"
 }
