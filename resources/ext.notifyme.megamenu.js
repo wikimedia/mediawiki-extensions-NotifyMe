@@ -158,7 +158,7 @@ $( () => {
 					classes.push( 'notifications-single-col' );
 				}
 
-				const $notificationsCol = $( '<div>' ).addClass( classes ); // eslint-disable-line mediawiki/class-doc
+				const $notificationsCol = $( '<div>' ).addClass( classes );
 
 				for ( let j = 0; j < 5; j++ ) {
 					if ( ( i * 5 + j ) > results.length - 1 ) {
