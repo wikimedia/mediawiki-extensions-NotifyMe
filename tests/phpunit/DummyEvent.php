@@ -12,14 +12,15 @@ use MWStake\MediaWiki\Component\Events\GroupableEvent;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 
 class DummyEvent implements INotificationEvent, GroupableEvent {
+
 	/** @var UserIdentity */
-	private $agent;
+	protected $agent;
 	/** @var DateTime|null */
-	private $time;
+	protected $time;
 	/** @var int */
-	private $id;
+	protected $id;
 	/** @var string */
-	private $key;
+	protected $key;
 
 	/**
 	 * @param int $id
@@ -133,5 +134,26 @@ class DummyEvent implements INotificationEvent, GroupableEvent {
 		UserIdentity $agent, MediaWikiServices $services, array $extra = []
 	): array {
 		return [];
+	}
+
+	/**
+	 * @return array
+	 */
+	public function __serialize(): array {
+		return [
+			'id' => $this->id,
+			'key' => $this->key,
+			'time' => $this->time,
+		];
+	}
+
+	/**
+	 * @param array $data
+	 * @return void
+	 */
+	public function __unserialize( array $data ): void {
+		$this->id = $data['id'];
+		$this->key = $data['key'];
+		$this->time = $data['time'];
 	}
 }
