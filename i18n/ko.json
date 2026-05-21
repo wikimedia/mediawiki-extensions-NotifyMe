@@ -127,5 +127,18 @@
 	"notifyme-arbitrary-event-action-message-label": "메시지",
 	"notifyme-arbitrary-event-action-event-target-user-label": "대상 사용자",
 	"notifyme-arbitrary-event-action-send-as-bot-label": "봇 사용자로써 보내기",
-	"notifyme-arbitrary-event-action-subject-label": "알림 유형"
+	"notifyme-arbitrary-event-action-subject-label": "알림 유형",
+	"notifyme-mail-template-edit-title-wrapper": "이메일 래퍼 편집",
+	"notifyme-mail-template-edit-title-single": "단일 이메일 알림 틀을 편집",
+	"notifyme-mail-template-edit-title-digest": "이메일 요약 알림 틀을 편집",
+	"notifyme-edit-mail-template-error-create": "새로운 이메일 틀을 생성할 수 없습니다",
+	"notifyme-edit-mail-template-error-edit": "이메일 틀을 편집할 수 없습니다: 메타 데이터가 없습니다",
+	"notifyme-ui-subscription-set-empty": "아직 아무 알림도 구독하지 않았습니다",
+	"notifyme-schema-links": "알림에 관련된 링크",
+	"notifyme-schema-agent": "알림을 유발시킨 사용자 (또는 알림을 유발시킨 작업을 수행한 사용자)",
+	"prefs-subs": "알림 구독",
+	"notifyme-notification-filter-count-aria-label": "{{PLURAL:$1|$1개 알림}} 포함",
+	"notifyme-notification-center-pagination-number-aria-label": "$1부터 $2까지의 알림 표시 됨",
+	"notifyme-arbitrary-event-action-subject-help": "이메일 알림의 제목으로 사용됩니다. 값은 평문 또는 메시지 키일 수 있습니다",
+	"notifyme-arbitrary-event-action-message-help": "값은 평문 또는 메시지 키일 수 있습니다"
 }
