@@ -106,7 +106,7 @@
 	"notifyme-mail-template-edit-help-header-notifications": "Variabelen voor individuele meldingen",
 	"notifyme-subscriber-provider-mandatory-desc": "Deze melding is verplicht. Er kan niet van worden afgemeld.",
 	"notifyme-mail-greeting": "Hallo",
-	"notifyme-schema-link-intro": "Bericht dat getoond moet worden voor de lijst met koppelingen. De beschikbaarheid van dit veld is afhankelijk van het soort melding.",
+	"notifyme-schema-link-intro": "Bericht dat weergegeven moet worden voor de lijst met koppelingen. De beschikbaarheid van dit veld is afhankelijk van het soort melding.",
 	"notifyme-sample-data-links-intro": "Bekijk de volgende koppelingen voor meer informatie",
 	"notifyme-schema-target-user-display-name": "Echte naam van de gebruiker (indien beschikbaar), anders gebruikersnaam",
 	"notifyme-schema-links-user-page": "Koppeling naar de gebruikerspagina",
