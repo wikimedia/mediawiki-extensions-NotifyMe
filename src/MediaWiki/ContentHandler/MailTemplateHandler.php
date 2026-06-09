@@ -102,7 +102,7 @@ class MailTemplateHandler extends TextContentHandler {
 			$this->addContentPages( $text );
 		}
 
-		$output->setRawText( $text . Html::rawElement( 'iframe', [
+		$output->setContentHolderText( $text . Html::rawElement( 'iframe', [
 				'id' => 'mail-template',
 				'src' => 'about:blank',
 				'width' => '100%',
