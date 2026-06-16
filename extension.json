@@ -293,8 +293,7 @@
 				"ui/widget/NotificationItemWidget.js",
 				"ui/widget/NotificationGroupWidget.js",
 				"ui/widget/PaginationWidget.js",
-				"ui/widget/ToggleReadCircleButtonWidget.js",
-				"ui/widget/Filter/FilterWidget.js"
+				"ui/widget/ToggleReadCircleButtonWidget.js"
 			],
 			"styles": {
 				"ext.notifyme.NotificationCenter.less": {},
@@ -316,8 +315,6 @@
 				"notifyme-notification-center-pagination-aria-previous",
 				"notifyme-notification-center-navigation-hint",
 				"notifyme-notification-center-filter-item-aria-label",
-				"notifyme-notification-filter-count-aria-label",
-				"notifyme-notification-filter-aria-label",
 				"notifyme-notification-center-pagination-number-aria-label"
 			],
 			"dependencies": [
@@ -467,6 +464,11 @@
 		"mail_template": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\MediaWiki\\ContentHandler\\MailTemplateHandler",
 			"services": [ "RevisionLookup", "NotifyMe.MailContentProvider" ]
+		}
+	},
+	"config": {
+		"NotifyMeUseWikiFilter": {
+			"value": false
 		}
 	},
 	"manifest_version": 2

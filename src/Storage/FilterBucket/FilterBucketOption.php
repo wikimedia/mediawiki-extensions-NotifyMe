@@ -15,15 +15,19 @@ class FilterBucketOption {
 	/** @var int */
 	private $count;
 
+	/** @var array */
+	private $attr;
+
 	/**
 	 * @param Message $label
 	 * @param string $key
 	 * @param int $count
 	 */
-	public function __construct( Message $label, string $key, int $count ) {
+	public function __construct( Message $label, string $key, int $count, array $attr = [] ) {
 		$this->label = $label;
 		$this->dataKey = $key;
 		$this->count = $count;
+		$this->attr = $attr;
 	}
 
 	/**
@@ -45,5 +49,12 @@ class FilterBucketOption {
 	 */
 	public function getLabel(): Message {
 		return $this->label;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getAttr(): array {
+		return $this->attr;
 	}
 }
