@@ -108,7 +108,7 @@ ext.notifyme.ui.panel.NotificationCenter.prototype.addTabs = function () {
 };
 
 ext.notifyme.ui.panel.NotificationCenter.prototype.addFilterWidget = function () {
-	this.filterWidget = new ext.notifyme.ui.widget.FilterWidget( {
+	this.filterWidget = new OOJSPlus.ui.widget.FilterWidget( {
 		mobileView: this.mobileView
 	} );
 

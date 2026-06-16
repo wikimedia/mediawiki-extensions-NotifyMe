@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\NotifyMe\Storage;
 
 use Exception;
+use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\CategoryBucket;
 use MediaWiki\Extension\NotifyMe\Storage\FilterBucket\INotificationFilterBucket;
@@ -41,6 +42,9 @@ class WebNotificationQueryStore {
 	/** @var HookContainer */
 	private $hookContainer;
 
+	/** @var Config */
+	private $config;
+
 	/** @var string */
 	private $wikiId;
 
@@ -54,10 +58,11 @@ class WebNotificationQueryStore {
 	 * @param Language $language
 	 * @param BucketProvider $bucketProvider
 	 * @param HookContainer $hookContainer
+	 * @param Config $config
 	 */
 	public function __construct(
 		ILoadBalancer $loadBalancer, WikiPageFactory $wikiPageFactory, TitleFactory $titleFactory,
-		Language $language, BucketProvider $bucketProvider, HookContainer $hookContainer
+		Language $language, BucketProvider $bucketProvider, HookContainer $hookContainer, Config $config
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->wikiPageFactory = $wikiPageFactory;
@@ -65,6 +70,7 @@ class WebNotificationQueryStore {
 		$this->language = $language;
 		$this->bucketProvider = $bucketProvider;
 		$this->hookContainer = $hookContainer;
+		$this->config = $config;
 		$this->wikiId = WikiMap::getCurrentWikiId();
 	}
 
@@ -115,8 +121,13 @@ class WebNotificationQueryStore {
 			new TitleBucket( $this->getTotalCount( $status, $user ) ),
 			new CategoryBucket( $this->titleFactory, $this, $user, $status ),
 			new NamespaceBucket( $this->language, $this, $user, $status ),
-			new SourceWikiBucket( $this->hookContainer, $this, $user, $status )
 		];
+		if ( $this->config->get( 'NotifyMeUseWikiFilter' ) === true ) {
+			$buckets = [
+				new TitleBucket( $this->getTotalCount( $status, $user ) ),
+				new SourceWikiBucket( $this->hookContainer, $this, $user, $status )
+			];
+		}
 
 		$this->hookContainer->run( 'NotifyMeGetFilterMeta', [ &$buckets, $this, $user, $status ] );
 
@@ -139,6 +150,7 @@ class WebNotificationQueryStore {
 							'key' => $option->getDataKey(),
 							'count' => $option->getCount(),
 							'label' => $option->getLabel()->text(),
+							'attr' => $option->getAttr()
 						];
 					},
 					$bucket->getOptions()

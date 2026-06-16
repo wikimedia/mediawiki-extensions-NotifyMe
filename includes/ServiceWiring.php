@@ -101,7 +101,8 @@ return [
 			$services->getTitleFactory(),
 			$services->getContentLanguage(),
 			$services->getService( 'NotifyMe.Buckets' ),
-			$services->getHookContainer()
+			$services->getHookContainer(),
+			$services->getMainConfig()
 		);
 	},
 	'NotifyMe.Buckets' => static function ( MediaWikiServices $services ) {

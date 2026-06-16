@@ -12,7 +12,7 @@ use MediaWiki\WikiMap\WikiMap;
 class SourceWikiBucket extends FilterBucket {
 
 	/** @var string */
-	private string $wikiId;
+	protected string $wikiId;
 
 	/**
 	 * @param HookContainer $hookContainer
@@ -70,13 +70,7 @@ class SourceWikiBucket extends FilterBucket {
 		if ( !$count ) {
 			return null;
 		}
-		if ( $key === $this->wikiId ) {
-			return new FilterBucketOption(
-				Message::newFromKey( 'notifyme-notification-center-filter-label-source-local' ),
-				$this->wikiId,
-				$count
-			);
-		}
+
 		$wikiData = [
 			'wiki_id' => $key,
 			'display_text' => $key,
@@ -85,7 +79,8 @@ class SourceWikiBucket extends FilterBucket {
 		return new FilterBucketOption(
 			new RawMessage( $wikiData['display_text'] ),
 			$key,
-			$count
+			$count,
+			$wikiData
 		);
 	}
 
