@@ -5,15 +5,18 @@
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"globals": {
-		"ext": "readonly",
-		"OOJSPlus": "readonly",
-		"moment": "readonly",
 		"document": "readonly",
-		"window": "readonly",
+		"ext": "readonly",
 		"location": "readonly",
 		"mediaWiki": "readonly",
-		"mws": "readonly"
+		"moment": "readonly",
+		"mws": "readonly",
+		"OOJSPlus": "readonly",
+		"window": "readonly"
 	},
 	"rules": {
 		"es-x/no-array-prototype-includes": "off",
