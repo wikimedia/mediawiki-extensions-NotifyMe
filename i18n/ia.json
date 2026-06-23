@@ -197,8 +197,6 @@
 	"notifyme-event-page-edit-desc": "Un pagina ha essite modificate per un altere usator",
 	"notifyme-ui-delivery-label": "Livration",
 	"prefs-subs": "Abonamentos a notificationes",
-	"notifyme-notification-filter-count-aria-label": "contine {{PLURAL:$1|un notification|$1 notificationes}}",
-	"notifyme-notification-filter-aria-label": "Filtro de notificationes",
 	"notifyme-notification-center-pagination-number-aria-label": "Notificationes de $1 a $2 monstrate",
 	"notifyme-automation-arbitrary-notification-action": "Inviar un notification",
 	"notifyme-automation-arbitrary-title-notification-action": "Inviar un notification concernente le pagina",

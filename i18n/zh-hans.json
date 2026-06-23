@@ -199,8 +199,6 @@
 	"notifyme-event-page-edit-desc": "页面已被其他用户编辑",
 	"notifyme-ui-delivery-label": "发送",
 	"prefs-subs": "通知订阅",
-	"notifyme-notification-filter-count-aria-label": "包含{{PLURAL:$1|1|$1}}条通知",
-	"notifyme-notification-filter-aria-label": "通知过滤器",
 	"notifyme-notification-center-pagination-number-aria-label": "已显示通知$1至$2",
 	"notifyme-automation-arbitrary-notification-action": "发送通知",
 	"notifyme-automation-arbitrary-title-notification-action": "发送页面相关通知",

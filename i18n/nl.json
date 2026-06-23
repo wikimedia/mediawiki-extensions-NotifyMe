@@ -199,8 +199,6 @@
 	"notifyme-event-page-edit-desc": "Er is een pagina door een andere gebruiker bewerkt",
 	"notifyme-ui-delivery-label": "Aflevering",
 	"prefs-subs": "Meldingsabonnementen",
-	"notifyme-notification-filter-count-aria-label": "bevat {{PLURAL:$1|één melding|$1 meldingen}}",
-	"notifyme-notification-filter-aria-label": "Meldingsfilter",
 	"notifyme-notification-center-pagination-number-aria-label": "Meldingen $1 tot $2 worden weergegeven",
 	"notifyme-automation-arbitrary-notification-action": "Een melding sturen",
 	"notifyme-automation-arbitrary-title-notification-action": "Een paginagerelateerde melding verzenden",

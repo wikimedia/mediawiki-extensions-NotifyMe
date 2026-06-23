@@ -197,8 +197,6 @@
 	"notifyme-event-page-edit-desc": "Сторінку відредагував інший користувач",
 	"notifyme-ui-delivery-label": "Доставка",
 	"prefs-subs": "Підписки на сповіщення",
-	"notifyme-notification-filter-count-aria-label": "містить $1 {{PLURAL:$1|сповіщення|сповіщення|сповіщень}}",
-	"notifyme-notification-filter-aria-label": "Фільтр сповіщень",
 	"notifyme-notification-center-pagination-number-aria-label": "Показано сповіщення з $1 по $2",
 	"notifyme-automation-arbitrary-notification-action": "Надіслати сповіщення",
 	"notifyme-automation-arbitrary-title-notification-action": "Надіслати сповіщення, пов'язане зі сторінкою",

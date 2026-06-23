@@ -204,8 +204,6 @@
 	"notifyme-event-page-edit-desc": "다른 사용자가 문서를 편집했습니다",
 	"notifyme-ui-delivery-label": "전달",
 	"prefs-subs": "알림 구독",
-	"notifyme-notification-filter-count-aria-label": "{{PLURAL:$1|$1개 알림}} 포함",
-	"notifyme-notification-filter-aria-label": "알림 필터",
 	"notifyme-notification-center-pagination-number-aria-label": "$1부터 $2까지의 알림 표시 됨",
 	"notifyme-automation-arbitrary-notification-action": "알림 보내기",
 	"notifyme-automation-arbitrary-title-notification-action": "문서 관련 알림 보내기",

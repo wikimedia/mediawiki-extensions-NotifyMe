@@ -198,8 +198,6 @@
 	"notifyme-event-page-edit-desc": "Outro usuario editou unha páxina",
 	"notifyme-ui-delivery-label": "Entrega",
 	"prefs-subs": "Subscricións ás notificacións",
-	"notifyme-notification-filter-count-aria-label": "contén {{PLURAL:$1|unha notificación|$1 notificacións}}",
-	"notifyme-notification-filter-aria-label": "Filtro de notificacións",
 	"notifyme-notification-center-pagination-number-aria-label": "Móstranse as notificacións da $1 á $2",
 	"notifyme-automation-arbitrary-notification-action": "Enviar unha notificación",
 	"notifyme-automation-arbitrary-title-notification-action": "Enviar unha notificación relacionada coa páxina",
