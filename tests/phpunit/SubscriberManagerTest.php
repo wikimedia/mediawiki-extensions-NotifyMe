@@ -2,9 +2,9 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
+use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
-use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
@@ -20,13 +20,9 @@ class SubscriberManagerTest extends TestCase {
 	 * @dataProvider getProviders
 	 */
 	public function testGetSubscribers( $providers, $expected, INotificationEvent $event ) {
-		$userOptionsLookupMock = $this->createMock( UserOptionsManager::class );
-		$userOptionsLookupMock->method( 'getOption' )->willReturn( json_encode( [
-			'type' => 'auto',
-			'channels' => [ 'web', 'email' ],
-			'channel-configuration' => []
-		] ) );
-		$manager = new SubscriberManager( $providers );
+		$bucketProvider = $this->createMock( BucketProvider::class );
+		$bucketProvider->method( 'getEventBuckets' )->willReturn( [ 'foo' ] );
+		$manager = new SubscriberManager( $providers, $bucketProvider );
 		$channelMock = $this->createMock( IChannel::class );
 		$channelMock->method( 'getKey' )->willReturn( 'web' );
 		$this->assertSame(

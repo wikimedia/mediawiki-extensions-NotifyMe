@@ -6,12 +6,12 @@ use MediaWiki\Extension\NotifyMe\ChannelFactory;
 use MediaWiki\Extension\NotifyMe\EventFactory;
 use MediaWiki\Extension\NotifyMe\EventProvider;
 use MediaWiki\Extension\NotifyMe\ForeignNotificationFactory;
-use MediaWiki\Extension\NotifyMe\ISubscriberProvider;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\NotificationTester;
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
+use MediaWiki\Extension\NotifyMe\SubscriberProvider\SubscriberProviderFactory;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
@@ -54,25 +54,14 @@ return [
 		);
 	},
 	'NotifyMe.SubscriberManager' => static function ( MediaWikiServices $services ) {
-		// Temporary compat warning
-		$compatAttribute = ExtensionRegistry::getInstance()->getAttribute( 'NotificationsSubscriberProviders' );
-		if ( !empty( $compatAttribute ) ) {
-			throw new Exception(
-				'NotificationsSubscriberProviders is no longer supported, convert to NotifyMeSubscriberProviders'
-			);
-		}
-		$registry = ExtensionRegistry::getInstance()->getAttribute( 'NotifyMeSubscriberProviders' );
-		$providers = [];
-		foreach ( $registry as $provider ) {
-			$provider = $services->getObjectFactory()->createObject( $provider );
-			if ( $provider instanceof ISubscriberProvider ) {
-				$providers[$provider->getKey()] = $provider;
-			}
-			if ( $provider instanceof LoggerAwareInterface ) {
-				$provider->setLogger( $services->getService( 'NotifyMe.Logger' ) );
-			}
-		}
-		return new SubscriberManager( $providers );
+		$factory = new SubscriberProviderFactory(
+			ExtensionRegistry::getInstance()->getAttribute( 'NotifyMeSubscriberProviders' ),
+			$services
+		);
+		return new SubscriberManager(
+			$factory->getProviders(),
+			$services->getService( 'NotifyMe.Buckets' )
+		);
 	},
 	'NotifyMe.SubscriptionConfigurator' => static function ( MediaWikiServices $services ) {
 		return new SubscriptionConfigurator(
@@ -145,5 +134,14 @@ return [
 			$services->getHookContainer(),
 			$services->getTitleFactory()
 		);
+	},
+	'NotifyMe._SubscriberProviderFactory' => static function ( MediaWikiServices $services ) {
+		return static function ( string $className ) use ( $services ) {
+			$provider = $services->getObjectFactory()->createObject( $className );
+			if ( $provider instanceof LoggerAwareInterface ) {
+				$provider->setLogger( $services->getService( 'NotifyMe.Logger' ) );
+			}
+			return $provider;
+		};
 	},
 ];

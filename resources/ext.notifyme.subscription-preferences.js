@@ -33,7 +33,7 @@ $( function ( mw ) {
 			classname: 'ext.notifyme.ui.panel.SubscriptionManager',
 			pref: 'notifications-subscriptions',
 			cfg: {
-				data: JSON.parse( pref.default ),
+				data: pref.value.configuration,
 				channelConfigurationRegistry: ext.notifyme.channelConfigurationRegistry,
 				buckets: pref.value.bucketData,
 				events: pref.value.eventData,

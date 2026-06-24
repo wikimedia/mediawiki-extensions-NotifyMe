@@ -12,7 +12,7 @@ ext.notifyme.ui.panel.SubscriptionManager = function ( cfg ) {
 	this.manualSubscriptionPanel = new ext.notifyme.ui.panel.IndividualSubscriptions( {
 		buckets: cfg.buckets,
 		events: cfg.events,
-		data: cfg.data.subscriptions || [],
+		data: cfg.data,
 		channelLabels: cfg.channelLabels
 	} );
 	this.manualSubscriptionPanel.connect( this, {
@@ -26,8 +26,9 @@ ext.notifyme.ui.panel.SubscriptionManager = function ( cfg ) {
 		this.manualSubscriptionPanel.$element,
 		new OO.ui.PanelLayout( {
 			expanded: false,
-			padded: true,
-			content: [ this.configurationLayout ]
+			padded: false,
+			content: [ this.configurationLayout ],
+			classes: [ 'ext-notifyme-subscription-section' ]
 		} ).$element
 	);
 	this.initialized = true;
@@ -79,8 +80,7 @@ ext.notifyme.ui.panel.SubscriptionManager.prototype.getValue = function () {
 		channelPreferences[ key ] = provider.getValue();
 	}
 
-	return {
-		channels: channelPreferences,
-		subscriptions: this.manualSubscriptionPanel.getValue()
-	};
+	return Object.assign( {
+		channels: channelPreferences
+	}, this.manualSubscriptionPanel.getValue() );
 };

@@ -2,101 +2,20 @@
 	margin-top: 20px;
 }
 
-.ext-notifyme-subscriptionSet {
-	width: 30%;
-	margin-top: 10px;
-	margin-right: 10px;
-	min-width: 320px;
-	position: relative;
-	background-color: #e9e9ee;
-	padding: 20px;
-	display: inline-block;
-
-	.ext-notifyme-subscriptionSet-header {
-		margin-bottom: 10px;
-
-		.tile-label {
-			display: block;
-			max-width: 70%;
-			font-size: 1.2em;
-			font-weight: bold;
-			margin: 0;
-		}
-
-		.tile-value {
-			display: block;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
-		}
+.ext-notifyme-subscription-section {
+	&:not( :first-child ) {
+		border-top: 1px solid #a2a9b1;
+		padding-top: 12px;
+		margin-top: 12px;
 	}
 
-	.ext-notifyme-subscriptionSet-buttons {
-		position: absolute;
-		right: 20px;
-		top: 15px;
-
-		.oo-ui-buttonWidget {
-			margin-right: 0 !important;
-		}
+	.ext-notifyme-subscription-set-label {
+		margin-bottom: 12px;
 	}
 
-	.ext-notifyme-subscriptionSet-delivery {
-		margin-top: 10px;
-
-		.oo-ui-labelWidget {
-			font-size: 0.85rem;
-			opacity: 0.7;
-		}
-
-		.ext-notifyme-subscriptionSet-delivery-icons {
-			float: right;
-
-			.oo-ui-iconWidget {
-				opacity: 0.3;
-				background-size: 20px;
-
-				&:last-of-type {
-					/* To align with buttons */
-					padding-right: 2.2rem;
-				}
-			}
+	.ext-notifyme-subscription-event-layout {
+		.oo-ui-fieldLayout-field {
+			width: 23px !important;
 		}
 	}
-}
-
-.subscription-set-add-button {
-	width: 100%;
-
-	.oo-ui-buttonElement-button {
-		float: right;
-	}
-}
-
-.ext-notifyme-ui-dialog-set-editor-bucket-picker {
-	.oo-ui-radioOptionWidget {
-		.oo-ui-radioInputWidget {
-			vertical-align: middle !important;
-		}
-	}
-
-	.ext-notifyme-ui-dialog-set-editor-bucket-label {
-		label {
-			margin: 0;
-		}
-
-		.oo-ui-popupButtonWidget {
-			margin: 0;
-
-			.oo-ui-iconElement a {
-				margin: 0;
-				padding: 0;
-			}
-		}
-	}
-}
-
-.ext-notifyme-ui-dialog-event-desc-panel,
-.ext-notifyme-ui-dialog-event-desc-panel label {
-	font-size: 0.8rem;
 }

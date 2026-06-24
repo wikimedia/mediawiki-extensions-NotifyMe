@@ -26,6 +26,8 @@ class SubscriptionConfigurator {
 	/** @var Config */
 	private $mainConfig;
 
+	public const SUBSCRIPTION_PREF_KEY = 'ext-notification-subscriptions-watchlist';
+
 	/**
 	 * @param ChannelFactory $channelFactory
 	 * @param UserOptionsManager $userOptionsManager
@@ -48,7 +50,7 @@ class SubscriptionConfigurator {
 	 * @return array
 	 */
 	public function getConfiguration( UserIdentity $user ): array {
-		$config = $this->userOptionsManager->getOption( $user, 'ext-notification-subscriptions' );
+		$config = $this->userOptionsManager->getOption( $user, static::SUBSCRIPTION_PREF_KEY );
 		if ( !$config ) {
 			return [];
 		}
@@ -106,8 +108,8 @@ class SubscriptionConfigurator {
 	 */
 	public function getDefaultValue(): string {
 		$staticOptions = $this->mainConfig->get( 'DefaultUserOptions' );
-		if ( isset( $staticOptions['ext-notification-subscriptions'] ) ) {
-			$value = $staticOptions['ext-notification-subscriptions'];
+		if ( isset( $staticOptions[static::SUBSCRIPTION_PREF_KEY] ) ) {
+			$value = $staticOptions[static::SUBSCRIPTION_PREF_KEY];
 			if ( is_string( $value ) ) {
 				$parsed = json_decode( $value, true );
 				if ( $parsed !== null ) {
@@ -116,14 +118,8 @@ class SubscriptionConfigurator {
 			}
 		}
 		$defaultOptions = [
-			'subscriptions' => [
-				[
-					'setType' => 'watchlist',
-					'set' => [],
-					'bucket' => 'content-high-freq',
-					'channels' => [ 'web', 'email' ]
-				],
-			],
+			'subscriptions' => [],
+			'delivery' => [],
 		];
 		foreach ( $this->channelFactory->getChannels() as $channel ) {
 			// Enable all channels by default

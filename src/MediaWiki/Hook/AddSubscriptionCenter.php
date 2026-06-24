@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe\MediaWiki\Hook;
 
 use MediaWiki\Extension\NotifyMe\MediaWiki\Html\NotificationsSubscriptionsElement;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
+use MediaWiki\Extension\NotifyMe\SubscriberProvider\WatchlistSubscriberProvider;
 use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
@@ -31,25 +32,19 @@ class AddSubscriptionCenter implements GetPreferencesHook, UserGetDefaultOptions
 	 * @param array &$preferences
 	 *
 	 * @return bool|void
+	 * @throws \Exception
 	 */
 	public function onGetPreferences( $user, &$preferences ) {
-		$manualProvider = $this->manager->getProvider( 'manual-subscriptions' );
-		$additionalModules = $manualProvider->getRLModulesFromSets();
+		/** @var WatchlistSubscriberProvider $watchlistProvider */
+		$watchlistProvider = $this->manager->getProvider( 'watchlist-subscriptions' );
 		$config = $this->configurator->getConfiguration( $user );
-
-		$validSubscriptions = [];
-		foreach ( $config['subscriptions'] ?? [] as $item ) {
-			if ( $manualProvider->isValidSet( $item['setType'] ) ) {
-				$validSubscriptions[] = $item;
-			}
-		}
-		$config['subscriptions'] = $validSubscriptions;
+		$config = $watchlistProvider->modifyConfiguration( $config );
 
 		HTMLForm::$typeMappings['notifications-subscriptions'] = NotificationsSubscriptionsElement::class;
-		$preferences['ext-notification-subscriptions'] = [
+		$preferences[$this->configurator::SUBSCRIPTION_PREF_KEY] = [
 			'type' => 'notifications-subscriptions',
 			'section' => 'notifications/subs',
-			'rl-modules' => array_merge( [ 'ext.notifyme.subscription-preferences' ], $additionalModules ),
+			'rl-modules' => [ 'ext.notifyme.subscription-preferences' ],
 			'value' => [
 				'configuration' => $config,
 				'bucketData' => $this->configurator->getBucketData(),
@@ -65,6 +60,6 @@ class AddSubscriptionCenter implements GetPreferencesHook, UserGetDefaultOptions
 	 * @return void
 	 */
 	public function onUserGetDefaultOptions( &$defaultOptions ) {
-		$defaultOptions[ 'ext-notification-subscriptions'] = $this->configurator->getDefaultValue();
+		$defaultOptions[$this->configurator::SUBSCRIPTION_PREF_KEY] = $this->configurator->getDefaultValue();
 	}
 }

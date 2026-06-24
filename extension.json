@@ -122,23 +122,9 @@
 				}
 			},
 			"SubscriberProviders": {
-				"manual-subscriptions": {
-					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\ManualSubscriberProvider",
-					"args": [ "NotifyMeManualSubscriberProviderSets" ],
-					"services": [ "UserFactory", "DBLoadBalancer", "NotifyMe.SubscriptionConfigurator", "ObjectFactory", "NotifyMe.Buckets" ]
-				}
-			},
-			"ManualSubscriberProviderSets": {
-				"ns": {
-					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\ManualProvider\\SubscriptionSet\\NamespaceSet"
-				},
-				"category": {
-					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\ManualProvider\\SubscriptionSet\\CategorySet",
-					"services": [ "TitleFactory" ]
-				},
-				"watchlist": {
-					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\ManualProvider\\SubscriptionSet\\WatchlistSet",
-					"services": [ "WatchedItemStore" ]
+				"watchlist-subscriptions": {
+					"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\WatchlistSubscriberProvider",
+					"services": [ "HookContainer", "UserFactory", "DBLoadBalancer", "NotifyMe.SubscriptionConfigurator", "NotifyMe.Buckets" ]
 				}
 			}
 		},
@@ -189,8 +175,7 @@
 			],
 			"dependencies": [
 				"ext.notifyme.subscription",
-				"ext.notifyme.preferences.bootstrap",
-				"ext.notifyme.subscription.set.bootstrap"
+				"ext.notifyme.preferences.bootstrap"
 			]
 		},
 		"ext.notifyme.bootstrap": {
@@ -203,32 +188,14 @@
 		},
 		"ext.notifyme.subscription": {
 			"scripts": [
-				"ui/dialog/SubscriptionSetEditor.js",
 				"ui/panel/IndividualSubscriptions.js",
 				"ui/panel/SubscriptionManager.js"
 			],
 			"messages": [
 				"notifyme-ui-subscription-manager-configuration",
-				"notifyme-ui-dialog-set-editor-title",
-				"notifyme-ui-dialog-set-editor-type",
-				"notifyme-ui-dialog-set-editor-bucket",
-				"notifyme-ui-dialog-set-editor-channels-prefixed",
-				"notifyme-ui-dialog-set-editor-channels-hint",
-				"notifyme-ui-subscription-set-add",
-				"notifyme-ui-subscription-set-duplicate",
 				"notifyme-ui-subscription-set-label",
-				"notifyme-ui-subscription-manager-type",
-				"notifyme-ui-subscription-manager-type-none-desc",
-				"notifyme-ui-subscription-manager-type-none",
-				"notifyme-ui-subscription-manager-type-manual",
-				"notifyme-ui-subscription-manager-type-manual-desc",
-				"notifyme-ui-dialog-set-editor-cancel",
-				"notifyme-ui-dialog-set-editor-create",
-				"notifyme-ui-subscription-set-empty",
-				"notifyme-ui-dialog-popup-table-event-label",
-				"notifyme-ui-dialog-popup-table-desc-label",
-				"notifyme-ui-dialog-popup-header-label",
-				"notifyme-ui-delivery-label"
+				"notifyme-ui-delivery-label",
+				"notifyme-ui-subscription-delivery-help"
 			],
 			"styles": [
 				"styles.less"
@@ -239,50 +206,12 @@
 				"ext.visualEditor.base"
 			]
 		},
-		"ext.notifyme.subscription.set": {
-			"scripts": [
-				"ui/subscriptionSet/editor/NamespaceSetEditor.js",
-				"ui/subscriptionSet/editor/CategorySetEditor.js",
-				"ui/subscriptionSet/Namespace.js",
-				"ui/subscriptionSet/Category.js",
-				"ui/subscriptionSet/Watchlist.js"
-			],
-			"messages": [
-				"notifyme-ui-subscriptionset-editor-category-label",
-				"notifyme-ui-subscriptionset-editor-namespace-label",
-				"notifyme-ui-subscriptionset-category-label",
-				"notifyme-ui-subscriptionset-namespace-label",
-				"notifyme-ui-subscriptionset-watchlist-label"
-			],
-			"styles": [
-				"styles.less"
-			],
-			"dependencies": [
-				"oojs-ui",
-				"ext.oOJSPlus.widgets",
-				"mediawiki.widgets"
-			]
-		},
 		"ext.notifyme.preferences.bootstrap": {
 			"scripts": [
 				"ui/preferences/ChannelPreferences.js"
 			],
 			"dependencies": [
 				"oojs-ui"
-			]
-		},
-		"ext.notifyme.subscription.set.bootstrap": {
-			"scripts": [
-				"ui/subscriptionSet/editor/SubscriptionSetEditor.js",
-				"ui/subscriptionSet/SubscriptionSet.js"
-			],
-			"messages": [
-				"notifyme-ui-edit",
-				"notifyme-ui-delete"
-			],
-			"dependencies": [
-				"oojs-ui",
-				"oojs-ui.styles.icons-alerts"
 			]
 		},
 		"ext.notifyme.notification.center": {
@@ -403,7 +332,9 @@
 		"PageMoveComplete": "triggerEvents",
 		"PageDeleteComplete": "triggerEvents",
 		"LinksUpdateComplete": "triggerEvents",
-		"UserGroupsChanged": "triggerEvents"
+		"UserGroupsChanged": "triggerEvents",
+		"NotifyMeWatchlistProviderGetWatchers": [ "getCategoryWatchers", "getNamespaceWatchers" ],
+		"NotifyMeWatchlistProviderGetWatchSource": [ "getCategoryWatchers", "getNamespaceWatchers" ]
 	},
 	"SpecialPages": {
 		"NotificationCenter": {
@@ -445,6 +376,14 @@
 		"replaceCID": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\Channel\\Email\\ReplaceCID",
 			"services": [ "NotifyMe.MailContentProvider" ]
+		},
+		"getCategoryWatchers": {
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\DerivedWatches\\Category",
+			"services": [ "DBLoadBalancer", "UserFactory", "TitleFactory" ]
+		},
+		"getNamespaceWatchers": {
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\DerivedWatches\\NamespaceWatch",
+			"services": [ "DBLoadBalancer", "UserFactory" ]
 		}
 	},
 	"RestRoutes": [
