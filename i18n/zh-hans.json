@@ -211,5 +211,7 @@
 	"notifyme-arbitrary-event-action-subject-label": "通知主题",
 	"notifyme-arbitrary-event-action-subject-help": "将被用作邮件通知的主题。值可以是纯文本或消息键",
 	"notifyme-arbitrary-event-action-message-help": "值可以是纯文本或消息键",
-	"notifyme-arbitrary-event-action-with-title-message-help": "值可以是纯文本或消息键。相关页面的标题锚点会作为第一参数传递。例如：页面$1被编辑，会解析为页面<a href=\"...\">我的页面</a>被编辑，在渲染通知以显示页面链接时实现正确解析。如果指定了消息键，则应处理$1参数。"
+	"notifyme-arbitrary-event-action-with-title-message-help": "值可以是纯文本或消息键。相关页面的标题锚点会作为第一参数传递。例如：页面$1被编辑，会解析为页面<a href=\"...\">我的页面</a>被编辑，在渲染通知以显示页面链接时实现正确解析。如果指定了消息键，则应处理$1参数。",
+	"notifyme-notification-filter-count-aria-label": "包含{{PLURAL:$1|1|$1}}条通知",
+	"notifyme-notification-filter-aria-label": "通知过滤器"
 }

@@ -216,5 +216,7 @@
 	"notifyme-arbitrary-event-action-subject-label": "알림 유형",
 	"notifyme-arbitrary-event-action-subject-help": "이메일 알림의 제목으로 사용됩니다. 값은 평문 또는 메시지 키일 수 있습니다",
 	"notifyme-arbitrary-event-action-message-help": "값은 평문 또는 메시지 키일 수 있습니다",
-	"notifyme-arbitrary-event-action-with-title-message-help": "값은 일반 텍스트 또는 메시지 키일 수 있습니다. 관련 문서의 제목 앵커가 첫 번째 매개변수로 전달됩니다. 예: Page $1 was edited는 Page <a href=\"...\">My page</a> was edited로 해석되며, 알림을 렌더링할 때 문서로 연결되는 링크를 표시하도록 적절히 구문 분석됩니다. 메시지 키를 지정한 경우 $1 매개변수를 처리해야 합니다."
+	"notifyme-arbitrary-event-action-with-title-message-help": "값은 일반 텍스트 또는 메시지 키일 수 있습니다. 관련 문서의 제목 앵커가 첫 번째 매개변수로 전달됩니다. 예: Page $1 was edited는 Page <a href=\"...\">My page</a> was edited로 해석되며, 알림을 렌더링할 때 문서로 연결되는 링크를 표시하도록 적절히 구문 분석됩니다. 메시지 키를 지정한 경우 $1 매개변수를 처리해야 합니다.",
+	"notifyme-notification-filter-count-aria-label": "{{PLURAL:$1|$1개 알림}} 포함",
+	"notifyme-notification-filter-aria-label": "알림 필터"
 }
