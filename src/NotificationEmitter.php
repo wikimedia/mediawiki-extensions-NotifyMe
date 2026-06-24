@@ -59,6 +59,9 @@ class NotificationEmitter implements IProcessStep {
 	 * @throws Exception
 	 */
 	public function execute( $data = [] ): array {
+		$this->logger->info( 'Starting notification emitter for event {eventId}', [
+			'eventId' => $this->eventId
+		] );
 		try {
 			$event = $this->store->getEvent( $this->eventId );
 		} catch ( Exception $e ) {

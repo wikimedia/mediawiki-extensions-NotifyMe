@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\NotifyMe\Tests;
 
-use MediaWiki\Config\Config;
 use MediaWiki\Extension\NotifyMe\BucketProvider;
 use MediaWiki\Extension\NotifyMe\ChannelFactory;
 use MediaWiki\Extension\NotifyMe\EventFactory;
@@ -10,13 +9,11 @@ use MediaWiki\Extension\NotifyMe\ForeignNotificationFactory;
 use MediaWiki\Extension\NotifyMe\Grouping\NotificationGroup;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\Extension\NotifyMe\SubscriberManager;
-use MediaWiki\Extension\NotifyMe\SubscriptionConfigurator;
 use MediaWiki\Language\Language;
 use MediaWiki\Languages\LanguageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\Options\UserOptionsLookup;
-use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
@@ -250,16 +247,12 @@ class SerializerTest extends NotificationTestBase {
 		$contentLanguage = $this->createMock( Language::class );
 		$contentLanguage->method( 'getCode' )->willReturn( 'en' );
 
-		$subscriberConfigurator = new SubscriptionConfigurator(
-			$this->createMock( ChannelFactory::class ),
-			$this->createMock( UserOptionsManager::class ),
-			$this->createMock( BucketProvider::class ),
-			$this->createMock( Config::class )
-		);
+		$bucketProvider = $this->createMock( BucketProvider::class );
+		$bucketProvider->method( 'getEventBuckets' )->willReturn( [ 'foo' ] );
 		return new NotificationSerializer(
 			$userFactoryMock,
 			$channelFactoryMock,
-			new SubscriberManager( [], $subscriberConfigurator ),
+			new SubscriberManager( [], $bucketProvider ),
 			$languageFactoryMock,
 			$userOptionLookupMock,
 			$contentLanguage,

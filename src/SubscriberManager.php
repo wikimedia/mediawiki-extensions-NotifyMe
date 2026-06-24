@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe;
 
 use InvalidArgumentException;
 use MediaWiki\Extension\NotifyMe\Channel\WebChannel;
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
@@ -14,12 +15,16 @@ use MWStake\MediaWiki\Component\Events\NotifyAgentEvent;
 final class SubscriberManager {
 	/** @var ISubscriberProvider[] */
 	private $providers;
+	/** @var BucketProvider */
+	private BucketProvider $bucketProvider;
 
 	/**
 	 * @param array $providers
+	 * @param BucketProvider $bucketProvider
 	 */
-	public function __construct( array $providers ) {
+	public function __construct( array $providers, BucketProvider $bucketProvider ) {
 		$this->providers = $providers;
+		$this->bucketProvider = $bucketProvider;
 	}
 
 	/**
@@ -30,21 +35,31 @@ final class SubscriberManager {
 	 * @throws \Exception
 	 */
 	public function getSubscribers( INotificationEvent $event, IChannel $channel ): array {
+		$logger = LoggerFactory::getInstance( 'notifications' );
+		$logger->info( "Getting subscribers for event {$event->getKey()} and channel {$channel->getKey()}" );
 		$subscribers = [];
 		if ( $event instanceof ForcedEvent && $channel instanceof WebChannel ) {
 			// Only send mandatory notifications to "primary" channel, which is "web"
 			// Not generic though
 			return $this->getMandatorySubscribers( $event );
 		}
-		foreach ( $this->providers as $key => $provider ) {
-			$subscribers = $this->merge( $subscribers, $provider->getSubscribers( $event, $channel ), $key );
-		}
+		$buckets = $this->bucketProvider->getEventBuckets( $event );
+		if ( in_array( 'personal', $buckets ) ) {
+			// Personal are never subscribable, always predefined set of target users
+			$subscribers = $event->getPresetSubscribers();
+		} else {
 
-		if ( !empty( $subscribers ) ) {
-			if ( $event->getPresetSubscribers() !== null ) {
-				// On self-subscribing events, group of people to notify is already set,
-				// but we still need to filter out any user that is not subscribed
-				$subscribers = $this->fromSubset( $subscribers, $event->getPresetSubscribers() );
+			$logger->info( "Getting subscribers for event {$event->getKey()} and channel {$channel->getKey()}" );
+			foreach ( $this->providers as $key => $provider ) {
+				$logger->info( "Getting subscribers from provider {$key}" );
+				$subscribers = $this->merge( $subscribers, $provider->getSubscribers( $event, $channel ), $key );
+			}
+			if ( !empty( $subscribers ) ) {
+				if ( $event->getPresetSubscribers() !== null ) {
+					// On self-subscribing events, group of people to notify is already set,
+					// but we still need to filter out any user that is not subscribed
+					$subscribers = $this->fromSubset( $subscribers, $event->getPresetSubscribers() );
+				}
 			}
 		}
 
