@@ -213,7 +213,5 @@
 	"notifyme-arbitrary-event-action-subject-label": "Thema der Benachrichtigung",
 	"notifyme-arbitrary-event-action-subject-help": "Wird als Betreff für die E-Mail-Benachrichtigung verwendet. Der Wert kann Klartext oder ein Nachrichtenschlüssel sein.",
 	"notifyme-arbitrary-event-action-message-help": "Der Wert kann Klartext oder ein Nachrichtenschlüssel sein.",
-	"notifyme-arbitrary-event-action-with-title-message-help": "Der Wert kann Klartext oder ein Nachrichtenschlüssel sein. Der Titelanker der relevanten Seite wird als erster Parameter übergeben. Beispiel: „Seite $1 wurde bearbeitet“ wird zu „Seite <a href=\"...\">Meine Seite</a> wurde bearbeitet“ aufgelöst, was beim Rendern der Benachrichtigung korrekt interpretiert wird, um den Link zur Seite anzuzeigen. Wenn ein Nachrichtenschlüssel angegeben ist, wird erwartet, dass er den Parameter $1 verarbeitet.",
-	"notifyme-notification-filter-count-aria-label": "enthält {{PLURAL:$1|eine Benachrichtigung| $1 Benachrichtigungen}}",
-	"notifyme-notification-filter-aria-label": "Benachrichtigungsfilter"
+	"notifyme-arbitrary-event-action-with-title-message-help": "Der Wert kann Klartext oder ein Nachrichtenschlüssel sein. Der Titelanker der relevanten Seite wird als erster Parameter übergeben. Beispiel: „Seite $1 wurde bearbeitet“ wird zu „Seite <a href=\"...\">Meine Seite</a> wurde bearbeitet“ aufgelöst, was beim Rendern der Benachrichtigung korrekt interpretiert wird, um den Link zur Seite anzuzeigen. Wenn ein Nachrichtenschlüssel angegeben ist, wird erwartet, dass er den Parameter $1 verarbeitet."
 }
