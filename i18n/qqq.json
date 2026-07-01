@@ -226,5 +226,9 @@
 	"notifyme-arbitrary-event-action-subject-label": "Field label",
 	"notifyme-arbitrary-event-action-subject-help": "Help text for the subject field of an arbitrary notification action.",
 	"notifyme-arbitrary-event-action-message-help": "Help text for the message field of an arbitrary notification action.",
-	"notifyme-arbitrary-event-action-with-title-message-help": "Help text for the message field of an arbitrary notification action when the title is included."
+	"notifyme-arbitrary-event-action-with-title-message-help": "Help text for the message field of an arbitrary notification action when the title is included.",
+	"notifyme-ui-subscription-delivery-help": "Help text in [[Special:Preferences]] explaining that notifications are always shown in-wiki and that additional delivery channels can be selected.",
+	"notifyme-subscriber-provider-watched-source-desc": "Description shown as a notification source reason when the user receives a notification because they watch the related page.",
+	"notifyme-category-subscription-description": "Explanation why the user receives notifications for a category subscription.",
+	"notifyme-namespace-subscription-description": "Explanation why the user receives notifications for a namespace subscription."
 }
