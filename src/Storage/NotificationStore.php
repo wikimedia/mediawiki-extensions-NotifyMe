@@ -2,9 +2,11 @@
 
 namespace MediaWiki\Extension\NotifyMe\Storage;
 
+use DateTimeImmutable;
 use Exception;
 use MediaWiki\Extension\NotifyMe\EventProvider;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\User\User;
 use MediaWiki\WikiMap\WikiMap;
 use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
@@ -28,17 +30,23 @@ class NotificationStore {
 	/** @var string */
 	private string $wikiId;
 
+	/** @var HookContainer */
+	private $hookContainer;
+
 	/**
 	 * @param ILoadBalancer $loadBalancer
 	 * @param NotificationSerializer $serializer
 	 * @param EventProvider $eventProvider
+	 * @param HookContainer $hookContainer
 	 */
 	public function __construct(
-		ILoadBalancer $loadBalancer, NotificationSerializer $serializer, EventProvider $eventProvider
+		ILoadBalancer $loadBalancer, NotificationSerializer $serializer, EventProvider $eventProvider,
+		HookContainer $hookContainer
 	) {
 		$this->loadBalancer = $loadBalancer;
 		$this->serializer = $serializer;
 		$this->eventProvider = $eventProvider;
+		$this->hookContainer = $hookContainer;
 		$this->wikiId = WikiMap::getCurrentWikiId();
 	}
 
@@ -234,6 +242,40 @@ class NotificationStore {
 			],
 			__METHOD__
 		);
+	}
+
+	/**
+	 * @param int $days
+	 * @return int Deleted notification count
+	 * @throws Exception
+	 */
+	public function cleanUpOld( int $days = 30 ): int {
+		$latestTimestamp = new DateTimeImmutable( "-$days days" );
+
+		$dbw = $this->loadBalancer->getConnection( DB_PRIMARY );
+		$expired = $dbw->newSelectQueryBuilder()
+			->select( 'ne_id' )
+			->from( 'notifications_event' )
+			->where( [ 'ne_timestamp >' . $dbw->addQuotes( $latestTimestamp->format( 'YmdHis' ) ) ] )
+			->fetchResultSet();
+		$expiredIds = [];
+		foreach ( $expired as $row ) {
+			$expiredIds[] = $row->ne_id;
+		}
+
+		if ( empty( $expiredIds ) ) {
+			return 0;
+		}
+		// Delete all notification instances for the expired events
+		$dbw->newDeleteQueryBuilder()
+			->delete( 'notifications_instance' )
+			->where( [ 'ni_event_id' => $expiredIds, 'ni_wiki_id' => $this->wikiId ] )
+			->caller( __METHOD__ )
+			->execute();
+
+		$this->hookContainer->run( 'NotifyMeCleanupOld', [ $expiredIds, $this->wikiId, $latestTimestamp ] );
+
+		return $dbw->affectedRows();
 	}
 
 	/**

@@ -299,6 +299,43 @@ class WebNotificationQueryStore {
 	}
 
 	/**
+	 * @return void
+	 */
+	public function cleanUpNonExisting() {
+		// Remove all rows linking to notifications that no longer exist
+		$db = $this->loadBalancer->getConnection( DB_PRIMARY );
+		$existing = $db->newSelectQueryBuilder()
+			->select( [ 'ni_id' ] )
+			->from( 'notifications_instance' )
+			->where( [ 'ni_wiki_id' => $this->wikiId ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$existingIds = [];
+		foreach ( $existing as $row ) {
+			$existingIds[] = $row->ni_id;
+		}
+		if ( empty( $existingIds ) ) {
+			// Clear all
+			$db->newDeleteQueryBuilder()
+				->deleteFrom( 'notifications_web_query_store' )
+				->where( [ 'nwqs_wiki_id' => $this->wikiId ] )
+				->caller( __METHOD__ )
+				->execute();
+			return;
+		}
+
+		$db->newDeleteQueryBuilder()
+			->deleteFrom( 'notifications_web_query_store' )
+			->where( [
+				'nwqs_notification_id NOT IN (' . $db->makeList( $existingIds ) . ')',
+				'nwqs_wiki_id' => $this->wikiId,
+			] )
+			->caller( __METHOD__ )
+			->execute();
+	}
+
+	/**
 	 * @param Title $title
 	 *
 	 * @return string

@@ -200,5 +200,6 @@
 	"notifyme-ui-subscription-delivery-help": "Help text in [[Special:Preferences]] explaining that notifications are always shown in-wiki and that additional delivery channels can be selected.",
 	"notifyme-subscriber-provider-watched-source-desc": "Description shown as a notification source reason when the user receives a notification because they watch the related page.",
 	"notifyme-category-subscription-description": "Explanation why the user receives notifications for a category subscription.",
-	"notifyme-namespace-subscription-description": "Explanation why the user receives notifications for a namespace subscription."
+	"notifyme-namespace-subscription-description": "Explanation why the user receives notifications for a namespace subscription.",
+	"notifyme-subscriber-provider-personal-desc": "Explanation shown as a notification source reason when the user receives a notification because they are the target of the event."
 }

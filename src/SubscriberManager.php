@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe;
 
 use InvalidArgumentException;
 use MediaWiki\Extension\NotifyMe\Channel\WebChannel;
+use MediaWiki\Extension\NotifyMe\SubscriberProvider\PersonalProvider;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
@@ -45,10 +46,10 @@ final class SubscriberManager {
 		}
 		$buckets = $this->bucketProvider->getEventBuckets( $event );
 		if ( in_array( 'personal', $buckets ) ) {
-			// Personal are never subscribable, always predefined set of target users
-			$subscribers = $event->getPresetSubscribers();
+			// Personal events must contain target users and they are unsubscribable, so
+			// we don't want to run whole expensive subscriber provider logic, because we already know the target users
+			$subscribers = $this->merge( [], $event->getPresetSubscribers(), 'personal' );
 		} else {
-
 			$logger->info( "Getting subscribers for event {$event->getKey()} and channel {$channel->getKey()}" );
 			foreach ( $this->providers as $key => $provider ) {
 				$logger->info( "Getting subscribers from provider {$key}" );
@@ -98,6 +99,10 @@ final class SubscriberManager {
 	 * @return ISubscriberProvider
 	 */
 	public function getProvider( string $providerName ): ISubscriberProvider {
+		if ( $providerName === 'personal' ) {
+			// Special case for personal notifications
+			return new PersonalProvider();
+		}
 		if ( isset( $this->providers[$providerName] ) ) {
 			return $this->providers[$providerName];
 		}
