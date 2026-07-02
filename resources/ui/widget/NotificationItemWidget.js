@@ -1,14 +1,8 @@
 ext.notifyme.ui.widget.NotificationItemWidget = function ( data, cfg ) {
 	cfg = cfg || {};
-
 	ext.notifyme.ui.widget.NotificationItemWidget.parent.call( this, cfg );
-	mws.galaxyIntegration.ForeignWikiBadge.call( this, data.sourceWiki || null );
 
 	this.$content = $( '<div>' ).addClass( 'notifications-ui-widget-NotificationItemWidget-notification-content' );
-	const $wikiBadge = this.getWikiBadge();
-	if ( $wikiBadge ) {
-		this.$content.append( $wikiBadge );
-	}
 
 	if ( data.isInGroup ) {
 		this.$content.addClass( 'notifications-ui-widget-NotificationItemWidget-notification-content-in-group' );
@@ -48,14 +42,10 @@ ext.notifyme.ui.widget.NotificationItemWidget = function ( data, cfg ) {
 	this.$element.attr( 'data-id', data.id );
 	this.$element.attr( 'data-unread', data.unread );
 
-	const wikiColor = this.getWikiColor();
-	if ( wikiColor ) {
-		this.$element.css( 'border-left', `4px solid ${ wikiColor }` );
-	}
+	mw.hook( 'notifyme.notification.item' ).fire( this, data );
 };
 
 OO.inheritClass( ext.notifyme.ui.widget.NotificationItemWidget, OO.ui.Widget );
-OO.mixinClass( ext.notifyme.ui.widget.NotificationItemWidget, mws.galaxyIntegration.ForeignWikiBadge );
 
 ext.notifyme.ui.widget.NotificationItemWidget.prototype.getMarkAsReadButton = function ( unread ) {
 	// Mark as read

@@ -250,8 +250,7 @@
 				"oojs-ui",
 				"moment",
 				"ext.oOJSPlus.widgets",
-				"oojs-ui.styles.icons-movement",
-				"mwstake.component.galaxy.foreignWikiBadge"
+				"oojs-ui.styles.icons-movement"
 			]
 		},
 		"ext.notifyme.specialPage": {
@@ -309,8 +308,7 @@
 			],
 			"dependencies": [
 				"moment",
-				"oojs-ui",
-				"mwstake.component.galaxy.foreignWikiBadge"
+				"oojs-ui"
 			]
 		}
 	},
