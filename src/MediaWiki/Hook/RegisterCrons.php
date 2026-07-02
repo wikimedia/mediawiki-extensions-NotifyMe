@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Hook;
 
+use MediaWiki\Extension\NotifyMe\Process\CleanupOldEvents;
 use MediaWiki\Extension\NotifyMe\Process\SendDailyDigest;
 use MediaWiki\Extension\NotifyMe\Process\SendWeeklyDigest;
 use MediaWiki\Hook\MediaWikiServicesHook;
@@ -31,6 +32,12 @@ class RegisterCrons implements MediaWikiServicesHook {
 			'send-daily' => [
 				'class' => SendWeeklyDigest::class,
 				'services' => [ 'NotifyMe.Store', 'NotifyMe.ChannelFactory', 'NotifyMe.Logger' ],
+			]
+		] ) );
+		$cronManager->registerCron( 'notifyme-cleanup-old', '0 2 * * *', new ManagedProcess( [
+			'cleanup' => [
+				'class' => CleanupOldEvents::class,
+				'services' => [ 'NotifyMe.Store', 'NotifyMe.Logger' ],
 			]
 		] ) );
 	}

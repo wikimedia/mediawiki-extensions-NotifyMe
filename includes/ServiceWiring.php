@@ -51,6 +51,7 @@ return [
 			$services->getDBLoadBalancer(),
 			$services->getService( 'NotifyMe.Serializer' ),
 			$services->getService( 'NotifyMe._EventProvider' ),
+			$services->getHookContainer()
 		);
 	},
 	'NotifyMe.SubscriberManager' => static function ( MediaWikiServices $services ) {

@@ -334,7 +334,8 @@
 		"LinksUpdateComplete": "triggerEvents",
 		"UserGroupsChanged": "triggerEvents",
 		"NotifyMeWatchlistProviderGetWatchers": [ "getCategoryWatchers", "getNamespaceWatchers" ],
-		"NotifyMeWatchlistProviderGetWatchSource": [ "getCategoryWatchers", "getNamespaceWatchers" ]
+		"NotifyMeWatchlistProviderGetWatchSource": [ "getCategoryWatchers", "getNamespaceWatchers" ],
+		"NotifyMeCleanupOld": "cleanUpExpiredWebNotificationStoreEntries"
 	},
 	"SpecialPages": {
 		"NotificationCenter": {
@@ -384,6 +385,10 @@
 		"getNamespaceWatchers": {
 			"class": "\\MediaWiki\\Extension\\NotifyMe\\SubscriberProvider\\DerivedWatches\\NamespaceWatch",
 			"services": [ "DBLoadBalancer", "UserFactory" ]
+		},
+		"cleanUpExpiredWebNotificationStoreEntries": {
+			"class": "\\MediaWiki\\Extension\\NotifyMe\\Hook\\CleanUpExpiredWebNotificationStoreEntries",
+			"services": [ "NotifyMe.WebQueryStore" ]
 		}
 	},
 	"RestRoutes": [
