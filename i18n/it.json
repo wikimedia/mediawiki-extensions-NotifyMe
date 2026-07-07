@@ -10,15 +10,11 @@
 	"notifyme-event-page-create-desc": "Una pagina è stata creata da un altro utente",
 	"notifyme-event-page-delete-desc": "Una pagina è stata cancellata da un altro utente",
 	"notifyme-event-page-move-desc": "Una pagina è stata spostata da un altro utente",
-	"notifyme-ui-dialog-popup-table-event-label": "Evento",
-	"notifyme-ui-dialog-popup-table-desc-label": "Descrizione",
 	"notifyme-automation-arbitrary-notification-action": "Invia una notifica",
 	"notifyme-automation-arbitrary-title-notification-action": "Invia una notifica relativa alla pagina",
 	"notifyme-arbitrary-event-action-message-label": "Messaggio",
 	"notifyme-notification-center-filter-label-source": "Wiki",
 	"notifyme-notification-center-filter-label-source-local": "Questo wiki",
 	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
-	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica",
-	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
-	"notifyme-notification-filter-aria-label": "Filtro notifiche"
+	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica"
 }
