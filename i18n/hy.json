@@ -5,10 +5,6 @@
 		]
 	},
 	"notifyme-desc": "Ծանուցումներ",
-	"notifyme-ui-subscriptionset-editor-category-label": "Կատեգորիա",
-	"notifyme-ui-subscriptionset-category-label": "Կատեգորիա",
-	"notifyme-ui-subscriptionset-namespace-label": "Անվանատարածք",
-	"notifyme-ui-dialog-set-editor-cancel": "Չեղարկել",
 	"notifyme-schema-links-url": "Հղման URL",
 	"notifyme-mail-template-edit-help-category-logo": "Պատկերանիշ",
 	"notifyme-mail-template-edit-help-category-colors": "Գույներ",
