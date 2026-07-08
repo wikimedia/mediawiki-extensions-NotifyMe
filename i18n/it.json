@@ -16,5 +16,9 @@
 	"notifyme-notification-center-filter-label-source": "Wiki",
 	"notifyme-notification-center-filter-label-source-local": "Questo wiki",
 	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
-	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica"
+	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica",
+	"notifyme-ui-dialog-popup-table-event-label": "Evento",
+	"notifyme-ui-dialog-popup-table-desc-label": "Descrizione",
+	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
+	"notifyme-notification-filter-aria-label": "Filtro notifiche"
 }

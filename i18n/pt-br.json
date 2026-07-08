@@ -35,5 +35,14 @@
 	"notifyme-navbar-button-aria-label": "Notificações",
 	"notifyme-notification-center-tab-label-unread": "Não lidas",
 	"notifyme-notification-center-tab-label-all": "Todos",
-	"notifyme-notification-center-filter-label-source": "Wiki"
+	"notifyme-notification-center-filter-label-source": "Wiki",
+	"notifyme-ui-subscriptionset-editor-category-label": "Categoria",
+	"notifyme-ui-subscriptionset-editor-namespace-label": "Espaço nominal",
+	"notifyme-ui-subscriptionset-category-label": "Categoria",
+	"notifyme-ui-subscriptionset-namespace-label": "Espaço nominal",
+	"notifyme-ui-subscriptionset-watchlist-label": "Páginas vigiadas",
+	"notifyme-ui-dialog-set-editor-cancel": "Cancelar",
+	"notifyme-ui-dialog-set-editor-create": "Feito",
+	"notifyme-ui-dialog-popup-table-event-label": "Evento",
+	"notifyme-ui-dialog-popup-table-desc-label": "Descrição"
 }
