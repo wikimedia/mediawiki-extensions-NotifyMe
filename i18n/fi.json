@@ -19,5 +19,6 @@
 	"notifyme-arbitrary-event-action-message-help": "Arvo voi olla pelkkää tekstiä tai viestiavain",
 	"notifyme-ui-subscriptionset-editor-category-label": "Luokka",
 	"notifyme-ui-subscriptionset-category-label": "Luokka",
-	"notifyme-ui-dialog-set-editor-cancel": "Peruuta"
+	"notifyme-ui-dialog-set-editor-cancel": "Peruuta",
+	"notifyme-notification-center-filter-label-source": "Wikit"
 }

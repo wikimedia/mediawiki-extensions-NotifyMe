@@ -7,9 +7,9 @@
 	},
 	"prefs-notifications": "Notifiche",
 	"notifyme-event-page-missing-desc": "''Non esiste ancora una descrizione di questo evento''",
-	"notifyme-event-page-create-desc": "Una pagina è stata creata da un altro utente",
-	"notifyme-event-page-delete-desc": "Una pagina è stata cancellata da un altro utente",
-	"notifyme-event-page-move-desc": "Una pagina è stata spostata da un altro utente",
+	"notifyme-event-page-create-desc": "Pagina creata",
+	"notifyme-event-page-delete-desc": "Pagina cancellata",
+	"notifyme-event-page-move-desc": "Pagina spostata",
 	"notifyme-automation-arbitrary-notification-action": "Invia una notifica",
 	"notifyme-automation-arbitrary-title-notification-action": "Invia una notifica relativa alla pagina",
 	"notifyme-arbitrary-event-action-message-label": "Messaggio",
@@ -20,5 +20,6 @@
 	"notifyme-ui-dialog-popup-table-event-label": "Evento",
 	"notifyme-ui-dialog-popup-table-desc-label": "Descrizione",
 	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
-	"notifyme-notification-filter-aria-label": "Filtro notifiche"
+	"notifyme-notification-filter-aria-label": "Filtro notifiche",
+	"notifyme-category-subscription-description": "Stai guardando una categoria a cui appartiene questa pagina"
 }
