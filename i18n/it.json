@@ -7,9 +7,9 @@
 	},
 	"prefs-notifications": "Notifiche",
 	"notifyme-event-page-missing-desc": "''Non esiste ancora una descrizione di questo evento''",
-	"notifyme-event-page-create-desc": "Una pagina è stata creata da un altro utente",
-	"notifyme-event-page-delete-desc": "Una pagina è stata cancellata da un altro utente",
-	"notifyme-event-page-move-desc": "Una pagina è stata spostata da un altro utente",
+	"notifyme-event-page-create-desc": "Pagina creata",
+	"notifyme-event-page-delete-desc": "Pagina cancellata",
+	"notifyme-event-page-move-desc": "Pagina spostata",
 	"notifyme-ui-dialog-popup-table-event-label": "Evento",
 	"notifyme-ui-dialog-popup-table-desc-label": "Descrizione",
 	"notifyme-notification-filter-count-aria-label": "contiene {{PLURAL:$1|una notifica|$1 notifiche}}",
@@ -20,5 +20,6 @@
 	"notifyme-notification-center-filter-label-source": "Wiki",
 	"notifyme-notification-center-filter-label-source-local": "Questo wiki",
 	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
-	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica"
+	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica",
+	"notifyme-category-subscription-description": "Stai guardando una categoria a cui appartiene questa pagina"
 }
