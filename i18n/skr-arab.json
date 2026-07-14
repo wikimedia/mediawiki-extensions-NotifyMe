@@ -44,18 +44,5 @@
 	"notifyme-notification-center-pagination-aria-next": "اڳلا",
 	"notifyme-notification-center-pagination-aria-previous": "پچھلا",
 	"notifyme-arbitrary-event-action-message-label": "سنیہا",
-	"notifyme-notification-center-filter-label-source": "وکی",
-	"notifyme-ui-dialog-set-editor-bucket": "اطلاع نامے دی قسم",
-	"notifyme-ui-subscription-set-add": "شامل کرو",
-	"notifyme-ui-subscription-manager-type-none": "کوئی وی کائنی",
-	"notifyme-ui-subscription-manager-type-manual": "انفرادی",
-	"notifyme-ui-subscriptionset-editor-category-label": "ونکی",
-	"notifyme-ui-subscriptionset-editor-namespace-label": "ناں جاہ",
-	"notifyme-ui-subscriptionset-category-label": "ونکی",
-	"notifyme-ui-subscriptionset-namespace-label": "ناں جاہ",
-	"notifyme-ui-subscriptionset-watchlist-label": "پارھا تندیر",
-	"notifyme-ui-dialog-set-editor-cancel": "منسوخ",
-	"notifyme-ui-dialog-set-editor-create": "تھی ڳیا",
-	"notifyme-ui-dialog-popup-table-event-label": "ایونٹ",
-	"notifyme-ui-dialog-popup-table-desc-label": "تفصیل"
+	"notifyme-notification-center-filter-label-source": "وکی"
 }

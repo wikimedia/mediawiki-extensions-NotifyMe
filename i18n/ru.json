@@ -13,6 +13,5 @@
 	"notifyme-link-label-history": "Посмотреть историю страницы",
 	"notifyme-notification-center-filter-label-namespaces": "Пространства имён",
 	"notifyme-notification-center-filter-label-categories": "Категории",
-	"notifyme-notification-center-timestamp-ago": "$1 назад",
-	"notifyme-ui-subscriptionset-category-label": "Категория"
+	"notifyme-notification-center-timestamp-ago": "$1 назад"
 }

@@ -16,9 +16,5 @@
 	"notifyme-event-page-linked-key-desc": "Էջը կապված է",
 	"notifyme-notifications-mega-menu-title": "Ծանուցումներ",
 	"notifyme-notification-center-filter-label-source": "Վիքի",
-	"notifyme-notification-center-filter-label-source-local": "Այս վիքի",
-	"notifyme-ui-subscriptionset-editor-category-label": "Կատեգորիա",
-	"notifyme-ui-subscriptionset-category-label": "Կատեգորիա",
-	"notifyme-ui-subscriptionset-namespace-label": "Անվանատարածք",
-	"notifyme-ui-dialog-set-editor-cancel": "Չեղարկել"
+	"notifyme-notification-center-filter-label-source-local": "Այս վիքի"
 }
