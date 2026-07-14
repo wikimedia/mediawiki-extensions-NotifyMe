@@ -212,5 +212,10 @@
 	"notifyme-ui-dialog-popup-table-desc-label": "Опис",
 	"notifyme-ui-dialog-popup-header-label": "Ці події запускають сповіщення:",
 	"notifyme-notification-filter-count-aria-label": "містить $1 {{PLURAL:$1|сповіщення|сповіщення|сповіщень}}",
-	"notifyme-notification-filter-aria-label": "Фільтр сповіщень"
+	"notifyme-notification-filter-aria-label": "Фільтр сповіщень",
+	"notifyme-ui-subscription-delivery-help": "Сповіщення завжди надсилаються у вікі. Виберіть додаткові канали сповіщень.",
+	"notifyme-subscriber-provider-watched-source-desc": "Ви переглядаєте сторінку, пов'язану з цим сповіщенням",
+	"notifyme-category-subscription-description": "Ви переглядаєте категорію, до якої належить ця сторінка",
+	"notifyme-namespace-subscription-description": "Ви переглядаєте простір назв, до якого належить ця сторінка",
+	"notifyme-subscriber-provider-personal-desc": "Це сповіщення стосується вас"
 }
