@@ -29,7 +29,7 @@ ext.notifyme.ui.panel.IndividualSubscriptions.prototype.makeLayout = function ()
 	this.deliveryPanel = new OO.ui.FieldsetLayout( {
 		padded: true,
 		expanded: false,
-		label: mw.message( 'notifyme-ui-delivery-label' ).text(),
+		label: mw.message( 'notifyme-ui-delivery-channels-label' ).text(),
 		classes: [ 'ext-notifyme-subscription-section' ]
 	} );
 	this.buildDelivery();
@@ -38,7 +38,7 @@ ext.notifyme.ui.panel.IndividualSubscriptions.prototype.makeLayout = function ()
 		padded: false,
 		items: [
 			new OO.ui.LabelWidget( {
-				label: mw.message( 'notifyme-ui-subscription-set-label' ).text(),
+				label: mw.message( 'notifyme-ui-subscription-set-watchlist-label' ).text(),
 				classes: [ 'ext-notifyme-subscription-set-label' ]
 			} ),
 			this.eventPanel,
