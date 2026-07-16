@@ -24,15 +24,15 @@
 		"NotifyMe": {
 			"Buckets": {
 				"content-low-freq": {
-					"label": "notifyme-bucket-content-low-freq-label",
+					"label": "notifyme-bucket-page-lifecycle-label",
 					"description": "notifyme-bucket-content-low-freq-desc"
 				},
 				"content-high-freq": {
-					"label": "notifyme-bucket-content-high-freq-label",
+					"label": "notifyme-bucket-recent-events-label",
 					"description": "notifyme-bucket-content-high-freq-desc"
 				},
 				"qm": {
-					"label": "notifyme-bucket-qm-label",
+					"label": "notifyme-bucket-qm-short-label",
 					"description": "notifyme-bucket-qm-desc"
 				},
 				"personal": {
@@ -47,28 +47,28 @@
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\CreatePageEvent"
 					},
 					"buckets": [ "content-low-freq" ],
-					"description": "notifyme-event-page-create-desc"
+					"description": "notifyme-event-page-create-short-desc"
 				},
 				"page-edit": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\EditPageEvent"
 					},
 					"buckets": [ "content-high-freq" ],
-					"description": "notifyme-event-page-edit-desc"
+					"description": "notifyme-event-page-edit-short-desc"
 				},
 				"page-move": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\MovePageEvent"
 					},
 					"buckets": [ "content-low-freq" ],
-					"description": "notifyme-event-page-move-desc"
+					"description": "notifyme-event-page-move-short-desc"
 				},
 				"page-delete": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\Event\\DeletePageEvent"
 					},
 					"buckets": [ "content-low-freq" ],
-					"description": "notifyme-event-page-delete-desc"
+					"description": "notifyme-event-page-delete-short-desc"
 				},
 				"page-linked": {
 					"spec": {
@@ -193,8 +193,8 @@
 			],
 			"messages": [
 				"notifyme-ui-subscription-manager-configuration",
-				"notifyme-ui-subscription-set-label",
-				"notifyme-ui-delivery-label",
+				"notifyme-ui-subscription-set-watchlist-label",
+				"notifyme-ui-delivery-channels-label",
 				"notifyme-ui-subscription-delivery-help"
 			],
 			"styles": [
