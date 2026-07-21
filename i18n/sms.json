@@ -4,5 +4,8 @@
 			"Yupik"
 		]
 	},
-	"notifyme-notification-center-filter-label-categories": "Kategoria"
+	"notifyme-notification-center-filter-label-categories": "Kategoria",
+	"notifyme-ui-subscriptionset-editor-category-label": "Kategoria",
+	"notifyme-ui-subscriptionset-category-label": "Kategoria",
+	"notifyme-ui-dialog-set-editor-cancel": "Jõõsk"
 }
