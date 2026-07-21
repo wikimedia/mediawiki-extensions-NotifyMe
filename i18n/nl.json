@@ -191,6 +191,5 @@
 	"notifyme-ui-subscription-delivery-help": "Meldingen worden altijd in de wiki verzonden.\nKies extra bezorgkanalen",
 	"notifyme-subscriber-provider-watched-source-desc": "U volgt de pagina die bij deze melding hoort",
 	"notifyme-category-subscription-description": "U volgt een categorie waartoe deze pagina behoort",
-	"notifyme-namespace-subscription-description": "U volgt de naamruimte waartoe deze pagina behoort",
-	"notifyme-subscriber-provider-personal-desc": "Deze melding heeft betrekking op u"
+	"notifyme-namespace-subscription-description": "U volgt de naamruimte waartoe deze pagina behoort"
 }

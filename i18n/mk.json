@@ -189,6 +189,5 @@
 	"notifyme-ui-subscription-delivery-help": "Известувањата секогаш се испраќаат на викито.\nИзберете дополнителни канали за достава",
 	"notifyme-subscriber-provider-watched-source-desc": "Набљудувате страница поврзана со ова известување",
 	"notifyme-category-subscription-description": "Набљудувате категорија во која припаѓа оваа страница",
-	"notifyme-namespace-subscription-description": "Набљудувате именски простор на кој му припаѓа оваа страница",
-	"notifyme-subscriber-provider-personal-desc": "Ова известување се однесува на вас"
+	"notifyme-namespace-subscription-description": "Набљудувате именски простор на кој му припаѓа оваа страница"
 }

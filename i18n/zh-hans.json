@@ -191,6 +191,5 @@
 	"notifyme-ui-subscription-delivery-help": "通知始终在wiki内发送。\n选择其他发送渠道",
 	"notifyme-subscriber-provider-watched-source-desc": "您正在监视与此通知相关的页面",
 	"notifyme-category-subscription-description": "您正在监视此页面所属的分类",
-	"notifyme-namespace-subscription-description": "您正在监视此页面所属的命名空间",
-	"notifyme-subscriber-provider-personal-desc": "此通知与您有关"
+	"notifyme-namespace-subscription-description": "您正在监视此页面所属的命名空间"
 }

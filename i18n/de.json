@@ -193,6 +193,5 @@
 	"notifyme-ui-subscription-delivery-help": "Benachrichtigungen werden immer im Wiki versendet.\n{{#FORMAL:|Wähle|Wählen Sie}} weitere Benachrichtigungskanäle aus",
 	"notifyme-subscriber-provider-watched-source-desc": "{{#FORMAL:Du beobachtet|Sie beobachten}} die Seite, die zu dieser Benachrichtung gehört.",
 	"notifyme-category-subscription-description": "{{#FORMAL:Du beobachtet|Sie beobachten}} eine Kategorie, zu der diese Seite gehört.",
-	"notifyme-namespace-subscription-description": "{{#FORMAL:Du beobachtet|Sie beobachten}} den Namensraum, zu dem diese Seite gehört.",
-	"notifyme-subscriber-provider-personal-desc": "Diese Benachrichtigung betrifft {{FORMAL:dich|Sie}}"
+	"notifyme-namespace-subscription-description": "{{#FORMAL:Du beobachtet|Sie beobachten}} den Namensraum, zu dem diese Seite gehört."
 }

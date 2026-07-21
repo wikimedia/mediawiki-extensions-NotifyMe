@@ -190,6 +190,5 @@
 	"notifyme-ui-subscription-delivery-help": "Сповіщення завжди надсилаються у вікі. Виберіть додаткові канали сповіщень.",
 	"notifyme-subscriber-provider-watched-source-desc": "Ви переглядаєте сторінку, пов'язану з цим сповіщенням",
 	"notifyme-category-subscription-description": "Ви переглядаєте категорію, до якої належить ця сторінка",
-	"notifyme-namespace-subscription-description": "Ви переглядаєте простір назв, до якого належить ця сторінка",
-	"notifyme-subscriber-provider-personal-desc": "Це сповіщення стосується вас"
+	"notifyme-namespace-subscription-description": "Ви переглядаєте простір назв, до якого належить ця сторінка"
 }

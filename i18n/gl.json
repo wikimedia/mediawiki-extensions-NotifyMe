@@ -190,6 +190,5 @@
 	"notifyme-ui-subscription-delivery-help": "As notificacións sempre se envían no wiki.\nEscolle canles de entrega adicionais.",
 	"notifyme-subscriber-provider-watched-source-desc": "Estás a vixiar a páxina relacionada con esta notificación",
 	"notifyme-category-subscription-description": "Estás a vixiar unha categoría á que pertence esta páxina",
-	"notifyme-namespace-subscription-description": "Estás a vixiar o espazo de nomes ao que pertence esta páxina",
-	"notifyme-subscriber-provider-personal-desc": "Esta notificación está relacionada contigo"
+	"notifyme-namespace-subscription-description": "Estás a vixiar o espazo de nomes ao que pertence esta páxina"
 }
