@@ -28,7 +28,7 @@
 	"notifyme-ui-dialog-set-editor-type": "Notifikatioune kréie fir",
 	"notifyme-ui-dialog-set-editor-bucket": "Notifikatiounstyp",
 	"notifyme-ui-subscription-set-add": "Derbäisetzen",
-	"notifyme-ui-subscription-set-label": "Konfiguréiert d'Notifikatiounsastellunge fir all d'Anträg op Ärer Iwwerwaachungslëscht",
+	"notifyme-ui-subscription-set-label": "Konfiguréiert d'Notifikatiounen, op déi Dir abonéiert sidd",
 	"notifyme-ui-subscription-manager-configuration": "Heefegkeet vun Ären Notifikatiounen",
 	"notifyme-ui-subscription-manager-type": "Wielt Ären Abonnementsmodell",
 	"notifyme-ui-subscription-manager-type-none-desc": "Keng Notifikatioune schécken",
@@ -153,8 +153,15 @@
 	"notifyme-notification-center-filter-label-source": "Wikien",
 	"notifyme-notification-center-filter-label-source-local": "Dës Wiki",
 	"notifyme-bucket-content-high-freq-label": "Rezent Aktivitéit",
-	"notifyme-event-page-create-desc": "Säit ugeluecht",
-	"notifyme-event-page-delete-desc": "Säit geläscht",
-	"notifyme-event-page-move-desc": "Säit geréckelt",
-	"notifyme-event-page-edit-desc": "Säit geännert"
+	"notifyme-event-page-create-desc": "Et gouf eng Säit vun engem anere Benotzer ugeluecht",
+	"notifyme-event-page-delete-desc": "Et gouf eng Säit vun engem anere Benotzer geläscht",
+	"notifyme-event-page-move-desc": "Et gouf eng Säit vun engem anere Benotzer geréckelt",
+	"notifyme-event-page-edit-desc": "Et gouf eng Säit vun engem anere Benotzer geännert",
+	"notifyme-bucket-content-low-freq-label": "Evenementer, déi manner dacks geschéien",
+	"notifyme-bucket-recent-events-label": "Rezent Aktivitéit",
+	"notifyme-bucket-qm-short-label": "Säitequalitéit",
+	"notifyme-event-page-create-short-desc": "Säit ugeluecht",
+	"notifyme-event-page-delete-short-desc": "Säit geläscht",
+	"notifyme-event-page-move-short-desc": "Säit geréckelt",
+	"notifyme-event-page-edit-short-desc": "Säit geännert"
 }
