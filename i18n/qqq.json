@@ -222,19 +222,5 @@
 	"notifyme-arbitrary-event-action-subject-label": "Field label",
 	"notifyme-arbitrary-event-action-subject-help": "Help text for the subject field of an arbitrary notification action.",
 	"notifyme-arbitrary-event-action-message-help": "Help text for the message field of an arbitrary notification action.",
-	"notifyme-arbitrary-event-action-with-title-message-help": "Help text for the message field of an arbitrary notification action when the title is included.",
-	"notifyme-ui-subscription-delivery-help": "Help text in [[Special:Preferences]] explaining that notifications are always shown in-wiki and that additional delivery channels can be selected.",
-	"notifyme-subscriber-provider-watched-source-desc": "Description shown as a notification source reason when the user receives a notification because they watch the related page.",
-	"notifyme-category-subscription-description": "Explanation why the user receives notifications for a category subscription.",
-	"notifyme-namespace-subscription-description": "Explanation why the user receives notifications for a namespace subscription.",
-	"notifyme-subscriber-provider-personal-desc": "Explanation shown as a notification source reason when the user receives a notification because they are the target of the event.",
-	"notifyme-bucket-page-lifecycle-label": "Label for less frequency content radio selection button",
-	"notifyme-bucket-recent-events-label": "Label for high frequency content radio selection button",
-	"notifyme-bucket-qm-short-label": "Label for page quality radio selection button",
-	"notifyme-ui-subscription-set-watchlist-label": "Label for the subscription set configuration.",
-	"notifyme-event-page-create-short-desc": "Description when page creation event is triggered",
-	"notifyme-event-page-delete-short-desc": "Description when page deletion event is triggered",
-	"notifyme-event-page-move-short-desc": "Description when page move event is triggered",
-	"notifyme-event-page-edit-short-desc": "Description when page edit event is triggered",
-	"notifyme-ui-delivery-channels-label": "Label for the delivery method selection in the notification settings.\n\nThis is used in the [[Special:Preferences]] page."
+	"notifyme-arbitrary-event-action-with-title-message-help": "Help text for the message field of an arbitrary notification action when the title is included."
 }
