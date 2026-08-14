@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Maintenance\Maintenance;
-use MediaWiki\MediaWikiServices;
 
 require_once __DIR__ . '/../../../maintenance/Maintenance.php';
 
@@ -43,11 +42,11 @@ class SetDefaultUserSubscriptions extends Maintenance {
 			__METHOD__
 		);
 		foreach ( $res as $row ) {
-			$user = MediaWikiServices::getInstance()->getUserFactory()->newFromId( $row->user_id );
-			MediaWikiServices::getInstance()->getUserOptionsManager()->setOption(
+			$user = $this->getServiceContainer()->getUserFactory()->newFromId( $row->user_id );
+			$this->getServiceContainer()->getUserOptionsManager()->setOption(
 				$user, 'ext-notification-subscriptions', $json
 			);
-			MediaWikiServices::getInstance()->getUserOptionsManager()->saveOptions( $user );
+			$this->getServiceContainer()->getUserOptionsManager()->saveOptions( $user );
 			$this->output( "Set default subscriptions for " . $user->getName() . "\n" );
 		}
 	}

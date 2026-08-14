@@ -3,7 +3,6 @@
 use MediaWiki\Extension\NotifyMe\Storage\NotificationStore;
 use MediaWiki\Extension\NotifyMe\Storage\WebNotificationQueryStore;
 use MediaWiki\Maintenance\Maintenance;
-use MediaWiki\MediaWikiServices;
 
 require_once __DIR__ . '/../../../maintenance/Maintenance.php';
 
@@ -17,12 +16,12 @@ class UpdateWebNotificationQueryStore extends Maintenance {
 		$this->output( "Clearing query store\n" );
 
 		/** @var WebNotificationQueryStore $queryStore */
-		$queryStore = MediaWikiServices::getInstance()->getService( 'NotifyMe.WebQueryStore' );
+		$queryStore = $this->getServiceContainer()->getService( 'NotifyMe.WebQueryStore' );
 		$queryStore->clearAll();
 
 		$this->output( "Querying notifications\n" );
 		/** @var NotificationStore $notificationStore */
-		$notificationStore = MediaWikiServices::getInstance()->getService( 'NotifyMe.Store' );
+		$notificationStore = $this->getServiceContainer()->getService( 'NotifyMe.Store' );
 		// TODO: Batches
 		$notifications = $notificationStore->forChannel( 'web' )->query();
 

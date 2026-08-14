@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Maintenance\Maintenance;
-use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\Events\BotAgent;
 
 require_once __DIR__ . '/../../../maintenance/Maintenance.php';
@@ -28,7 +27,7 @@ class TriggerEvent extends Maintenance {
 	 * @throws Exception If any required parameter is invalid or missing.
 	 */
 	public function execute() {
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		/** @var \MediaWiki\Extension\NotifyMe\NotificationTester $tester */
 		$tester = $services->getService( 'NotifyMe.Tester' );
 		$titleFactory = $services->getTitleFactory();
