@@ -58,7 +58,27 @@ class SourceWikiBucket extends FilterBucket {
 			$res[] = $this->makeOption( $key, $count );
 		}
 
-		return array_filter( $res );
+		return $this->sortOptions( array_filter( $res ) );
+	}
+
+	/**
+	 * Main wiki first, every other instance by its display name.
+	 *
+	 * @param FilterBucketOption[] $options
+	 * @return FilterBucketOption[]
+	 */
+	private function sortOptions( array $options ): array {
+		usort( $options, static function ( FilterBucketOption $a, FilterBucketOption $b ) {
+			$aIsRoot = (bool)( $a->getAttr()['is_root'] ?? false );
+			$bIsRoot = (bool)( $b->getAttr()['is_root'] ?? false );
+			if ( $aIsRoot !== $bIsRoot ) {
+				return $aIsRoot ? -1 : 1;
+			}
+
+			return strnatcasecmp( $a->getLabel()->text(), $b->getLabel()->text() );
+		} );
+
+		return array_values( $options );
 	}
 
 	/**
