@@ -18,9 +18,11 @@ class ArbitraryTitleNotificationAction extends ArbitraryNotificationAction imple
 	 */
 	public function executeForPage( PageIdentity $page ): Status {
 		$data = $this->getData();
-		$users = $this->getTargetUsers( $data );
+		$actor = $this->getAgent( $data );
+		$users = $this->expressionParser->processUsers( $data['target_users'] ?? '', $actor, $page );
+
 		$event = new ArbitraryTitleEvent(
-			$this->getAgent( $data ), $page, $data['message'] ?? '', $data['subject'], $users
+			$actor, $page, $data['message'] ?? '', $data['subject'] ?? '', $users
 		);
 		$this->notifier->emit( $event );
 
