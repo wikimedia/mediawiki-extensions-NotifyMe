@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\NotifyMe\WikiAutomations\Action;
 
 use MediaWiki\Extension\NotifyMe\WikiAutomations\ArbitraryEvent;
 use MediaWiki\Extension\WikiAutomations\Action\GenericAutomationAction;
+use MediaWiki\Extension\WikiAutomations\Util\WikitextExpressionParser;
 use MediaWiki\Message\Message;
 use MediaWiki\Status\Status;
 use MediaWiki\User\UserFactory;
@@ -18,10 +19,12 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 	/**
 	 * @param UserFactory $userFactory
 	 * @param Notifier $notifier
+	 * @param WikitextExpressionParser $expressionParser
 	 */
 	public function __construct(
 		protected readonly UserFactory $userFactory,
-		protected readonly Notifier $notifier
+		protected readonly Notifier $notifier,
+		protected readonly WikitextExpressionParser $expressionParser
 	) {
 	}
 
@@ -46,10 +49,13 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 				'helpInline' => true,
 			],
 			[
-				'type' => 'user_multiselect',
+				'type' => 'textarea',
 				'name' => 'target_users',
 				'label' => Message::newFromKey( 'notifyme-arbitrary-event-action-event-target-user-label' )->text(),
 				'labelAlign' => 'top',
+				'help' => Message::newFromKey( 'notifyme-arbitrary-event-action-event-target-user-help' )->text(),
+				'helpInline' => true,
+				'widget_rows' => 2
 			],
 			[
 				'type' => 'checkbox',
@@ -63,10 +69,11 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 
 	public function execute(): Status {
 		$data = $this->getData();
-		$users = $this->getTargetUsers( $data );
+		$agent = $this->getAgent( $data );
+		$users = $this->expressionParser->processUsers( $data['target_users'] ?? '', $agent );
 
 		$event = new ArbitraryEvent(
-			$this->getAgent( $data ), $data['message'] ?? '', $data['subject'] ?? '', $users
+			$agent, $data['message'] ?? '', $data['subject'] ?? '', $users
 		);
 		$this->notifier->emit( $event );
 
@@ -77,19 +84,6 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 			'subject' => $data['subject'] ?? '',
 			'message' => $data['message'] ?? ''
 		] );
-	}
-
-	/**
-	 * @param array $data
-	 * @return array
-	 */
-	protected function getTargetUsers( array $data ): array {
-		$users = array_map( function ( $userName ) {
-			return $this->userFactory->newFromName( $userName );
-		}, $data['target_users'] ?? [] );
-		return array_filter( $users, static function ( $user ) {
-			return $user && $user->isRegistered();
-		} );
 	}
 
 	/**
@@ -113,12 +107,9 @@ class ArbitraryNotificationAction extends GenericAutomationAction {
 				'value' => $message
 			];
 		}
-		$targetUsers = array_map( static function ( $user ) {
-			return $user->getName();
-		}, $this->getTargetUsers( $data ) );
-		if ( !empty( $targetUsers ) ) {
+		if ( !empty( $data['target_users'] ) ) {
 			$displayData[] = [
-				'value' => implode( ', ', $targetUsers )
+				'value' => $data['target_users']
 			];
 		}
 

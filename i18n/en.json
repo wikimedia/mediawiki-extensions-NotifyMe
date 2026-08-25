@@ -228,5 +228,7 @@
 	"notifyme-ui-subscription-delivery-help": "Notifications are always sent in the wiki.\nChoose additional delivery channels",
 	"notifyme-subscriber-provider-watched-source-desc": "You are watching the page related to this notification",
 	"notifyme-category-subscription-description": "You are watching a category this page belongs to",
-	"notifyme-namespace-subscription-description": "You are watching the namespace this page belongs to"
+	"notifyme-namespace-subscription-description": "You are watching the namespace this page belongs to",
+	"notifyme-subscriber-provider-personal-desc": "You were explicitly selected as a recipient",
+	"notifyme-arbitrary-event-action-event-target-user-help": "Comma-separated list of usernames to send the notification to. Wikitext expressions are supported"
 }
