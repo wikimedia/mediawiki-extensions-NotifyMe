@@ -98,13 +98,15 @@
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\ArbitraryMessageEvent"
 					},
-					"buckets": [ "personal" ]
+					"buckets": [ "personal" ],
+					"testable": false
 				},
 				"arbitrary-title-message-event": {
 					"spec": {
 						"class": "\\MediaWiki\\Extension\\NotifyMe\\WikiAutomations\\ArbitraryTitleMessageEvent"
 					},
-					"buckets": [ "personal" ]
+					"buckets": [ "personal" ],
+					"testable": false
 				}
 			},
 			"Channels": {
