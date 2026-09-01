@@ -224,5 +224,7 @@
 	"notifyme-ui-subscription-delivery-help": "Meldingen worden altijd in de wiki verzonden.\nKies extra bezorgkanalen",
 	"notifyme-subscriber-provider-watched-source-desc": "U volgt de pagina die bij deze melding hoort",
 	"notifyme-category-subscription-description": "U volgt een categorie waartoe deze pagina behoort",
-	"notifyme-namespace-subscription-description": "U volgt de naamruimte waartoe deze pagina behoort"
+	"notifyme-namespace-subscription-description": "U volgt de naamruimte waartoe deze pagina behoort",
+	"notifyme-subscriber-provider-personal-desc": "U bent uitdrukkelijk als ontvanger uitgekozen",
+	"notifyme-arbitrary-event-action-event-target-user-help": "Een door komma’s gescheiden lijst met gebruikersnamen waar de melding heen moet. Wikitekst-uitdrukkingen worden ondersteund"
 }

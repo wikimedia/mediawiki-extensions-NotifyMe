@@ -29,5 +29,7 @@
 	"notifyme-notification-center-filter-label-source-local": "Questo wiki",
 	"notifyme-arbitrary-event-default-subject": "Notifica automatica",
 	"notifyme-arbitrary-event-action-subject-label": "Tema della notifica",
-	"notifyme-category-subscription-description": "Stai guardando una categoria a cui appartiene questa pagina"
+	"notifyme-category-subscription-description": "Stai guardando una categoria a cui appartiene questa pagina",
+	"notifyme-subscriber-provider-personal-desc": "Sei stato esplicitamente selezionato come destinatario",
+	"notifyme-arbitrary-event-action-event-target-user-help": "Elenco di nomi utente separati da virgole a cui inviare la notifica. Sono supportate le espressioni wikitesto."
 }

@@ -11,5 +11,7 @@
 	"notifyme-digest-header-daily": "خلاصه‌ای از فعالیت‌ها در $1 در ۲۴ ساعت گذشته در اینجا آمده است",
 	"notifyme-digest-header-weekly": "خلاصه‌ای از فعالیت‌ها در $1 در هفتهٔ گذشته در اینجا آمده است",
 	"notifyme-notification-center-filter-label-namespaces": "فضاهای نام",
-	"prefs-subs": "اشتراک‌های آگاه‌سازی"
+	"prefs-subs": "اشتراک‌های آگاه‌سازی",
+	"notifyme-subscriber-provider-personal-desc": "شما به صراحت به عنوان گیرنده انتخاب شده‌اید",
+	"notifyme-arbitrary-event-action-event-target-user-help": "فهرستی از نام‌های کاربری جداشده با ویرگول برای ارسال آگاه‌سازی. از عبارت‌های ویکی‌متنی پشتیبانی می‌شود"
 }
