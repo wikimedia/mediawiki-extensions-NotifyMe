@@ -19,10 +19,11 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use PHPUnit\Framework\TestCase;
-use WatchedItemStoreInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
+use Wikimedia\Rdbms\FakeResultWrapper;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\LoadBalancer;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 class ManualSubscriberProviderTest extends TestCase {
 
@@ -179,7 +180,8 @@ class ManualSubscriberProviderTest extends TestCase {
 		$eventProviderMock = $this->createMock( EventProvider::class );
 		$eventProviderMock->method( 'getRegisteredEvents' )->willReturn( $eventConfiguration );
 		$mockUserFactory = $this->createMock( UserFactory::class );
-		$mockUserFactory->method( 'newFromId' )->willReturnCallback( function ( $id ) {
+		$mockUserFactory->method( 'newFromRow' )->willReturnCallback( function ( $row ) {
+			$id = $row->user_id;
 			$userMock = $this->createMock( User::class );
 			$userMock->method( 'getId' )->willReturn( $id );
 			$blockMock = $this->createMock( AbstractBlock::class );
@@ -191,14 +193,32 @@ class ManualSubscriberProviderTest extends TestCase {
 			return $userMock;
 		} );
 
+		$userRows = array_map( static function ( $userId ) {
+			return (object)[
+				'user_id' => $userId,
+			];
+		}, [ 1, 2, 3, 4, 5 ] );
+
+		$watchlistRows = [
+			(object)[
+				'wl_user' => 1,
+				'we_expiry' => '20000101000000',
+			],
+			(object)[
+				'wl_user' => 2,
+				'we_expiry' => null,
+			],
+		];
+
+		$userQueryBuilder = $this->getSelectQueryBuilderMock( $userRows );
+		$watchlistQueryBuilder = $this->getSelectQueryBuilderMock( $watchlistRows );
+
 		$mockDatabase = $this->createMock( IDatabase::class );
-		$mockDatabase->method( 'select' )->willReturn(
-			array_map( static function ( $userId ) {
-				return (object)[
-					'user_id' => $userId,
-				];
-			}, [ 1, 2, 3, 4, 5 ] )
+		$mockDatabase->method( 'newSelectQueryBuilder' )->willReturnOnConsecutiveCalls(
+			$userQueryBuilder,
+			$watchlistQueryBuilder
 		);
+
 		$mockLoadBalancer = $this->createMock( LoadBalancer::class );
 		$mockLoadBalancer->method( 'getConnection' )
 			->willReturn( $mockDatabase );
@@ -216,21 +236,11 @@ class ManualSubscriberProviderTest extends TestCase {
 			return $categoryTitleMock;
 		} );
 
-		$mockWatchedItemStore = $this->createMock( WatchedItemStoreInterface::class );
-		$mockWatchedItemStore->method( 'getWatchedItem' )->willReturnCallback( function ( $user, $title ) {
-			if ( $user->getId() === 1 || $title->getText() !== 'Watched' ) {
-				return null;
-			}
-			$watchedItem = $this->createMock( \WatchedItem::class );
-			$watchedItem->method( 'isExpired' )->willReturn( false );
-			return $watchedItem;
-		} );
-
 		$ofMock = $this->createMock( ObjectFactory::class );
 		$setProviders = [
 			'category' => new CategorySet( $mockTitleFactory ),
 			'ns' => new NamespaceSet(),
-			'watchlist' => new WatchlistSet( $mockWatchedItemStore ),
+			'watchlist' => new WatchlistSet( $mockLoadBalancer ),
 		];
 
 		$bucketProvider = new BucketProvider( [ 'no-opt-out' => [], 'foo' => [], 'bar' => [] ], $eventProviderMock );
@@ -254,6 +264,8 @@ class ManualSubscriberProviderTest extends TestCase {
 			$titleMock = $this->createMock( Title::class );
 			$titleMock->method( 'getNamespace' )->willReturn( $ns );
 			$titleMock->method( 'getText' )->willReturn( $title );
+			$titleMock->method( 'getDbKey' )->willReturn( str_replace( ' ', '_', $title ) );
+			$titleMock->method( 'getArticleID' )->willReturn( crc32( $title . ':' . $ns ) );
 			$titleMock->method( 'getParentCategories' )->willReturn( [
 				'Category:Foo_bar' => true,
 				'Category:Bar' => true
@@ -261,6 +273,21 @@ class ManualSubscriberProviderTest extends TestCase {
 			$event->method( 'getTitle' )->willReturn( $titleMock );
 		}
 		return $event;
+	}
+
+	private function getSelectQueryBuilderMock( array $result ): SelectQueryBuilder {
+		$builder = $this->createMock( SelectQueryBuilder::class );
+		$builder->method( 'select' )->willReturnSelf();
+		$builder->method( 'from' )->willReturnSelf();
+		$builder->method( 'where' )->willReturnSelf();
+		$builder->method( 'leftJoin' )->willReturnSelf();
+		$builder->method( 'caller' )->willReturnSelf();
+		$builder->method( 'fetchResultSet' )->willReturnCallback(
+			static function () use ( $result ) {
+				return new FakeResultWrapper( $result );
+			}
+		);
+		return $builder;
 	}
 
 	private function getChannel( string $key ) {
