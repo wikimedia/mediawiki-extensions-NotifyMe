@@ -19,7 +19,7 @@
 		"mwstake/mediawiki-component-events": "~4",
 		"mwstake/mediawiki-component-commonuserinterface": "^8.0",
 		"mwstake/mediawiki-component-datastore": "~3",
-		"mwstake/mediawiki-component-wikicron": "~4"
+		"mwstake/mediawiki-component-wikicron": "~6"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "45.0.0",
