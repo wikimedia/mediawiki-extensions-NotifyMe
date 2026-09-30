@@ -27,13 +27,13 @@ class RegisterCrons implements MediaWikiServicesHook {
 				'class' => SendDailyDigest::class,
 				'services' => [ 'NotifyMe.Store', 'NotifyMe.ChannelFactory', 'NotifyMe.Logger' ],
 			]
-		] ) );
+		], 60 * 60 ) );
 		$cronManager->registerCron( 'notifyme-send-weekly', '0 7 * * 1', new ManagedProcess( [
 			'send-daily' => [
 				'class' => SendWeeklyDigest::class,
 				'services' => [ 'NotifyMe.Store', 'NotifyMe.ChannelFactory', 'NotifyMe.Logger' ],
 			]
-		] ) );
+		], 60 * 60 ) );
 		$cronManager->registerCron( 'notifyme-cleanup-old', '0 2 * * *', new ManagedProcess( [
 			'cleanup' => [
 				'class' => CleanupOldEvents::class,
