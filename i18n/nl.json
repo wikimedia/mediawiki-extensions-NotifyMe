@@ -199,7 +199,7 @@
 	"notifyme-event-page-delete-desc": "Een pagina is verwijderd door een andere gebruiker",
 	"notifyme-event-page-delete-short-desc": "Pagina verwijderd",
 	"notifyme-event-page-move-desc": "Een pagina is hernoemd door een andere gebruiker",
-	"notifyme-event-page-move-short-desc": "Pagina verplaatst",
+	"notifyme-event-page-move-short-desc": "Pagina hernoemd",
 	"notifyme-ui-dialog-popup-table-event-label": "Evenement",
 	"notifyme-ui-dialog-popup-table-desc-label": "Beschrijving",
 	"notifyme-ui-dialog-popup-header-label": "Deze gebeurtenissen activeren meldingen:",
