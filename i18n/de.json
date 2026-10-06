@@ -208,6 +208,7 @@
 	"notifyme-event-page-edit-desc": "Seite bearbeitet",
 	"notifyme-event-page-edit-short-desc": "Bearbeiten einer Seite",
 	"notifyme-ui-delivery-label": "Benachrichtigungskanäle",
+	"notifyme-ui-delivery-channels-label": "Benachrichtigungskanäle",
 	"prefs-subs": "Benachrichtigungsabonnements",
 	"notifyme-notification-center-pagination-number-aria-label": "Benachrichtigungen $1 bis $2 angezeigt",
 	"notifyme-automation-arbitrary-notification-action": "Senden einer Benachrichtigung",
