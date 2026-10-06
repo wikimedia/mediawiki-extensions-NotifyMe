@@ -3,7 +3,8 @@
 		"authors": [
 			"GuoPC",
 			"Lakejason0",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Villager-bloc-h"
 		]
 	},
 	"notifyme-desc": "通知",
@@ -195,16 +196,16 @@
 	"notifyme-notification-center-filter-item-aria-label": "筛选条件$1",
 	"notifyme-event-page-missing-desc": "''尚无关于此事件的描述''",
 	"notifyme-event-page-create-desc": "页面已由其他用户创建",
-	"notifyme-event-page-create-short-desc": "页面已创建",
+	"notifyme-event-page-create-short-desc": "创建页面",
 	"notifyme-event-page-delete-desc": "页面已由其他用户删除",
-	"notifyme-event-page-delete-short-desc": "页面已删除",
+	"notifyme-event-page-delete-short-desc": "删除页面",
 	"notifyme-event-page-move-desc": "页面已由其他用户移动",
-	"notifyme-event-page-move-short-desc": "页面已移动",
+	"notifyme-event-page-move-short-desc": "移动页面",
 	"notifyme-ui-dialog-popup-table-event-label": "事件",
 	"notifyme-ui-dialog-popup-table-desc-label": "描述",
 	"notifyme-ui-dialog-popup-header-label": "这些事件会触发通知：",
 	"notifyme-event-page-edit-desc": "页面已由其他用户编辑",
-	"notifyme-event-page-edit-short-desc": "页面已编辑",
+	"notifyme-event-page-edit-short-desc": "编辑页面",
 	"notifyme-ui-delivery-label": "发送",
 	"notifyme-ui-delivery-channels-label": "通知渠道",
 	"prefs-subs": "通知订阅",
