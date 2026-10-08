@@ -17,11 +17,12 @@ use MWStake\MediaWiki\Component\Events\Delivery\IChannel;
 use MWStake\MediaWiki\Component\Events\INotificationEvent;
 use MWStake\MediaWiki\Component\Events\ITitleEvent;
 use MWStake\MediaWiki\Component\Events\Notification;
+use Wikimedia\ObjectCache\HashBagOStuff;
 use Wikimedia\Rdbms\LoadBalancer;
 
 class WatchlistSubscriberProvider implements ISubscriberProvider {
 
-	private \HashBagOStuff $pageWatcherCache;
+	private HashBagOStuff $pageWatcherCache;
 
 	/**
 	 * @param HookContainer $hookContainer
@@ -37,7 +38,7 @@ class WatchlistSubscriberProvider implements ISubscriberProvider {
 		private readonly SubscriptionConfigurator $configurator,
 		private readonly BucketProvider $bucketProvider
 	) {
-		$this->pageWatcherCache = new \HashBagOStuff();
+		$this->pageWatcherCache = new HashBagOStuff();
 	}
 
 	/**
