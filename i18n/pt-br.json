@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Andersonv",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Épico"
 		]
 	},
 	"notifyme-desc": "Notificações",
@@ -225,5 +226,5 @@
 	"notifyme-category-subscription-description": "Você está vigiando uma categoria à qual esta página pertence",
 	"notifyme-namespace-subscription-description": "Você está vigiando o domínio(namespace) ao qual esta página pertence",
 	"notifyme-subscriber-provider-personal-desc": "Você foi {{GENDER:|selecionado|selecionada|selecionado(a)}} explicitamente como {{GENDER:|destinatário|destinatária|destinatário(a)}}",
-	"notifyme-arbitrary-event-action-event-target-user-help": "Lista de nomes de usuário, separados por vírgula, que receberão a notificação. Expressões de wikitexto são suportadas"
+	"notifyme-arbitrary-event-action-event-target-user-help": "Lista de nomes de usuário, separados por vírgulas, que receberão a notificação. São aceitas expressões em wikitexto."
 }
