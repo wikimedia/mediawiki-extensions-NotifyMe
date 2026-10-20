@@ -29,7 +29,7 @@
 	"notifyme-ui-subscription-set-add": "追加",
 	"notifyme-ui-subscription-set-duplicate": "この通知のセットは既に購読しています",
 	"notifyme-ui-subscription-set-label": "ウォッチリストのすべての項目の通知の設定",
-	"notifyme-ui-subscription-manager-configuration": "通知の頻度",
+	"notifyme-ui-subscription-manager-configuration": "通知の頻度を設定",
 	"notifyme-ui-subscription-manager-type": "購読モデルを選択",
 	"notifyme-ui-subscription-manager-type-none-desc": "いかなる通知も送信しません",
 	"notifyme-ui-subscription-manager-type-none": "なし",
