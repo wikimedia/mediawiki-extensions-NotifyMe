@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\NotifyMe\Channel\Email;
 use DOMDocument;
 use Exception;
 use MediaWiki\Config\Config;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
@@ -17,7 +18,6 @@ use MediaWiki\Title\TitleFactory;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\CommonUserInterface\LessVars;
-use RepoGroup;
 use Wikimedia\Rdbms\ILoadBalancer;
 
 class MailContentProvider {
