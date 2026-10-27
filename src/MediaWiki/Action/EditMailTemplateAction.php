@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\NotifyMe\MediaWiki\Action;
 
-use EditAction;
 use LogicException;
+use MediaWiki\Actions\EditAction;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\NotifyMe\NotificationSerializer;
 use MediaWiki\MediaWikiServices;
