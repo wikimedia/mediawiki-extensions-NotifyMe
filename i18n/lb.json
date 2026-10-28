@@ -88,7 +88,7 @@
 	"notifyme-event-page-delete-bot": "D'Säit $1 gouf geläscht",
 	"notifyme-event-page-move": "{{GENDER:$1|huet}} d'Säit $2 op $3 geréckelt",
 	"notifyme-event-page-delete": "{{GENDER:$1|huet}} d'Säit $2 geläscht",
-	"notifyme-mail-manage-notifications": "Gitt op de follgende Link fir anzestellen, wat fir Notifikatiounen Dir kritt",
+	"notifyme-mail-manage-notifications": "Gitt op de follgende Link, fir anzestellen, wat fir Notifikatiounen Dir kritt",
 	"notifyme-mail-manage-notifications-link": "Notifikatiounsastellungen",
 	"notifyme-notification-center-filter-label-all": "Alles",
 	"notifyme-notification-center-filter-label-namespaces": "Nummraim",
