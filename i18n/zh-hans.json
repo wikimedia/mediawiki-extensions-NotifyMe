@@ -4,7 +4,8 @@
 			"GuoPC",
 			"Lakejason0",
 			"Liuxinyu970226",
-			"Villager-bloc-h"
+			"Villager-bloc-h",
+			"铁桶"
 		]
 	},
 	"notifyme-desc": "通知",
@@ -180,7 +181,7 @@
 	"notifyme-notifications-group-mark-group-as-read-label": "标记该组为已读",
 	"notifyme-notifications-group-expander-label-expanded": "隐藏此页面的$1次以上{{PLURAL:$1|编辑}}",
 	"notifyme-notifications-group-expander-label-collapsed": "显示此页面的$1次以上{{PLURAL:$1|编辑}}",
-	"notifyme-notification-center-help-menu-mark-all-read-label": "标记所有为已读",
+	"notifyme-notification-center-help-menu-mark-all-read-label": "全部标记为已读",
 	"notifyme-notification-center-mark-as-read-circle-title": "标记为已读",
 	"notifyme-notification-center-mark-as-unread-circle-title": "标记为未读",
 	"notifyme-notification-center-timestamp-ago": "$1前",
