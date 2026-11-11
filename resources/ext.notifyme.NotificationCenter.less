@@ -203,18 +203,45 @@
 		/** TODO: Uncomment when icons will get returned **/
 		/** margin-left: 30px; **/
 		margin-right: 20px;
-		display: unset;
+		align-items: baseline;
+		gap: 0;
 
 		.notifications-ui-widget-NotificationItemWidget-content-message-header,
 		.notifications-ui-widget-NotificationItemWidget-user-widget {
-			display: inline;
-			vertical-align: middle;
+			display: block;
 			margin-left: 0;
 		}
 
 		.notifications-ui-widget-NotificationItemWidget-content-message-header {
+			flex: 1;
+			min-width: 0;
 			padding-top: 5px;
 			padding-left: 5px;
+		}
+
+		.notifications-ui-widget-NotificationItemWidget-user-widget {
+			display: flex;
+			flex-shrink: 0;
+			align-items: baseline;
+			align-self: baseline;
+
+			> .user-image:not( :only-child ) {
+				align-self: center;
+			}
+
+			.user-image {
+				vertical-align: baseline;
+
+				> a,
+				.bs-userminiprofile > a {
+					align-items: baseline;
+				}
+
+				a > img,
+				a > .user-image-default {
+					align-self: center;
+				}
+			}
 		}
 	}
 
