@@ -78,7 +78,9 @@ class AddDefaultMailTemplates extends LoggedUpdateMaintenance {
 			$this->output( "... Adding $page..." );
 			$content = file_get_contents( $data['file'] );
 			$wikiPage = $wikiPageFactory->newFromTitle( $title );
-			$updater = $wikiPage->newPageUpdater( $this->getMaintenanceUser() );
+			$updater = $wikiPage->newPageUpdater(
+				User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] )
+			);
 			$content = new MailTemplate( $content );
 			$updater->setContent( 'main', $content );
 			$meta = new JsonContent( json_encode( $data['meta'] ) );
@@ -94,13 +96,6 @@ class AddDefaultMailTemplates extends LoggedUpdateMaintenance {
 		}
 
 		return true;
-	}
-
-	/**
-	 * @return User
-	 */
-	private function getMaintenanceUser(): User {
-		return User::newSystemUser( 'MediaWiki default', [ 'steal' => true ] );
 	}
 
 	/**
