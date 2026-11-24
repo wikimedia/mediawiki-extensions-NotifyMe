@@ -217,14 +217,15 @@
 	"notifyme-bucket-recent-events-label": "Нещодавня активність",
 	"notifyme-bucket-qm-short-label": "Якість сторінки",
 	"notifyme-ui-subscription-set-watchlist-label": "Налаштуйте параметри сповіщень для всіх елементів у вашому списку спостереження",
-	"notifyme-event-page-create-short-desc": "Сторінку створено",
-	"notifyme-event-page-delete-short-desc": "Сторінку вилучено",
-	"notifyme-event-page-move-short-desc": "Сторінку перейменовано",
-	"notifyme-event-page-edit-short-desc": "Сторінку відредаговано",
+	"notifyme-event-page-create-short-desc": "Створити сторінку",
+	"notifyme-event-page-delete-short-desc": "Вилучити сторінку",
+	"notifyme-event-page-move-short-desc": "Перейменувати сторінку",
+	"notifyme-event-page-edit-short-desc": "Редагувати сторінку",
 	"notifyme-ui-delivery-channels-label": "Канали сповіщень",
 	"notifyme-ui-subscription-delivery-help": "Сповіщення завжди надсилаються у вікі. Виберіть додаткові канали сповіщень.",
 	"notifyme-subscriber-provider-watched-source-desc": "Ви переглядаєте сторінку, пов'язану з цим сповіщенням",
 	"notifyme-category-subscription-description": "Ви переглядаєте категорію, до якої належить ця сторінка",
 	"notifyme-namespace-subscription-description": "Ви переглядаєте простір назв, до якого належить ця сторінка",
-	"notifyme-subscriber-provider-personal-desc": "Це сповіщення стосується вас"
+	"notifyme-subscriber-provider-personal-desc": "Вас було явно вказано одержувачем",
+	"notifyme-arbitrary-event-action-event-target-user-help": "Список імен користувачів, розділених комами, яким потрібно надіслати сповіщення. Підтримується вікітекст."
 }
